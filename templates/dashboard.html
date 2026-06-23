@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Micro-Savings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-6xl mx-auto p-6">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-4xl font-bold text-green-600">Your Savings History</h1>
+            <a href="{{ url_for('index') }}" class="text-green-600 hover:underline flex items-center gap-1"><i class="fas fa-plus"></i> New Analysis</a>
+        </header>
+
+        <div class="bg-white rounded-3xl shadow p-8">
+            <h2 class="text-2xl font-semibold mb-6">Recent Analyses</h2>
+            {% if history %}
+                <div class="space-y-6">
+                    {% for analysis in history %}
+                    <div class="border border-gray-200 rounded-2xl p-6">
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>{{ analysis[6] }}</span>
+                            <span class="font-medium">Spent: ${{ analysis[3] }}</span>
+                        </div>
+                        <div class="mt-2 text-emerald-600 font-semibold">Potential Savings: ${{ analysis[4] }} ({{ analysis[5] | round(1) }}%)</div>
+                        <div class="mt-3 text-xs text-gray-400 line-clamp-2">{{ analysis[2][:150] }}...</div>
+                        <a href="{{ url_for('export_report', analysis_id=analysis[0]) }}" 
+                           class="mt-4 inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700">
+                            <i class="fas fa-download"></i> Download CSV Report
+                        </a>
+                    </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-gray-500">No analyses yet. Start by analyzing a receipt!</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

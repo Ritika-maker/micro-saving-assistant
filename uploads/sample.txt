@@ -1,0 +1,5 @@
+Milk - 200
+Bread - 80
+Rice - 120
+Chips - 250
+Coffee - 180

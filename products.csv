@@ -1,0 +1,24 @@
+product_name,category,brand,price,unit,unit_price,health_score
+Amul Milk 1L,Dairy,Amul,2.5,liter,2.5,8
+Mother Dairy Milk 1L,Dairy,Mother Dairy,2.2,liter,2.2,7
+Nestle Milk 1L,Dairy,Nestle,3.0,liter,3.0,6
+Whole Wheat Bread 400g,Bakery,Generic,1.2,pack,3.0,9
+White Bread 400g,Bakery,Generic,1.0,pack,2.5,6
+Brown Rice 1kg,Grains,Generic,4.5,kg,4.5,9
+Basmati Rice 1kg,Grains,Generic,5.5,kg,5.5,8
+Eggs 12pcs,Protein,Generic,3.0,dozen,0.25,7
+Chicken Breast 500g,Meat,Generic,4.0,kg,8.0,6
+Apples 1kg,Fruits,Generic,2.0,kg,2.0,10
+Bananas 1kg,Fruits,Generic,1.5,kg,1.5,9
+Coca Cola 2L,Beverages,Coca Cola,2.5,liter,1.25,4
+Pepsi 2L,Beverages,Pepsi,2.3,liter,1.15,4
+Detergent 1kg,Household,Surf,3.5,kg,3.5,5
+Toothpaste 100g,Personal Care,Colgate,1.8,tube,18.0,7
+Yogurt 500g,Dairy,Amul,1.8,pack,3.6,8
+Oats 500g,Grains,Quaker,2.5,pack,5.0,9
+Tomatoes 1kg,Vegetables,Generic,1.2,kg,1.2,10
+Potatoes 1kg,Vegetables,Generic,0.8,kg,0.8,9
+Olive Oil 500ml,Oils,Generic,4.5,bottle,9.0,8
+Sunflower Oil 1L,Oils,Fortune,3.2,liter,3.2,7
+Shampoo 200ml,Personal Care,Head & Shoulders,2.8,bottle,14.0,6
+Soap 4pcs,Personal Care,Dove,2.2,pack,0.55,8
