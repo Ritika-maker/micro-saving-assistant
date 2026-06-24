@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, session
+from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, session, Response
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 import os
+import sqlite3
 import pandas as pd
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 import pytesseract
 import json
-from flask import Response
 from PIL import Image
 import io
 
@@ -19,9 +19,9 @@ import csv
 from io import StringIO
 
 app = Flask(__name__)
-app.secret_key = 'super_secret_key_for_dev'  # Change in production
+app.secret_key = 'super_secret_key_for_dev'  
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 init_db()
@@ -40,7 +40,6 @@ class User(UserMixin):
 
 @login_manager.user_loader
 def load_user(user_id):
-    import sqlite3
     conn = sqlite3.connect('users.db')
     c = conn.cursor()
     c.execute("SELECT id, username FROM users WHERE id=?", (user_id,))
@@ -71,7 +70,7 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        user_data = get_user(username, password)  # Note: hash compare better, but simple for demo
+        user_data = get_user(username, password)
         if user_data:
             user = User(user_data[0], user_data[1])
             login_user(user)
@@ -108,7 +107,6 @@ def upload_receipt():
         file.save(file_path)
         
         if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
-            # Tesseract OCR
             try:
                 img = Image.open(file_path)
                 raw_text = pytesseract.image_to_string(img)
@@ -123,7 +121,6 @@ def upload_receipt():
     if not raw_text:
         return jsonify({"error": "No input provided"}), 400
 
-    # Process receipt
     receipt_data = parse_receipt_text(raw_text)
     
     total_spent = 0
@@ -135,9 +132,11 @@ def upload_receipt():
         matched = fuzzy_match(item['name'], products)
         if matched:
             item['normalized'] = matched['product_name']
+            item['category']   = matched.get('category', '')
             item_for_comp = {"name": matched['product_name'], "price": item['price']}
         else:
             item['normalized'] = item['name']
+            item['category']   = ''
             item_for_comp = item
         
         alts = find_alternatives(item_for_comp, products_df)
@@ -154,10 +153,9 @@ def upload_receipt():
         "savings_pct": round((total_savings / total_spent * 100) if total_spent > 0 else 0, 1),
         "items": receipt_data['items'],
         "recommendations": recommendations,
-        "raw_text": raw_text[:500]  # Truncated for history
+        "raw_text": raw_text[:500]
     }
     
-     # Save to history
     save_analysis(current_user.id, raw_text[:1000], dashboard_data["total_spent"], 
                   dashboard_data["total_savings"], dashboard_data["savings_pct"],
                   items_count=len(receipt_data['items']),
@@ -183,26 +181,33 @@ def export_report(analysis_id):
         output = StringIO()
         writer = csv.writer(output)
         
-        writer.writerow(['Item', 'Price', 'Normalized', 'Alternatives'])
+        writer.writerow(['Item', 'Price', 'Normalized Name', 'Best Alternative', 'Alt Price', 'Savings %'])
         for item in data.get('items', []):
             recs = data.get('recommendations', {}).get(item['name'], [])
-            alts = '; '.join([r['alternative'] for r in recs])
-            writer.writerow([item['name'], item['price'], item.get('normalized', ''), alts])
+            if recs:
+                best = recs[0]
+                writer.writerow([
+                    item['name'],
+                    item['price'],
+                    item.get('normalized', ''),
+                    best.get('alternative', ''),
+                    best.get('alt_price', ''),
+                    f"{best.get('savings_pct', '')}%"
+                ])
+            else:
+                writer.writerow([item['name'], item['price'], item.get('normalized', ''), '—', '—', '—'])
         
         writer.writerow([])
-        writer.writerow(['Summary', '', '', ''])
-        writer.writerow(['Total Spent', data['total_spent'], '', ''])
-        writer.writerow(['Potential Savings', data['total_savings'], f"({data['savings_pct']}%)", ''])
+        writer.writerow(['Total Spent', data['total_spent'], '', '', '', ''])
+        writer.writerow(['Potential Savings', data['total_savings'], f"({data['savings_pct']}%)", '', '', ''])
         
         return Response(
             output.getvalue(),
             mimetype='text/csv',
             headers={"Content-Disposition": f"attachment;filename=savings_report_{analysis_id}.csv"}
         )
-    except:
-        return "Error generating report", 500
-
-from flask import Response  # Move import if needed
+    except Exception as e:
+        return f"Error generating report: {str(e)}", 500
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

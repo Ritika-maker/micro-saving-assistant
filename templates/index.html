@@ -7,178 +7,429 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', system-ui, sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+
+        .tab-btn.active {
+            background: #16a34a;
+            color: white;
+            border-color: #16a34a;
+        }
+        .category-tag {
+            font-size: 10px;
+            padding: 2px 7px;
+            border-radius: 99px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+        .cat-Dairy     { background:#dbeafe; color:#1d4ed8; }
+        .cat-Bakery    { background:#fef9c3; color:#a16207; }
+        .cat-Grains    { background:#fef3c7; color:#b45309; }
+        .cat-Protein   { background:#dcfce7; color:#166534; }
+        .cat-Meat      { background:#fee2e2; color:#b91c1c; }
+        .cat-Fruits    { background:#f3e8ff; color:#6d28d9; }
+        .cat-Beverages { background:#e0f2fe; color:#0369a1; }
+        .cat-Household { background:#f1f5f9; color:#475569; }
+        .cat-Personal  { background:#fce7f3; color:#9d174d; }
+        .cat-Vegetables{ background:#dcfce7; color:#15803d; }
+        .cat-Oils      { background:#fefce8; color:#a16207; }
+
+        .health-bar { height: 6px; border-radius: 3px; background: #e5e7eb; overflow: hidden; }
+        .health-fill { height: 100%; border-radius: 3px; transition: width .4s; }
+
+        .rec-card {
+            border-left: 3px solid #16a34a;
+            background: #f0fdf4;
+        }
+        .savings-badge {
+            background: #dcfce7;
+            color: #15803d;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 3px 10px;
+            border-radius: 99px;
+        }
+        .spinner { animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        input[type=number]::-webkit-inner-spin-button { opacity: .5; }
+
+        tr.item-row:hover td { background: #f9fafb; }
+
+        .result-section { display: none; }
+        .result-section.visible { display: block; }
     </style>
 </head>
-<body class="bg-gray-50">
-    <div class="max-w-6xl mx-auto p-6">
-       <header class="text-center mb-10 flex justify-between items-center">
-            <div>
-                <h1 class="text-4xl font-bold text-green-600 flex items-center gap-3">
-                    <i class="fas fa-piggy-bank"></i> Micro-Savings Assistant
-                </h1>
-                <p class="text-gray-600 mt-2">Smart Receipt Analyzer & Shopping Optimizer</p>
-            </div>
-            {% if current_user.is_authenticated %}
-            <div class="flex items-center gap-4">
-                <span class="text-green-600">Hi, {{ current_user.username }}!</span>
-                <a href="{{ url_for('logout') }}" class="text-red-500 hover:text-red-600">Logout</a>
-            </div>
-            {% else %}
-            <div class="flex gap-3">
-                <a href="{{ url_for('login') }}" class="px-6 py-2 border border-green-600 text-green-600 rounded-2xl hover:bg-green-50">Login</a>
-                <a href="{{ url_for('register') }}" class="px-6 py-2 bg-green-600 text-white rounded-2xl hover:bg-green-700">Register</a>
-            </div>
-            {% endif %}
-        </header>
+<body class="bg-gray-50 min-h-screen">
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Upload Section -->
-            <div class="bg-white rounded-2xl shadow-lg p-8">
-                <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-                    <i class="fas fa-upload"></i> Upload Receipt
-                </h2>
-                
-                 <form id="uploadForm" enctype="multipart/form-data" class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Paste Receipt Text</label>
-                        <textarea id="receiptText" rows="6" 
-                            class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                            placeholder="Amul Milk 1L    2.50&#10;Whole Wheat Bread 400g    1.20"></textarea>
-                    </div>
-                    
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Or Upload Image / TXT</label>
-                        <input type="file" id="fileInput" name="file" accept="image/*,.txt" 
-                               class="w-full px-4 py-3 border border-gray-300 rounded-xl">
-                    </div>
-                    
-                    <div class="flex gap-4">
-                        <button type="submit" 
-                            class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-4 px-8 rounded-2xl transition-all flex items-center justify-center gap-2">
-                            <i class="fas fa-magic"></i> Analyze Receipt
-                        </button>
-                    </div>
-                </form>
-                
-                <div class="mt-6 pt-6 border-t text-xs text-gray-500">
-                    Supports: Text paste, .txt files, and images (JPG/PNG) with OCR
-                </div>
+<!-- NAV -->
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-leaf text-white text-sm"></i>
             </div>
+            <span class="font-semibold text-gray-800">Micro-Savings</span>
+        </div>
+        <div class="flex gap-3 text-sm">
+            <a href="/dashboard" class="text-gray-500 hover:text-gray-800 flex items-center gap-1">
+                <i class="fas fa-chart-line"></i> History
+            </a>
+            <a href="/logout" class="text-gray-500 hover:text-gray-800 flex items-center gap-1">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </div>
+</nav>
 
-            <!-- Results Dashboard -->
-            <div id="results" class="hidden bg-white rounded-2xl shadow-lg p-8">
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h2 class="text-2xl font-semibold">Analysis Results</h2>
-                        <div id="summary" class="mt-4 grid grid-cols-2 gap-4"></div>
-                    </div>
-                    <button onclick="resetUI()" 
-                        class="text-gray-400 hover:text-gray-600">
-                        <i class="fas fa-redo"></i>
-                    </button>
-                </div>
-                
-                <div id="itemRecommendations" class="space-y-6"></div>
+<div class="max-w-6xl mx-auto px-6 py-8">
+
+    <!-- HERO -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">Find where you're overspending</h1>
+        <p class="text-gray-500 mt-1">Enter your receipt items below or upload a file — we'll show you cheaper alternatives.</p>
+    </div>
+
+    <!-- INPUT TABS -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-6">
+        <div class="flex border-b border-gray-100 p-4 gap-2">
+            <button onclick="switchTab('table')" id="tab-table"
+                class="tab-btn active px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 transition-all">
+                <i class="fas fa-table mr-1"></i> Enter Items
+            </button>
+            <button onclick="switchTab('text')" id="tab-text"
+                class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 transition-all text-gray-600">
+                <i class="fas fa-align-left mr-1"></i> Paste Receipt Text
+            </button>
+            <button onclick="switchTab('file')" id="tab-file"
+                class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 transition-all text-gray-600">
+                <i class="fas fa-upload mr-1"></i> Upload File
+            </button>
+        </div>
+
+        <!-- TABLE INPUT -->
+        <div id="panel-table" class="p-6">
+            <div class="overflow-x-auto rounded-xl border border-gray-100">
+                <table class="w-full text-sm" id="itemTable">
+                    <thead>
+                        <tr class="bg-gray-50 text-left">
+                            <th class="px-4 py-3 font-semibold text-gray-600 w-8">#</th>
+                            <th class="px-4 py-3 font-semibold text-gray-600">Product Name</th>
+                            <th class="px-4 py-3 font-semibold text-gray-600 w-28">Category</th>
+                            <th class="px-4 py-3 font-semibold text-gray-600 w-24">Brand</th>
+                            <th class="px-4 py-3 font-semibold text-gray-600 w-24">Price (NPR)</th>
+                            <th class="px-4 py-3 font-semibold text-gray-600 w-20">Unit</th>
+
+                            <th class="px-4 py-3 w-10"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- rows injected by JS -->
+                    </tbody>
+                </table>
             </div>
+            <div class="flex gap-3 mt-4">
+                <button onclick="addRow()" class="text-sm text-green-700 font-medium flex items-center gap-1 hover:text-green-800">
+                    <i class="fas fa-plus-circle"></i> Add row
+                </button>
+                <button onclick="loadSample()" class="text-sm text-gray-400 hover:text-gray-600 flex items-center gap-1">
+                    <i class="fas fa-magic"></i> Load sample
+                </button>
+            </div>
+        </div>
+
+        <!-- TEXT INPUT -->
+        <div id="panel-text" class="p-6 hidden">
+            <p class="text-xs text-gray-400 mb-2">One item per line: <code class="bg-gray-100 px-1 rounded">Product Name &nbsp; Price</code></p>
+            <textarea id="receiptText" rows="8" placeholder="Amul Milk 1L    2.50&#10;Whole Wheat Bread 400g    1.20&#10;Eggs 12pcs    3.00&#10;Basmati Rice 1kg    5.50&#10;Coca Cola 2L    2.50&#10;Apples 1kg    2.00"
+                class="w-full rounded-xl border border-gray-200 p-4 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"></textarea>
+        </div>
+
+        <!-- FILE INPUT -->
+        <div id="panel-file" class="p-6 hidden">
+            <label class="flex flex-col items-center justify-center border-2 border-dashed border-gray-200 rounded-xl p-10 cursor-pointer hover:border-green-400 transition-colors" for="fileInput">
+                <i class="fas fa-cloud-upload-alt text-3xl text-gray-300 mb-3"></i>
+                <span class="text-sm text-gray-500">Drop a <strong>.txt</strong> or image here, or click to browse</span>
+                <span id="fileName" class="mt-2 text-xs text-green-600 hidden"></span>
+            </label>
+            <input id="fileInput" type="file" accept=".txt,.png,.jpg,.jpeg" class="hidden" onchange="showFileName(this)">
+        </div>
+
+        <div class="px-6 pb-6">
+            <button onclick="analyzeReceipt()"
+                class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2">
+                <i class="fas fa-search-dollar"></i> Analyze & Find Savings
+            </button>
         </div>
     </div>
 
-    <script>
-         async function analyzeReceipt() {
-            const text = document.getElementById('receiptText').value.trim();
-            const fileInput = document.getElementById('fileInput');
-            const formData = new FormData();
+    <!-- LOADING -->
+    <div id="loadingBlock" class="hidden text-center py-12">
+        <i class="fas fa-circle-notch spinner text-green-500 text-3xl"></i>
+        <p class="text-gray-500 mt-3 text-sm">Scanning for savings…</p>
+    </div>
 
-            if (text) {
-                formData.append('receipt_text', text);
-            }
-            if (fileInput.files.length > 0) {
-                formData.append('file', fileInput.files[0]);
-            }
+    <!-- RESULTS -->
+    <div id="resultsBlock" class="result-section space-y-6">
 
-            if (!text && !fileInput.files.length) {
-                alert("Please paste text or upload a file");
-                return;
-            }
+        <!-- SUMMARY CARDS -->
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Total Spent</p>
+                <p class="text-3xl font-bold text-gray-900 mt-1" id="resTotal">—</p>
+            </div>
+            <div class="bg-green-50 rounded-2xl p-5 border border-green-100 shadow-sm">
+                <p class="text-xs font-semibold text-green-600 uppercase tracking-wide">Potential Savings</p>
+                <p class="text-3xl font-bold text-green-700 mt-1" id="resSavings">—</p>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Savings Rate</p>
+                <p class="text-3xl font-bold text-gray-900 mt-1" id="resPct">—</p>
+            </div>
+        </div>
 
-            try {
-                const response = await fetch('/upload', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const data = await response.json();
-                
-                if (data.error) {
-                    alert(data.error);
-                    return;
-                }
+        <!-- ITEMS TABLE WITH RECOMMENDATIONS -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-100">
+                <h2 class="font-semibold text-gray-800">Item Breakdown & Alternatives</h2>
+            </div>
+            <div id="itemResults" class="divide-y divide-gray-50"></div>
+        </div>
+    </div>
 
-                showDashboard(data);
-            } catch (e) {
-                alert("Please log in first to use the service.");
-            }
-        }
+</div>
 
-        function showDashboard(data) {
-            document.getElementById('results').classList.remove('hidden');
-            
-            // Summary
-            const summaryHTML = `
-                <div class="bg-green-50 p-4 rounded-2xl">
-                    <div class="text-sm text-green-600">Total Spent</div>
-                    <div class="text-3xl font-bold">$${data.total_spent}</div>
+<script>
+// ── CSV-derived product hints ────
+const CATEGORIES = ['Dairy','Bakery','Grains','Protein','Meat','Fruits','Beverages','Household','Personal Care','Vegetables','Oils'];
+const UNITS = ['liter','pack','kg','dozen','bottle','tube'];
+
+const SAMPLE_ITEMS = [
+    { name: 'Amul Milk 1L',          category: 'Dairy',     brand: 'Amul',    price: '2.50', unit: 'liter', health: 8 },
+    { name: 'Whole Wheat Bread 400g', category: 'Bakery',    brand: 'Generic', price: '1.20', unit: 'pack',  health: 9 },
+    { name: 'Eggs 12pcs',             category: 'Protein',   brand: 'Generic', price: '3.00', unit: 'dozen', health: 7 },
+    { name: 'Basmati Rice 1kg',       category: 'Grains',    brand: 'Generic', price: '5.50', unit: 'kg',    health: 8 },
+    { name: 'Coca Cola 2L',           category: 'Beverages', brand: 'Coca Cola',price:'2.50', unit: 'liter', health: 4 },
+    { name: 'Apples 1kg',             category: 'Fruits',    brand: 'Generic', price: '2.00', unit: 'kg',    health: 10},
+];
+
+let activeTab = 'table';
+let rowCount = 0;
+
+function switchTab(tab) {
+    activeTab = tab;
+    ['table','text','file'].forEach(t => {
+        document.getElementById('panel-'+t).classList.toggle('hidden', t !== tab);
+        const btn = document.getElementById('tab-'+t);
+        btn.classList.toggle('active', t === tab);
+        if (t !== tab) btn.classList.add('text-gray-600');
+        else btn.classList.remove('text-gray-600');
+    });
+}
+
+function catClass(cat) {
+    const map = {
+        'Dairy':'cat-Dairy','Bakery':'cat-Bakery','Grains':'cat-Grains',
+        'Protein':'cat-Protein','Meat':'cat-Meat','Fruits':'cat-Fruits',
+        'Beverages':'cat-Beverages','Household':'cat-Household',
+        'Personal Care':'cat-Personal','Vegetables':'cat-Vegetables','Oils':'cat-Oils'
+    };
+    return map[cat] || 'cat-Household';
+}
+
+function addRow(data = {}) {
+    rowCount++;
+    const idx = rowCount;
+    const body = document.getElementById('tableBody');
+    const tr = document.createElement('tr');
+    tr.id = 'row-'+idx;
+    tr.className = 'item-row';
+
+    const catOpts = CATEGORIES.map(c => `<option ${data.category===c?'selected':''} value="${c}">${c}</option>`).join('');
+    const unitOpts = UNITS.map(u => `<option ${data.unit===u?'selected':''} value="${u}">${u}</option>`).join('');
+
+    tr.innerHTML = `
+        <td class="px-4 py-3 text-gray-400 text-xs">${idx}</td>
+        <td class="px-4 py-2">
+            <input type="text" placeholder="e.g. Amul Milk 1L" value="${data.name||''}"
+                class="w-full border-0 bg-transparent focus:outline-none focus:ring-1 focus:ring-green-400 rounded px-2 py-1 text-sm" />
+        </td>
+        <td class="px-4 py-2">
+            <select class="w-full border-0 bg-transparent focus:outline-none text-sm text-gray-600 rounded">
+                <option value="">—</option>${catOpts}
+            </select>
+        </td>
+        <td class="px-4 py-2">
+            <input type="text" placeholder="Brand" value="${data.brand||''}"
+                class="w-full border-0 bg-transparent focus:outline-none focus:ring-1 focus:ring-green-400 rounded px-2 py-1 text-sm" />
+        </td>
+        <td class="px-4 py-2">
+            <input type="number" min="0" step="0.01" placeholder="0.00" value="${data.price||''}"
+                class="w-full border-0 bg-transparent focus:outline-none focus:ring-1 focus:ring-green-400 rounded px-2 py-1 text-sm" />
+        </td>
+        <td class="px-4 py-2">
+            <select class="w-full border-0 bg-transparent focus:outline-none text-sm text-gray-600 rounded">
+                ${unitOpts}
+            </select>
+        </td>
+        <td class="px-4 py-2">
+            <button onclick="removeRow(${idx})" class="text-gray-300 hover:text-red-400 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </td>
+    `;
+    body.appendChild(tr);
+}
+
+
+function removeRow(idx) {
+    const row = document.getElementById('row-'+idx);
+    if (row) row.remove();
+}
+
+function loadSample() {
+    document.getElementById('tableBody').innerHTML = '';
+    rowCount = 0;
+    SAMPLE_ITEMS.forEach(s => addRow(s));
+}
+
+function showFileName(input) {
+    const span = document.getElementById('fileName');
+    if (input.files.length) {
+        span.textContent = input.files[0].name;
+        span.classList.remove('hidden');
+    }
+}
+
+// ── ANALYSIS ──────
+function getTableText() {
+    const rows = document.querySelectorAll('#tableBody tr');
+    const lines = [];
+    rows.forEach(row => {
+        const inputs = row.querySelectorAll('input, select');
+        const name  = inputs[0]?.value?.trim();
+        const price = inputs[3]?.value?.trim();
+        if (name && price) lines.push(`${name}    ${price}`);
+    });
+    return lines.join('\n');
+}
+
+async function analyzeReceipt() {
+    let formData = new FormData();
+
+    if (activeTab === 'table') {
+        const txt = getTableText();
+        if (!txt) { alert('Add at least one item with a name and price.'); return; }
+        formData.append('receipt_text', txt);
+
+    } else if (activeTab === 'text') {
+        const txt = document.getElementById('receiptText').value.trim();
+        if (!txt) { alert('Paste some receipt text first.'); return; }
+        formData.append('receipt_text', txt);
+
+    } else {
+        const file = document.getElementById('fileInput').files[0];
+        if (!file) { alert('Choose a file first.'); return; }
+        formData.append('file', file);
+    }
+
+    document.getElementById('loadingBlock').classList.remove('hidden');
+    document.getElementById('resultsBlock').classList.remove('visible');
+
+    try {
+        const res = await fetch('/upload', { method: 'POST', body: formData });
+        const data = await res.json();
+        document.getElementById('loadingBlock').classList.add('hidden');
+        renderResults(data);
+    } catch (e) {
+        document.getElementById('loadingBlock').classList.add('hidden');
+        alert('Something went wrong. Please try again.');
+    }
+}
+
+function healthColor(score) {
+    if (score >= 8) return '#22c55e';
+    if (score >= 5) return '#f59e0b';
+    return '#ef4444';
+}
+
+function renderResults(data) {
+    document.getElementById('resTotal').textContent   = `NPR ${data.total_spent.toFixed(2)}`;
+    document.getElementById('resSavings').textContent = `NPR ${data.total_savings.toFixed(2)}`;
+    document.getElementById('resPct').textContent     = `${data.savings_pct}%`;
+
+    const container = document.getElementById('itemResults');
+    container.innerHTML = '';
+
+    data.items.forEach(item => {
+        const recs = data.recommendations[item.name] || [];
+        const hasRecs = recs.length > 0;
+
+        // Determine a rough category label from normalized name
+        const catLabel = item.category || '';
+
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'p-5';
+
+        // Item header
+        itemDiv.innerHTML = `
+            <div class="flex items-start justify-between gap-4 flex-wrap">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400">
+                        <i class="fas fa-tag text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800 text-sm">${item.name}</p>
+                        <p class="text-xs text-gray-400 mt-0.5">${item.normalized || item.name}</p>
+                    </div>
                 </div>
-                <div class="bg-emerald-50 p-4 rounded-2xl">
-                    <div class="text-sm text-emerald-600">Potential Savings</div>
-                    <div class="text-3xl font-bold text-emerald-600">$${data.total_savings}</div>
-                    <div class="text-sm">(${data.savings_pct}%)</div>
+                <div class="flex items-center gap-3">
+                    <span class="text-lg font-bold text-gray-800">NPR ${item.price.toFixed(2)}</span>
+                    ${hasRecs
+                        ? `<span class="savings-badge">Save up to ${recs[0].savings_pct}%</span>`
+                        : `<span class="text-xs text-gray-300 bg-gray-50 px-3 py-1 rounded-full">Best price</span>`
+                    }
                 </div>
-            `;
-            document.getElementById('summary').innerHTML = summaryHTML;
+            </div>
+            ${hasRecs ? `<div class="mt-4 space-y-2" id="recs-${item.name.replace(/\W/g,'_')}"></div>` : ''}
+        `;
 
-            // Recommendations
-            let recHTML = '';
-            for (const [itemName, recs] of Object.entries(data.recommendations)) {
-                if (recs.length === 0) continue;
-                
-                recHTML += `
-                    <div class="border border-gray-100 rounded-2xl p-6">
-                        <div class="font-medium text-lg mb-4">📦 ${itemName}</div>
-                        <div class="space-y-4">
-                `;
-                
-                recs.forEach(rec => {
-                    recHTML += `
-                        <div class="flex justify-between items-start bg-gray-50 p-4 rounded-xl">
-                            <div>
-                                <div class="font-semibold">${rec.alternative}</div>
-                                <div class="text-sm text-gray-600">${rec.explanation}</div>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-emerald-600 font-bold">-${rec.savings_pct}%</div>
-                            </div>
+        container.appendChild(itemDiv);
+
+        if (hasRecs) {
+            const recsDiv = itemDiv.querySelector('[id^="recs-"]');
+            recs.forEach(rec => {
+                const card = document.createElement('div');
+                card.className = 'rec-card rounded-xl p-4 flex items-start justify-between gap-4';
+
+                const healthIcon = rec.is_healthier
+                    ? `<span class="text-xs text-green-600 font-medium flex items-center gap-1"><i class="fas fa-heartbeat"></i> Healthier</span>`
+                    : '';
+
+                card.innerHTML = `
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <p class="text-sm font-semibold text-gray-800">${rec.alternative}</p>
+                            ${healthIcon}
                         </div>
-                    `;
-                });
-                
-                recHTML += `</div></div>`;
-            }
-            
-            document.getElementById('itemRecommendations').innerHTML = recHTML;
+                        <p class="text-xs text-gray-500 mt-1">${rec.reason}</p>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <p class="font-bold text-green-700 text-sm">-${rec.savings_pct}%</p>
+                        <p class="text-xs text-gray-400">NPR ${rec.alt_price ? rec.alt_price.toFixed(2) : '—'}</p>
+                    </div>
+                `;
+                recsDiv.appendChild(card);
+            });
         }
+    });
 
-        function resetUI() {
-            document.getElementById('results').classList.add('hidden');
-            document.getElementById('receiptText').value = '';
-        }
+    document.getElementById('resultsBlock').classList.add('visible');
+    document.getElementById('resultsBlock').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
-        // Form submit
-        document.getElementById('uploadForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            analyzeReceipt();
-        });
-    </script>
+// Init with 3 empty rows
+addRow();
+</script>
 </body>
 </html>

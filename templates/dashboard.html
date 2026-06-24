@@ -3,41 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Micro-Savings</title>
+    <title>Dashboard – Micro-Savings</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body class="bg-gray-50">
-    <div class="max-w-6xl mx-auto p-6">
-        <header class="flex justify-between items-center mb-8">
-            <h1 class="text-4xl font-bold text-green-600">Your Savings History</h1>
-            <a href="{{ url_for('index') }}" class="text-green-600 hover:underline flex items-center gap-1"><i class="fas fa-plus"></i> New Analysis</a>
-        </header>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
 
-        <div class="bg-white rounded-3xl shadow p-8">
-            <h2 class="text-2xl font-semibold mb-6">Recent Analyses</h2>
-            {% if history %}
-                <div class="space-y-6">
-                    {% for analysis in history %}
-                    <div class="border border-gray-200 rounded-2xl p-6">
-                        <div class="flex justify-between text-sm text-gray-500">
-                            <span>{{ analysis[6] }}</span>
-                            <span class="font-medium">Spent: ${{ analysis[3] }}</span>
-                        </div>
-                        <div class="mt-2 text-emerald-600 font-semibold">Potential Savings: ${{ analysis[4] }} ({{ analysis[5] | round(1) }}%)</div>
-                        <div class="mt-3 text-xs text-gray-400 line-clamp-2">{{ analysis[2][:150] }}...</div>
-                        <a href="{{ url_for('export_report', analysis_id=analysis[0]) }}" 
-                           class="mt-4 inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700">
-                            <i class="fas fa-download"></i> Download CSV Report
-                        </a>
-                    </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            {% else %}
-                <p class="text-gray-500">No analyses yet. Start by analyzing a receipt!</p>
-            {% endif %}
+        .stat-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -30px; right: -30px;
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            opacity: 0.06;
+        }
+        .stat-card.green::before  { background: #16a34a; }
+        .stat-card.blue::before   { background: #2563eb; }
+        .stat-card.amber::before  { background: #d97706; }
+
+        .history-row {
+            transition: box-shadow .15s, transform .15s;
+        }
+        .history-row:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+            transform: translateY(-1px);
+        }
+
+        .savings-pill {
+            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+            color: #15803d;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 99px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            border-radius: 3px;
+            background: #e5e7eb;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #16a34a, #4ade80);
+            transition: width .6s ease;
+        }
+
+        .empty-state {
+            background: repeating-linear-gradient(
+                45deg,
+                #f9fafb,
+                #f9fafb 10px,
+                #f3f4f6 10px,
+                #f3f4f6 20px
+            );
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #2563eb;
+            padding: 5px 12px;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            background: #eff6ff;
+            transition: background .15s, border-color .15s;
+        }
+        .download-btn:hover {
+            background: #dbeafe;
+            border-color: #93c5fd;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+<!-- NAV -->
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-10">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-leaf text-white text-sm"></i>
+            </div>
+            <span class="font-semibold text-gray-800">Micro-Savings</span>
+        </div>
+        <div class="flex items-center gap-4 text-sm">
+            <a href="{{ url_for('index') }}"
+               class="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                <i class="fas fa-plus text-xs"></i> New Analysis
+            </a>
+            <a href="{{ url_for('logout') }}" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
         </div>
     </div>
+</nav>
+
+<div class="max-w-5xl mx-auto px-6 py-10">
+
+    <!-- PAGE HEADER -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900">Savings History</h1>
+        <p class="text-sm text-gray-400 mt-1">All your receipt analyses, most recent first.</p>
+    </div>
+
+    {% if history %}
+
+    <!-- AGGREGATE STATS -->
+    {% set total_spent_all   = history | sum(attribute=3) %}
+    {% set total_savings_all = history | sum(attribute=4) %}
+    {% set avg_savings_pct   = (history | sum(attribute=5)) / (history | length) %}
+
+    <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="stat-card green bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Total Spent</p>
+            <p class="text-3xl font-extrabold text-gray-900 mt-1">NPR {{ "%.2f" | format(total_spent_all) }}</p>
+            <p class="text-xs text-gray-400 mt-1">across {{ history | length }} receipt{{ 's' if history | length != 1 }}</p>
+        </div>
+        <div class="stat-card green bg-green-50 rounded-2xl border border-green-100 shadow-sm p-5">
+            <p class="text-xs font-semibold text-green-600 uppercase tracking-wide">Could Have Saved</p>
+            <p class="text-3xl font-extrabold text-green-700 mt-1">NPR {{ "%.2f" | format(total_savings_all) }}</p>
+            <p class="text-xs text-green-400 mt-1">if you switched to cheaper alternatives</p>
+        </div>
+        <div class="stat-card amber bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Avg Savings Rate</p>
+            <p class="text-3xl font-extrabold text-gray-900 mt-1">{{ "%.1f" | format(avg_savings_pct) }}%</p>
+            <p class="text-xs text-gray-400 mt-1">per analysis</p>
+        </div>
+    </div>
+
+    <!-- HISTORY LIST -->
+    <div class="space-y-3">
+        {% for analysis in history %}
+        {% set pct = analysis[5] | round(1) %}
+        {% set bar_width = [pct, 100] | min %}
+
+        <div class="history-row bg-white rounded-2xl border border-gray-100 p-5">
+            <div class="flex items-start justify-between gap-4 flex-wrap">
+
+                <!-- LEFT: date + receipt preview -->
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
+                        <i class="fas fa-receipt text-green-600 text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400">{{ analysis[6][:16] }}</p>
+                        <p class="text-sm text-gray-500 mt-1 line-clamp-1 max-w-xs">
+                            {{ analysis[2][:80] }}{% if analysis[2] | length > 80 %}…{% endif %}
+                        </p>
+                        <p class="text-xs text-gray-300 mt-1">{{ analysis[7] }} item{{ 's' if analysis[7] != 1 }}</p>
+                    </div>
+                </div>
+
+                <!-- RIGHT: numbers + download -->
+                <div class="flex items-center gap-6 ml-auto">
+                    <div class="text-right">
+                        <p class="text-xs text-gray-400">Spent</p>
+                        <p class="font-bold text-gray-800">NPR {{ "%.2f" | format(analysis[3]) }}</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs text-gray-400">Could save</p>
+                        <p class="font-bold text-green-600">NPR {{ "%.2f" | format(analysis[4]) }}</p>
+                    </div>
+                    <span class="savings-pill">{{ pct }}% off</span>
+                    <a href="{{ url_for('export_report', analysis_id=analysis[0]) }}"
+                       class="download-btn" title="Download CSV">
+                        <i class="fas fa-download"></i> CSV
+                    </a>
+                </div>
+            </div>
+
+            <!-- SAVINGS PROGRESS BAR -->
+            <div class="mt-4">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{ bar_width }}%"></div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+
+    <!-- EMPTY STATE -->
+    <div class="empty-state rounded-2xl border border-dashed border-gray-200 p-16 text-center">
+        <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-receipt text-2xl text-gray-300"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700">No analyses yet</h2>
+        <p class="text-sm text-gray-400 mt-1 mb-6">Upload your first receipt to see potential savings.</p>
+        <a href="{{ url_for('index') }}"
+           class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium px-5 py-2.5 rounded-xl transition-colors text-sm">
+            <i class="fas fa-plus"></i> Analyze a Receipt
+        </a>
+    </div>
+
+    {% endif %}
+
+</div>
 </body>
 </html>
