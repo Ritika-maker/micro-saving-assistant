@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-def load_products(csv_path='products.csv'):
+def load_products(csv_path='products2.csv'):
     df = pd.read_csv(csv_path)
     return df.to_dict('records')
 

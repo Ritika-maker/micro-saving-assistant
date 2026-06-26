@@ -19,9 +19,9 @@ import csv
 from io import StringIO
 
 app = Flask(__name__)
-app.secret_key = 'super_secret_key_for_dev'  
+app.secret_key = 'super_secret_key_for_dev'  # Change in production
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 init_db()
@@ -133,24 +133,32 @@ def upload_receipt():
         if matched:
             item['normalized'] = matched['product_name']
             item['category']   = matched.get('category', '')
+            item['brand']      = matched.get('brand', '')
             item_for_comp = {"name": matched['product_name'], "price": item['price']}
         else:
             item['normalized'] = item['name']
             item['category']   = ''
+            item['brand']      = ''
             item_for_comp = item
         
-        alts = find_alternatives(item_for_comp, products_df)
-        recs = recommend_alternatives(item, products, alts)
+        item_brand = item.get('brand', '')
+        alts = find_alternatives(item_for_comp, products_df, item_brand=item_brand)
+        recs = recommend_alternatives(item, products, alts, item_brand=item_brand)
         recommendations[item['name']] = recs
         
+        # Per-item saving: difference between item price and best alternative price
         if recs:
-            best_saving = recs[0].get('savings_pct', 0)
-            total_savings += (item['price'] * best_saving / 100)
+            best_alt_price = recs[0].get('alt_price', item['price'])
+            item_saving = max(0, item['price'] - best_alt_price)
+            total_savings += item_saving
     
+    total_spent_int  = int(round(total_spent))
+    total_savings_int = int(round(total_savings))
+
     dashboard_data = {
-        "total_spent": round(total_spent, 2),
-        "total_savings": round(total_savings, 2),
-        "savings_pct": round((total_savings / total_spent * 100) if total_spent > 0 else 0, 1),
+        "total_spent":   total_spent_int,
+        "total_savings": total_savings_int,
+        "savings_pct":   round((total_savings / total_spent * 100) if total_spent > 0 else 0, 1),
         "items": receipt_data['items'],
         "recommendations": recommendations,
         "raw_text": raw_text[:500]
