@@ -103,10 +103,10 @@
                 <i class="fas fa-align-left mr-1"></i> Paste Receipt Text
             </button>
             -->
-            <button onclick="switchTab('file')" id="tab-file"
-                class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 transition-all text-gray-600">
+            <button onclick="switchTab('file')" id="tab-file" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 transition-all text-gray-600">
                 <i class="fas fa-upload mr-1"></i> Upload File
             </button>
+
         </div>
 
         <!-- TABLE INPUT -->
@@ -223,6 +223,7 @@ function switchTab(tab) {
     ['table','text','file'].forEach(t => {
         document.getElementById('panel-'+t).classList.toggle('hidden', t !== tab);
         const btn = document.getElementById('tab-'+t);
+        if (!btn) return;  
         btn.classList.toggle('active', t === tab);
         if (t !== tab) btn.classList.add('text-gray-600');
         else btn.classList.remove('text-gray-600');

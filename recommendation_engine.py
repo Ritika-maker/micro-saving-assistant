@@ -1,3 +1,4 @@
+
 FOOD_CATEGORIES = {'Dairy', 'Bakery', 'Grains', 'Protein', 'Meat', 'Fruits', 'Beverages', 'Vegetables', 'Oils'}
 
 def recommend_alternatives(item, products, comparison_results, item_brand=None):
@@ -11,26 +12,22 @@ def recommend_alternatives(item, products, comparison_results, item_brand=None):
     recs = []
     item_category = comparison_results[0].get('category', '') if comparison_results else ''
     is_food = item_category in FOOD_CATEGORIES
-
     seen_names = set()
 
     for alt in comparison_results[:3]:
         alt_brand = alt.get('brand', '').strip().lower()
-
-        # Skip if same brand as what user bought
-        if item_brand and alt_brand == item_brand.strip().lower():
-            continue
+        # Skip same-brand alternatives, but only when brand is a real brand (not Generic)
+        if item_brand and item_brand.strip().lower() != 'generic':
+            if alt_brand == item_brand.strip().lower():
+                continue
 
         alt_name = alt['product_name']
         if alt_name in seen_names:
             continue
         seen_names.add(alt_name)
 
-        # Use unit_price for savings calc if available
         alt_unit_price = float(alt.get('unit_price') or alt.get('price'))
         item_price = float(item['price'])
-
-        # savings vs what user paid
         savings_pct = (item_price - alt_unit_price) / item_price * 100
         if savings_pct <= 0:
             continue
@@ -38,7 +35,6 @@ def recommend_alternatives(item, products, comparison_results, item_brand=None):
         health_score = alt.get('health_score', 0)
         is_healthier = is_food and int(health_score) >= 8
 
-        brand_display = alt.get('brand', '').strip()
         if is_healthier:
             reason = f"Saves {savings_pct:.0f}% and has a better nutrition score ({int(health_score)}/10)."
         else:
@@ -46,15 +42,13 @@ def recommend_alternatives(item, products, comparison_results, item_brand=None):
 
         recs.append({
             "alternative":  alt_name,
-            "alt_price":    int(round(alt_unit_price)),   # no decimals
+            "alt_price":    int(round(alt_unit_price)),
             "savings_pct":  round(savings_pct, 1),
             "is_healthier": is_healthier,
             "reason":       reason,
             "explanation":  reason,
         })
-
     return recs
-
 
 if __name__ == "__main__":
     pass
