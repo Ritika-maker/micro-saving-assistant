@@ -12,7 +12,6 @@ def find_alternatives(item, products_df, item_brand=None):
     category = None
     item_unit_price = None
 
-    # Find the matched product's category and unit_price
     for prod in products_df.to_dict('records'):
         prod_name_lower = prod['product_name'].lower()
         if (prod_name_lower in item_name_lower or
@@ -27,19 +26,15 @@ def find_alternatives(item, products_df, item_brand=None):
 
     alts = products_df[products_df['category'] == category].copy()
 
-    # Exclude same brand as what the user bought
-    if item_brand:
+    # Only exclude same brand when it's a real brand (not Generic)
+    if item_brand and item_brand.strip().lower() != 'generic':
         alts = alts[alts['brand'].str.lower() != item_brand.lower()]
 
-    # Also exclude the exact matched product name
     alts = alts[alts['product_name'].str.lower() != item['name'].lower()]
 
-    # Use unit_price for comparison
     ref_price = item_unit_price if item_unit_price else item['price']
-    alts['_unit_price'] = alts.apply(
-        lambda r: float(r.get('unit_price') or r.get('price')), axis=1
-    )
+    alts['_unit_price'] = alts.apply(lambda r: float(r.get('unit_price') or r.get('price')), axis=1)
     alts['savings'] = (ref_price - alts['_unit_price']) / ref_price * 100
-    alts = alts[alts['savings'] > 5]  # at least 5% cheaper per unit
+    alts = alts[alts['savings'] > 5]
     alts = alts.sort_values('savings', ascending=False)
     return alts.head(3).to_dict('records')
