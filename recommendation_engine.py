@@ -13,10 +13,12 @@ def recommend_alternatives(item, products, comparison_results, item_brand=None):
     item_category = comparison_results[0].get('category', '') if comparison_results else ''
     is_food = item_category in FOOD_CATEGORIES
     seen_names = set()
+    item_name_lower = item['name'].lower()
 
     for alt in comparison_results[:3]:
         alt_brand = alt.get('brand', '').strip().lower()
-        # Skip same-brand alternatives, but only when brand is a real brand (not Generic)
+
+        # Skip same brand only for real named brands (not Generic)
         if item_brand and item_brand.strip().lower() != 'generic':
             if alt_brand == item_brand.strip().lower():
                 continue
@@ -35,7 +37,14 @@ def recommend_alternatives(item, products, comparison_results, item_brand=None):
         health_score = alt.get('health_score', 0)
         is_healthier = is_food and int(health_score) >= 8
 
-        if is_healthier:
+        # Detect if this is the same product (user overpaid)
+        is_same_product = alt_name.lower() == item_name_lower or \
+                          alt_name.lower() in item_name_lower or \
+                          item_name_lower in alt_name.lower()
+
+        if is_same_product:
+            reason = f"You overpaid — standard price is NPR {int(round(alt_unit_price))} ({savings_pct:.0f}% cheaper)."
+        elif is_healthier:
             reason = f"Saves {savings_pct:.0f}% and has a better nutrition score ({int(health_score)}/10)."
         else:
             reason = f"Same category, {savings_pct:.0f}% cheaper per unit."
