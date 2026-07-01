@@ -27,7 +27,7 @@ def parse_receipt_text(raw_text, store_name=None):
 def fuzzy_match(name, products):
     """
     Jaccard keyword overlap (70%) + sequence ratio (30%).
-    Returns (best_match_dict, confidence_score) or (None, 0).
+    Returns (best_match_dict, confidence_score 0.0-1.0) or (None, 0.0).
     """
     name_lower = name.lower().strip()
     name_words = set(w for w in name_lower.split() if len(w) > 2)

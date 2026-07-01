@@ -2,10 +2,6 @@ import pandas as pd
 from product_db import load_products_with_store_prices
 
 def find_alternatives(item, products_df, item_brand=None, current_store=None):
-    """
-    Find cheaper alternatives in same category, across all stores.
-    Returns alts with store info for store-to-store comparison.
-    """
     item_name_lower = item['name'].lower()
     user_price = float(item['price'])
     category = None
@@ -33,10 +29,9 @@ def find_alternatives(item, products_df, item_brand=None, current_store=None):
     alts['_unit_price'] = alts.apply(
         lambda r: float(r.get('unit_price') or r.get('price') or 0), axis=1
     )
-    # Use user's actual paid price as savings reference
     alts['savings'] = (user_price - alts['_unit_price']) / user_price * 100
 
-    # Keep same product only if user overpaid vs DB price
+    # Remove same product if user didn't overpay
     if matched_product_name:
         same_mask = alts['product_name'].str.lower() == matched_product_name.lower()
         same_prices = alts.loc[same_mask, '_unit_price']
@@ -45,27 +40,26 @@ def find_alternatives(item, products_df, item_brand=None, current_store=None):
 
     alts = alts[alts['savings'] > 5]
     alts = alts.sort_values('savings', ascending=False)
-
     results = alts.head(3).to_dict('records')
 
-    # Enrich with store-level price comparison
+    # Enrich with store-level prices
     all_with_stores = load_products_with_store_prices()
     store_map = {p['product_name']: p['stores'] for p in all_with_stores}
 
     for alt in results:
         stores_data = store_map.get(alt['product_name'], [])
         if stores_data:
-            best = min(stores_data, key=lambda s: s['unit_price'])
+            best  = min(stores_data, key=lambda s: s['unit_price'])
             worst = max(stores_data, key=lambda s: s['unit_price'])
-            alt['store_prices'] = stores_data
-            alt['best_store'] = best['store_name']
-            alt['best_store_price'] = best['unit_price']
-            alt['worst_store'] = worst['store_name']
-            alt['price_range'] = f"NPR {best['unit_price']} – {worst['unit_price']}"
+            alt['store_prices']      = stores_data
+            alt['best_store']        = best['store_name']
+            alt['best_store_price']  = best['unit_price']
+            alt['worst_store']       = worst['store_name']
+            alt['price_range']       = f"NPR {best['unit_price']} – {worst['unit_price']}"
         else:
-            alt['store_prices'] = []
-            alt['best_store'] = current_store or 'General Market'
-            alt['best_store_price'] = alt.get('unit_price', alt.get('price', 0))
-            alt['price_range'] = None
+            alt['store_prices']     = []
+            alt['best_store']       = current_store or 'General Market'
+            alt['best_store_price'] = int(alt.get('unit_price') or alt.get('price') or 0)
+            alt['price_range']      = None
 
     return results

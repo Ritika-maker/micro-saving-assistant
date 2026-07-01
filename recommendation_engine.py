@@ -2,7 +2,7 @@ FOOD_CATEGORIES = {'Dairy', 'Bakery', 'Grains', 'Protein', 'Meat',
                    'Fruits', 'Beverages', 'Vegetables', 'Oils'}
 
 def recommend_alternatives(item, products, comparison_results,
-                           item_brand=None, match_confidence=None):
+                            item_brand=None, match_confidence=None):
     recs = []
     item_category = comparison_results[0].get('category', '') if comparison_results else ''
     is_food = item_category in FOOD_CATEGORIES
@@ -34,9 +34,9 @@ def recommend_alternatives(item, products, comparison_results,
                            alt_name.lower() in item_name_lower or
                            item_name_lower in alt_name.lower())
 
-        best_store = alt.get('best_store', '')
+        best_store   = alt.get('best_store', '')
         store_prices = alt.get('store_prices', [])
-        price_range = alt.get('price_range')
+        price_range  = alt.get('price_range')
 
         if is_same_product:
             reason = f"You overpaid — standard price is NPR {int(round(alt_unit_price))} ({savings_pct:.0f}% cheaper)."
