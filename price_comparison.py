@@ -1,13 +1,10 @@
 import pandas as pd
+from product_db import load_products_with_store_prices
 
-
-def find_alternatives(item, products_df, item_brand=None):
+def find_alternatives(item, products_df, item_brand=None, current_store=None):
     """
-    Find cheaper alternatives in the same category.
-    - Excludes the same brand (no point recommending what user already bought).
-    - Compares by unit_price for fairness across pack sizes.
-    - Falls back to price if unit_price missing.
-    - Returns up to 3 alternatives cheaper than the item.
+    Find cheaper alternatives in same category, across all stores.
+    Returns alts with store info for store-to-store comparison.
     """
     item_name_lower = item['name'].lower()
     user_price = float(item['price'])
@@ -28,25 +25,47 @@ def find_alternatives(item, products_df, item_brand=None):
 
     alts = products_df[products_df['category'] == category].copy()
 
-    # Only exclude same brand when it's a real named brand (not Generic)
+    # Skip same brand only for real named brands
     if item_brand and item_brand.strip().lower() != 'generic':
         alts = alts[alts['brand'].str.lower() != item_brand.lower()]
 
-    # Always use user's actual paid price as the reference for savings
+    alts = alts.copy()
     alts['_unit_price'] = alts.apply(
-        lambda r: float(r.get('unit_price') or r.get('price')), axis=1
+        lambda r: float(r.get('unit_price') or r.get('price') or 0), axis=1
     )
+    # Use user's actual paid price as savings reference
     alts['savings'] = (user_price - alts['_unit_price']) / user_price * 100
 
-    # Only exclude same product if user is NOT overpaying vs DB price
+    # Keep same product only if user overpaid vs DB price
     if matched_product_name:
-        same_product_mask = alts['product_name'].str.lower() == matched_product_name.lower()
-        same_product_db_price = alts.loc[same_product_mask, '_unit_price']
-        if not same_product_db_price.empty and user_price <= float(same_product_db_price.iloc[0]) * 1.05:
-            # User paid fair price — exclude same product from alts
-            alts = alts[~same_product_mask]
-        # else: user overpaid even for same product — keep it in alts
+        same_mask = alts['product_name'].str.lower() == matched_product_name.lower()
+        same_prices = alts.loc[same_mask, '_unit_price']
+        if not same_prices.empty and user_price <= float(same_prices.iloc[0]) * 1.05:
+            alts = alts[~same_mask]
 
     alts = alts[alts['savings'] > 5]
     alts = alts.sort_values('savings', ascending=False)
-    return alts.head(3).to_dict('records')
+
+    results = alts.head(3).to_dict('records')
+
+    # Enrich with store-level price comparison
+    all_with_stores = load_products_with_store_prices()
+    store_map = {p['product_name']: p['stores'] for p in all_with_stores}
+
+    for alt in results:
+        stores_data = store_map.get(alt['product_name'], [])
+        if stores_data:
+            best = min(stores_data, key=lambda s: s['unit_price'])
+            worst = max(stores_data, key=lambda s: s['unit_price'])
+            alt['store_prices'] = stores_data
+            alt['best_store'] = best['store_name']
+            alt['best_store_price'] = best['unit_price']
+            alt['worst_store'] = worst['store_name']
+            alt['price_range'] = f"NPR {best['unit_price']} – {worst['unit_price']}"
+        else:
+            alt['store_prices'] = []
+            alt['best_store'] = current_store or 'General Market'
+            alt['best_store_price'] = alt.get('unit_price', alt.get('price', 0))
+            alt['price_range'] = None
+
+    return results

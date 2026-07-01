@@ -1,0 +1,503 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Comparison — Micro-Savings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; }
+
+        /* Category color system */
+        .cat-pill { font-size:10px; font-weight:600; padding:2px 8px; border-radius:99px; white-space:nowrap; }
+        .cat-Dairy      { background:#dbeafe; color:#1d4ed8; }
+        .cat-Bakery     { background:#fef9c3; color:#92400e; }
+        .cat-Grains     { background:#fef3c7; color:#b45309; }
+        .cat-Protein    { background:#d1fae5; color:#065f46; }
+        .cat-Meat       { background:#fee2e2; color:#b91c1c; }
+        .cat-Fruits     { background:#f3e8ff; color:#6d28d9; }
+        .cat-Beverages  { background:#e0f2fe; color:#0369a1; }
+        .cat-Household  { background:#f1f5f9; color:#475569; }
+        .cat-Personal   { background:#fce7f3; color:#9d174d; }
+        .cat-Vegetables { background:#d1fae5; color:#15803d; }
+        .cat-Oils       { background:#fefce8; color:#a16207; }
+
+        /* Health bar */
+        .health-ring {
+            width:28px; height:28px; border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            font-size:10px; font-weight:700;
+        }
+        .h-great  { background:#d1fae5; color:#065f46; }
+        .h-good   { background:#fef9c3; color:#92400e; }
+        .h-low    { background:#fee2e2; color:#b91c1c; }
+
+        /* Confidence badges */
+        .conf-badge { font-size:10px; font-weight:600; padding:2px 7px; border-radius:99px; }
+        .conf-high  { background:#d1fae5; color:#065f46; }
+        .conf-mid   { background:#fef9c3; color:#92400e; }
+        .conf-low   { background:#fee2e2; color:#b91c1c; }
+        .conf-none  { background:#f1f5f9; color:#64748b; }
+
+        /* Price cells */
+        .price-cell { min-width:90px; text-align:center; }
+        .price-best  { background:#f0fdf4; }
+        .price-worst { background:#fff7ed; }
+        .price-empty { color:#d1d5db; }
+        .price-spread-bar { height:3px; border-radius:2px; background:#e2e8f0; position:relative; margin-top:4px; }
+        .price-spread-fill { height:100%; border-radius:2px; background:#16a34a; position:absolute; left:0; }
+
+        /* Table */
+        .compare-table { border-collapse:separate; border-spacing:0; width:100%; }
+        .compare-table th { 
+            position:sticky; top:0; background:#fff; z-index:5;
+            font-size:11px; font-weight:600; color:#6b7280; text-transform:uppercase;
+            letter-spacing:0.05em; padding:12px 16px; border-bottom:1px solid #e5e7eb;
+            white-space:nowrap;
+        }
+        .compare-table th.store-col {
+            background:#f8fafc; text-align:center; min-width:110px;
+        }
+        .compare-table td { 
+            padding:14px 16px; border-bottom:1px solid #f3f4f6;
+            vertical-align:middle;
+        }
+        .compare-table tr:hover td { background:#fafafa; }
+        .compare-table tr:hover td.price-best  { background:#e8fdf0; }
+        .compare-table tr:hover td.price-worst { background:#fff2e6; }
+
+        /* Filters */
+        .filter-btn { 
+            padding:6px 14px; border-radius:99px; font-size:12px; font-weight:500;
+            border:1px solid #e2e8f0; background:#fff; color:#64748b;
+            cursor:pointer; transition:all .15s; white-space:nowrap;
+        }
+        .filter-btn.active { background:#16a34a; color:#fff; border-color:#16a34a; }
+        .filter-btn:hover:not(.active) { border-color:#16a34a; color:#16a34a; }
+
+        /* Search */
+        .search-wrap { position:relative; }
+        .search-wrap input { padding-left:36px; }
+        .search-wrap .ico { position:absolute; left:11px; top:50%; transform:translateY(-50%); color:#9ca3af; }
+
+        /* Stat cards */
+        .stat-card { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:16px 20px; }
+
+        /* Sort arrows */
+        .sort-btn { cursor:pointer; user-select:none; }
+        .sort-btn:hover { color:#16a34a; }
+
+        /* Confidence history sparkline */
+        .spark { display:inline-flex; gap:2px; align-items:flex-end; height:16px; }
+        .spark-bar { width:4px; border-radius:1px; background:#86efac; }
+
+        /* Skeleton loader */
+        .skeleton { background:linear-gradient(90deg,#f3f4f6 25%,#e5e7eb 50%,#f3f4f6 75%);
+            background-size:200% 100%; animation:shimmer 1.5s infinite; border-radius:6px; }
+        @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+        /* Empty state */
+        .empty-state { text-align:center; padding:60px 20px; color:#9ca3af; }
+
+        /* Sticky product column */
+        .sticky-col { position:sticky; left:0; background:#fff; z-index:2; }
+        .compare-table tr:hover .sticky-col { background:#fafafa; }
+
+        /* Tooltip */
+        .has-tooltip { position:relative; cursor:help; }
+        .tooltip-text {
+            display:none; position:absolute; bottom:calc(100% + 6px); left:50%;
+            transform:translateX(-50%); background:#1e293b; color:#fff;
+            font-size:11px; padding:5px 9px; border-radius:6px; white-space:nowrap; z-index:20;
+        }
+        .has-tooltip:hover .tooltip-text { display:block; }
+
+        /* Spread indicator in header */
+        .spread-badge { 
+            font-size:10px; font-weight:600; padding:1px 6px; border-radius:4px;
+            background:#fef9c3; color:#92400e;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-20">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-leaf text-white text-sm"></i>
+                </div>
+                <span class="font-semibold text-gray-800">Micro-Savings</span>
+            </a>
+            <span class="text-gray-300">|</span>
+            <span class="text-sm font-medium text-gray-700"><i class="fas fa-store-alt mr-1 text-green-600"></i> Store Comparison</span>
+        </div>
+        <div class="flex gap-3 text-sm">
+            <a href="/" class="text-gray-500 hover:text-gray-800 flex items-center gap-1"><i class="fas fa-receipt"></i> Analyze</a>
+            <a href="/dashboard" class="text-gray-500 hover:text-gray-800 flex items-center gap-1"><i class="fas fa-chart-line"></i> History</a>
+            <a href="/logout" class="text-gray-500 hover:text-gray-800 flex items-center gap-1"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+</nav>
+
+<div class="max-w-7xl mx-auto px-6 py-6">
+
+    <!-- PAGE HEADER -->
+    <div class="flex items-start justify-between mb-6 flex-wrap gap-3">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">Price Comparison</h1>
+            <p class="text-sm text-gray-500 mt-0.5">Compare product prices across stores — prices are updated automatically from your receipts.</p>
+        </div>
+        <div class="flex gap-2">
+            <button onclick="exportCSV()" class="flex items-center gap-2 text-sm border border-gray-200 bg-white px-4 py-2 rounded-lg hover:border-green-500 hover:text-green-700 transition-colors">
+                <i class="fas fa-download"></i> Export CSV
+            </button>
+        </div>
+    </div>
+
+    <!-- STAT SUMMARY ROW -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6" id="statRow">
+        <div class="stat-card">
+            <p class="text-xs text-gray-400 uppercase font-semibold tracking-wide">Products</p>
+            <p class="text-2xl font-bold text-gray-900 mt-1" id="statProducts">—</p>
+        </div>
+        <div class="stat-card">
+            <p class="text-xs text-gray-400 uppercase font-semibold tracking-wide">Stores</p>
+            <p class="text-2xl font-bold text-gray-900 mt-1" id="statStores">—</p>
+        </div>
+        <div class="stat-card">
+            <p class="text-xs text-gray-400 uppercase font-semibold tracking-wide">Avg price spread</p>
+            <p class="text-2xl font-bold text-amber-600 mt-1" id="statSpread">—</p>
+        </div>
+        <div class="stat-card">
+            <p class="text-xs text-gray-400 uppercase font-semibold tracking-wide">Max savings opportunity</p>
+            <p class="text-2xl font-bold text-green-600 mt-1" id="statMaxSaving">—</p>
+        </div>
+    </div>
+
+    <!-- FILTERS + SEARCH -->
+    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm mb-4 p-4">
+        <div class="flex flex-wrap gap-3 items-center">
+            <!-- Search -->
+            <div class="search-wrap flex-1 min-w-48">
+                <i class="fas fa-search ico text-sm"></i>
+                <input id="searchInput" type="text" placeholder="Search products, brands…"
+                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"/>
+            </div>
+
+            <!-- Category filters -->
+            <div class="flex gap-2 flex-wrap" id="catFilters">
+                <button class="filter-btn active" data-cat="" onclick="setCategory(this, '')">All</button>
+                {% for cat in categories %}
+                <button class="filter-btn" data-cat="{{ cat }}" onclick="setCategory(this, '{{ cat }}')">{{ cat }}</button>
+                {% endfor %}
+            </div>
+
+            <!-- Sort -->
+            <select id="sortSelect" onchange="applySort()"
+                class="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white">
+                <option value="category">Sort: Category</option>
+                <option value="name">Sort: Name A–Z</option>
+                <option value="spread_desc">Sort: Biggest spread first</option>
+                <option value="health_desc">Sort: Health score</option>
+                <option value="conf_desc">Sort: Confidence</option>
+            </select>
+        </div>
+
+        <!-- Active store filters (checkboxes) -->
+        <div class="flex gap-3 flex-wrap mt-3 pt-3 border-t border-gray-50" id="storeCheckboxes"></div>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="compare-table" id="compareTable">
+                <thead id="tableHead"></thead>
+                <tbody id="tableBody">
+                    <!-- skeleton -->
+                    <tr>
+                        <td colspan="10" class="py-16 text-center text-gray-400">
+                            <i class="fas fa-circle-notch fa-spin text-green-500 text-2xl mb-3 block"></i>
+                            Loading price data…
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="flex gap-4 mt-3 text-xs text-gray-400 flex-wrap">
+        <span><span class="inline-block w-3 h-3 rounded bg-green-50 border border-green-200 mr-1"></span>Cheapest for this product</span>
+        <span><span class="inline-block w-3 h-3 rounded bg-orange-50 border border-orange-200 mr-1"></span>Most expensive</span>
+        <span><span class="inline-block text-gray-300 mr-1">—</span>Not stocked / no data</span>
+    </div>
+
+</div>
+
+<script>
+// ── State ────────────────────────────────────────────────────────────────────
+let allData      = null;   // raw API response
+let filtered     = [];     // products after search/category/store filter
+let activeCategory = '';
+let activeStores = new Set();  // store IDs to show (all = all)
+let sortMode     = 'category';
+let searchTimer  = null;
+
+// ── Bootstrap ────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+    loadData();
+    document.getElementById('searchInput').addEventListener('input', e => {
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(() => applyFilters(), 250);
+    });
+    document.getElementById('sortSelect').addEventListener('change', applySort);
+});
+
+async function loadData(q = '', category = '') {
+    const params = new URLSearchParams();
+    if (q)        params.set('q', q);
+    if (category) params.set('category', category);
+
+    const res  = await fetch('/api/compare?' + params.toString());
+    allData = await res.json();
+
+    // Init store filter (all on)
+    activeStores = new Set(allData.stores.map(s => s.id));
+    renderStoreCheckboxes();
+    applyFilters();
+}
+
+// ── Store checkboxes ─────────────────────────────────────────────────────────
+function renderStoreCheckboxes() {
+    const wrap = document.getElementById('storeCheckboxes');
+    wrap.innerHTML = '<span class="text-xs text-gray-400 self-center">Stores:</span>';
+    allData.stores.forEach(s => {
+        const id = `sc-${s.id}`;
+        const label = document.createElement('label');
+        label.className = 'flex items-center gap-1.5 cursor-pointer text-sm text-gray-600';
+        label.innerHTML = `
+            <input type="checkbox" id="${id}" checked
+                class="accent-green-600 w-3.5 h-3.5"
+                onchange="toggleStore(${s.id}, this.checked)"/>
+            <span>${s.store_name}</span>`;
+        wrap.appendChild(label);
+    });
+}
+
+function toggleStore(storeId, checked) {
+    if (checked) activeStores.add(storeId);
+    else         activeStores.delete(storeId);
+    renderTable();
+}
+
+// ── Filters ──────────────────────────────────────────────────────────────────
+function setCategory(btn, cat) {
+    activeCategory = cat;
+    document.querySelectorAll('#catFilters .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilters();
+}
+
+function applyFilters() {
+    if (!allData) return;
+    const q = document.getElementById('searchInput').value.trim().toLowerCase();
+    filtered = allData.products.filter(p => {
+        const matchQ   = !q || p.product_name.toLowerCase().includes(q) || (p.brand||'').toLowerCase().includes(q);
+        const matchCat = !activeCategory || p.category === activeCategory;
+        return matchQ && matchCat;
+    });
+    applySort(null, false);
+}
+
+function applySort(e, doFilter = true) {
+    if (doFilter) applyFilters();
+    sortMode = document.getElementById('sortSelect').value;
+    filtered.sort((a, b) => {
+        if (sortMode === 'name')        return a.product_name.localeCompare(b.product_name);
+        if (sortMode === 'spread_desc') return b.price_spread - a.price_spread;
+        if (sortMode === 'health_desc') return (b.health_score||0) - (a.health_score||0);
+        if (sortMode === 'conf_desc')   return (b.avg_confidence||0) - (a.avg_confidence||0);
+        // default: category then name
+        return a.category.localeCompare(b.category) || a.product_name.localeCompare(b.product_name);
+    });
+    renderTable();
+}
+
+// ── Render ───────────────────────────────────────────────────────────────────
+function renderTable() {
+    const visibleStores = allData.stores.filter(s => activeStores.has(s.id));
+    renderHead(visibleStores);
+    renderBody(visibleStores);
+    updateStats(visibleStores);
+}
+
+function renderHead(visibleStores) {
+    const thead = document.getElementById('tableHead');
+    let html = `<tr>
+        <th class="sticky-col" style="min-width:220px">Product</th>
+        <th style="min-width:80px">Category</th>
+        <th style="min-width:56px; text-align:center">Health</th>
+        <th style="min-width:80px">Confidence</th>`;
+    visibleStores.forEach(s => {
+        html += `<th class="store-col">${s.store_name}</th>`;
+    });
+    html += `<th style="min-width:80px; text-align:center">Spread</th></tr>`;
+    thead.innerHTML = html;
+}
+
+function renderBody(visibleStores) {
+    const tbody = document.getElementById('tableBody');
+
+    if (!filtered.length) {
+        tbody.innerHTML = `<tr><td colspan="20"><div class="empty-state">
+            <i class="fas fa-search text-3xl mb-3 block"></i>
+            No products match your filters.
+        </div></td></tr>`;
+        return;
+    }
+
+    let lastCat = null;
+    const rows = filtered.map(p => {
+        let catSep = '';
+        if (sortMode === 'category' && p.category !== lastCat) {
+            lastCat = p.category;
+            catSep = `<tr>
+                <td colspan="20" style="padding:6px 16px 4px; background:#f8fafc; border-bottom:1px solid #e5e7eb;">
+                    <span class="cat-pill cat-${p.category.replace(/\s+/g,'')}">${p.category}</span>
+                </td>
+            </tr>`;
+        }
+
+        // Health ring
+        const hs = p.health_score || 0;
+        const hClass = hs >= 8 ? 'h-great' : hs >= 6 ? 'h-good' : 'h-low';
+
+        // Confidence
+        const confHtml = confBadgeHtml(p.avg_confidence, p.confidence_history);
+
+        // Price cells
+        let priceCells = '';
+        visibleStores.forEach(s => {
+            const sp = p.store_prices[s.id];
+            if (!sp) {
+                priceCells += `<td class="price-cell price-empty text-gray-300 text-sm">—</td>`;
+            } else {
+                const isBest  = p.best_store_id  === s.id && Object.keys(p.store_prices).length > 1;
+                const isWorst = p.worst_store_id === s.id && Object.keys(p.store_prices).length > 1;
+                const cls = isBest ? 'price-best' : isWorst ? 'price-worst' : '';
+                const icon = isBest
+                    ? '<i class="fas fa-star text-green-500" style="font-size:9px;margin-right:2px"></i>'
+                    : isWorst
+                    ? '<i class="fas fa-arrow-up text-amber-500" style="font-size:9px;margin-right:2px"></i>'
+                    : '';
+                const age = sp.updated_at ? daysAgo(sp.updated_at) : null;
+                const ageTip = age !== null ? `Updated ${age === 0 ? 'today' : age + 'd ago'}` : '';
+                priceCells += `
+                    <td class="price-cell ${cls} has-tooltip">
+                        <div class="font-semibold text-gray-800 text-sm">${icon}NPR ${sp.unit_price}</div>
+                        ${ageTip ? `<div class="text-xs text-gray-400">${ageTip}</div>` : ''}
+                        <div class="tooltip-text">${ageTip || 'Price data'}</div>
+                    </td>`;
+            }
+        });
+
+        // Spread cell
+        const spreadHtml = p.price_spread > 0
+            ? `<td class="price-cell text-center">
+                <span class="spread-badge">NPR ${p.price_spread}</span>
+                <div class="price-spread-bar mt-1 mx-2">
+                    <div class="price-spread-fill" style="width:${Math.min(100, p.price_spread / 2)}%"></div>
+                </div>
+               </td>`
+            : `<td class="price-cell text-center text-gray-300 text-xs">single store</td>`;
+
+        return catSep + `<tr>
+            <td class="sticky-col">
+                <div class="font-medium text-gray-800 text-sm">${p.product_name}</div>
+                <div class="text-xs text-gray-400 mt-0.5">${p.brand || ''} · ${p.unit || ''}</div>
+            </td>
+            <td><span class="cat-pill cat-${(p.category||'').replace(/\s+/g,'')}">${p.category||''}</span></td>
+            <td class="text-center">
+                <div class="health-ring ${hClass} mx-auto">${hs}</div>
+            </td>
+            <td>${confHtml}</td>
+            ${priceCells}
+            ${spreadHtml}
+        </tr>`;
+    });
+
+    tbody.innerHTML = rows.join('');
+}
+
+function updateStats(visibleStores) {
+    document.getElementById('statProducts').textContent = filtered.length;
+    document.getElementById('statStores').textContent   = visibleStores.length;
+
+    const spreads   = filtered.map(p => p.price_spread).filter(s => s > 0);
+    const avgSpread = spreads.length ? Math.round(spreads.reduce((a,b)=>a+b,0)/spreads.length) : 0;
+    const maxSpread = spreads.length ? Math.max(...spreads) : 0;
+
+    document.getElementById('statSpread').textContent    = avgSpread ? `NPR ${avgSpread}` : '—';
+    document.getElementById('statMaxSaving').textContent = maxSpread ? `NPR ${maxSpread}` : '—';
+}
+
+// ── Confidence badge ─────────────────────────────────────────────────────────
+function confBadgeHtml(avg, history) {
+    if (avg === null || avg === undefined) {
+        return `<span class="conf-badge conf-none">No history</span>`;
+    }
+    const cls = avg >= 70 ? 'conf-high' : avg >= 45 ? 'conf-mid' : 'conf-low';
+    const sparkHtml = history && history.length > 1
+        ? `<div class="spark ml-1">${
+            history.slice(-6).map(v => {
+                const h = Math.max(3, Math.round(v / 10));
+                const col = v >= 70 ? '#86efac' : v >= 45 ? '#fde68a' : '#fca5a5';
+                return `<div class="spark-bar" style="height:${h}px;background:${col}" title="${v}%"></div>`;
+            }).join('')
+          }</div>`
+        : '';
+    return `<div class="flex items-center gap-1">
+        <span class="conf-badge ${cls}">${avg}%</span>
+        ${sparkHtml}
+    </div>`;
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function daysAgo(isoStr) {
+    try {
+        const d = new Date(isoStr);
+        const diff = Math.floor((Date.now() - d.getTime()) / 86400000);
+        return diff;
+    } catch { return null; }
+}
+
+function exportCSV() {
+    if (!allData || !filtered.length) return;
+    const visibleStores = allData.stores.filter(s => activeStores.has(s.id));
+    const storeHeaders  = visibleStores.map(s => s.store_name);
+    const rows = [['Product','Category','Brand','Unit','Health Score','Avg Confidence',...storeHeaders,'Price Spread']];
+    filtered.forEach(p => {
+        const prices = visibleStores.map(s => {
+            const sp = p.store_prices[s.id];
+            return sp ? sp.unit_price : '';
+        });
+        rows.push([
+            p.product_name, p.category, p.brand, p.unit,
+            p.health_score, p.avg_confidence ?? '',
+            ...prices, p.price_spread
+        ]);
+    });
+    const csv  = rows.map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const a    = document.createElement('a');
+    a.href     = URL.createObjectURL(blob);
+    a.download = 'price_comparison.csv';
+    a.click();
+}
+</script>
+</body>
+</html>

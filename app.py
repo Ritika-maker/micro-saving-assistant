@@ -217,5 +217,136 @@ def export_report(analysis_id):
     except Exception as e:
         return f"Error generating report: {str(e)}", 500
 
+# ── Store comparison routes ───────────────────────────────────────────────────
+
+@app.route('/compare')
+@login_required
+def compare():
+    conn = sqlite3.connect('users.db')
+    c = conn.cursor()
+    c.execute("SELECT DISTINCT category FROM products WHERE category != '' ORDER BY category")
+    categories = [r[0] for r in c.fetchall()]
+    conn.close()
+    return render_template('compare.html', categories=categories)
+
+
+@app.route('/api/compare')
+@login_required
+def api_compare():
+    """
+    Returns product × store price matrix.
+    Joins: products → store_prices → stores (all in users.db).
+    Also pulls confidence history from past analyses for the current user.
+    """
+    q        = request.args.get('q', '').strip().lower()
+    category = request.args.get('category', '').strip()
+
+    conn = sqlite3.connect('users.db')
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+
+    # All stores
+    c.execute("SELECT id, store_name FROM stores ORDER BY store_name")
+    all_stores = [{"id": r["id"], "store_name": r["store_name"]} for r in c.fetchall()]
+
+    # Build WHERE for product filters
+    where_clauses, params = [], []
+    if q:
+        where_clauses.append("(LOWER(p.product_name) LIKE ? OR LOWER(p.brand) LIKE ?)")
+        params += [f'%{q}%', f'%{q}%']
+    if category:
+        where_clauses.append("p.category = ?")
+        params.append(category)
+    where_sql = ("WHERE " + " AND ".join(where_clauses)) if where_clauses else ""
+
+    # Fetch product + store price rows
+    c.execute(f'''
+        SELECT
+            p.product_name,
+            p.category,
+            p.brand,
+            p.unit,
+            p.health_score,
+            sp.price,
+            sp.unit_price,
+            sp.updated_at,
+            s.id        AS store_id,
+            s.store_name
+        FROM products p
+        JOIN store_prices sp ON sp.product_id = p.id
+        JOIN stores       s  ON s.id          = sp.store_id
+        {where_sql}
+        ORDER BY p.category, p.product_name, sp.unit_price ASC
+    ''', params)
+    rows = c.fetchall()
+
+    # Pull confidence history from past analyses
+    c.execute('''
+        SELECT raw_data FROM analyses
+        WHERE user_id = ? AND raw_data IS NOT NULL AND raw_data != '{}'
+        ORDER BY analysis_date DESC LIMIT 30
+    ''', (current_user.id,))
+    conf_history = {}
+    for (raw,) in c.fetchall():
+        try:
+            data = json.loads(raw)
+            for item in data.get('items', []):
+                name = item.get('normalized') or item.get('name', '')
+                conf = item.get('confidence')
+                if name and conf is not None:
+                    conf_history.setdefault(name, []).append(int(conf))
+        except Exception:
+            pass
+
+    conn.close()
+
+    # Group rows into product objects keyed by product_name
+    from collections import OrderedDict
+    products_map = OrderedDict()
+    for r in rows:
+        key = r["product_name"]
+        if key not in products_map:
+            confs    = conf_history.get(key, [])
+            avg_conf = round(sum(confs) / len(confs)) if confs else None
+            products_map[key] = {
+                "product_name":       key,
+                "category":           r["category"],
+                "brand":              r["brand"],
+                "unit":               r["unit"],
+                "health_score":       r["health_score"],
+                "avg_confidence":     avg_conf,
+                "confidence_history": confs,
+                "store_prices":       {},
+                "best_store_id":      None,
+                "worst_store_id":     None,
+                "price_spread":       0,
+            }
+        products_map[key]["store_prices"][r["store_id"]] = {
+            "price":      int(round(r["price"])),
+            "unit_price": int(round(r["unit_price"])),
+            "updated_at": r["updated_at"],
+            "store_name": r["store_name"],
+        }
+
+    # Compute best / worst store and price spread per product
+    for prod in products_map.values():
+        prices = [(sid, sp["unit_price"]) for sid, sp in prod["store_prices"].items()]
+        if len(prices) > 1:
+            best  = min(prices, key=lambda x: x[1])
+            worst = max(prices, key=lambda x: x[1])
+            prod["best_store_id"]  = best[0]
+            prod["worst_store_id"] = worst[0]
+            prod["price_spread"]   = worst[1] - best[1]
+        elif prices:
+            prod["best_store_id"]  = prices[0][0]
+            prod["worst_store_id"] = prices[0][0]
+            prod["price_spread"]   = 0
+
+    return jsonify({
+        "stores":   all_stores,
+        "products": list(products_map.values()),
+    })
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
