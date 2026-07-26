@@ -32,6 +32,7 @@ init_db()
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+login_manager.login_message = 'Please log in to access this page.'
 
 class User(UserMixin):
     def __init__(self, id, username):
@@ -48,6 +49,12 @@ def load_user(user_id):
     return User(user[0], user[1]) if user else None
 
 @app.route('/')
+def landing():
+    # Always show home page regardless of login state
+    return render_template('home.html')
+
+@app.route('/app')
+@login_required
 def index():
     stores = get_all_stores()
     return render_template('index.html', stores=stores)

@@ -87,29 +87,7 @@
 </head>
 <body class="bg-gray-50 min-h-screen">
 
-<!-- NAV -->
-<nav class="bg-white border-b border-gray-100 sticky top-0 z-10">
-    <div class="max-w-5xl mx-auto px-6 py-3 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                <i class="fas fa-leaf text-white text-sm"></i>
-            </div>
-            <span class="font-semibold text-gray-800">Micro-Savings</span>
-        </div>
-        <div class="flex items-center gap-4 text-sm">
-            <a href="{{ url_for('index') }}"
-               class="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-                <i class="fas fa-plus text-xs"></i> New Analysis
-            </a>
-            <a href="/compare" class="text-gray-400 hover:text-gray-600 transition-colors flex items-center gap-1 text-sm">
-                <i class="fas fa-store-alt"></i> Compare
-            </a>
-            <a href="{{ url_for('logout') }}" class="text-gray-400 hover:text-gray-600 transition-colors">
-                <i class="fas fa-sign-out-alt"></i>
-            </a>
-        </div>
-    </div>
-</nav>
+{% include "_nav.html" %}
 
 <div class="max-w-5xl mx-auto px-6 py-10">
 

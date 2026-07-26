@@ -5,42 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Micro-Savings</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-50">
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="bg-white p-8 rounded-3xl shadow-xl w-full max-w-md">
-            <h1 class="text-3xl font-bold text-center text-green-600 mb-8">Create Account</h1>
-            
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="mb-4 p-3 rounded-xl {{ 'bg-green-100 text-green-700' if category == 'success' else 'bg-red-100 text-red-700' }}">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
+<body class="bg-gray-50 min-h-screen">
 
-            <form method="POST" class="space-y-6">
-                <div>
-                    <label class="block text-sm font-medium mb-2">Username</label>
-                    <input type="text" name="username" required 
-                           class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-green-500">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-2">Password</label>
-                    <input type="password" name="password" required 
-                           class="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-green-500">
-                </div>
-                <button type="submit" 
-                        class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-2xl">
-                    Register
-                </button>
-            </form>
-            <p class="text-center mt-6 text-sm">
-                Already have an account? <a href="{{ url_for('login') }}" class="text-green-600 hover:underline">Login</a>
-            </p>
+{% include "_nav.html" %}
+
+<div class="flex items-center justify-center min-h-[calc(100vh-60px)] px-4 py-12">
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 w-full max-w-md">
+
+        <div class="text-center mb-8">
+            <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-leaf text-white text-lg"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-900">Create an account</h1>
+            <p class="text-sm text-gray-500 mt-1">Free forever. No credit card needed.</p>
         </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="mb-4 p-3 rounded-xl text-sm {{ 'bg-green-50 text-green-700 border border-green-200' if category == 'success' else 'bg-red-50 text-red-700 border border-red-200' }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" class="space-y-5">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Username</label>
+                <input type="text" name="username" required autocomplete="username"
+                       class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Password</label>
+                <input type="password" name="password" required autocomplete="new-password"
+                       class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+            </div>
+            <button type="submit"
+                    class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm">
+                Create account
+            </button>
+        </form>
+
+        <p class="text-center mt-6 text-sm text-gray-500">
+            Already have an account?
+            <a href="{{ url_for('login') }}" class="text-green-600 font-medium hover:underline">Sign in</a>
+        </p>
     </div>
+</div>
 </body>
 </html>

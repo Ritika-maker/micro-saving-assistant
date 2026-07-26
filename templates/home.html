@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-Savings — Smart Grocery Shopping in Nepal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter..." rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --green:   #14532d;
+            --green-m: #16a34a;
+            --green-l: #dcfce7;
+            --saffron: #d97706;
+            --saff-l:  #fef3c7;
+            --cream:   #fafaf7;
+            --ink:     #111827;
+            --muted:   #6b7280;
+            --border:  #e5e7eb;
+            --white:   #ffffff;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        /* ── NAV ── */
+        /* ── HERO ── */
+        .hero {
+            max-width: 1100px; margin: 0 auto;
+            padding: 80px 24px 60px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--saff-l); color: var(--saffron);
+            font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+            padding: 5px 12px; border-radius: 99px; margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(38px, 5vw, 58px);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--ink);
+            margin-bottom: 20px;
+        }
+        .hero-title em {
+            font-style: normal;
+            color: var(--green-m);
+        }
+
+        .hero-body {
+            font-size: 17px; color: var(--muted); line-height: 1.7;
+            margin-bottom: 32px; max-width: 480px;
+        }
+
+        .hero-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 12px;
+            background: var(--green); color: #fff;
+            font-size: 15px; font-weight: 600; text-decoration: none;
+            transition: background .15s, transform .1s;
+        }
+        .btn-primary:hover { background: var(--green-m); transform: translateY(-1px); }
+        .btn-ghost {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 24px; border-radius: 12px;
+            border: 1.5px solid var(--border);
+            color: var(--ink); font-size: 15px; font-weight: 500;
+            text-decoration: none; transition: border-color .15s;
+        }
+        .btn-ghost:hover { border-color: var(--green-m); color: var(--green-m); }
+
+        .hero-stats {
+            display: flex; gap: 28px; margin-top: 36px; padding-top: 28px;
+            border-top: 1px solid var(--border);
+        }
+        .stat-item { display: flex; flex-direction: column; }
+        .stat-num { font-size: 26px; font-weight: 800; color: var(--green); }
+        .stat-lbl { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+        /* ── RECEIPT DEMO (signature element) ── */
+        .receipt-demo {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 24px 80px rgba(0,0,0,.10), 0 4px 16px rgba(0,0,0,.06);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .receipt-header {
+            background: var(--green);
+            padding: 18px 24px;
+            color: white;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .receipt-header-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.4); }
+
+        .receipt-body { padding: 20px 24px; }
+        .receipt-store {
+            text-align: center; padding-bottom: 14px; border-bottom: 1px dashed var(--border);
+            margin-bottom: 14px;
+        }
+        .receipt-store-name { font-weight: 700; font-size: 14px; color: var(--ink); }
+        .receipt-store-sub { font-size: 11px; color: var(--muted); }
+
+        .receipt-row {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            padding: 7px 0; border-bottom: 1px solid #f9fafb;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity .4s ease, transform .4s ease;
+        }
+        .receipt-row.visible { opacity: 1; transform: translateY(0); }
+
+        .receipt-item-name { font-size: 13px; color: var(--ink); font-weight: 500; }
+        .receipt-item-sub  { font-size: 11px; color: var(--muted); margin-top: 1px; }
+        .receipt-price     { font-size: 13px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+        .receipt-saving {
+            display: inline-flex; align-items: center; gap: 4px;
+            background: var(--green-l); color: var(--green);
+            font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 99px;
+            margin-top: 3px; opacity: 0; transition: opacity .5s ease .3s;
+        }
+        .receipt-saving.visible { opacity: 1; }
+
+        .receipt-total {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 14px 0 0; margin-top: 6px;
+            border-top: 2px solid var(--ink);
+            opacity: 0; transition: opacity .5s ease;
+        }
+        .receipt-total.visible { opacity: 1; }
+        .receipt-total-label { font-weight: 700; font-size: 14px; }
+        .receipt-total-saving {
+            background: var(--green); color: white;
+            padding: 4px 12px; border-radius: 8px;
+            font-size: 12px; font-weight: 700;
+        }
+
+        /* scan line animation */
+        .scan-line {
+            position: absolute; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(22,163,74,.6), transparent);
+            top: 60px; animation: scan 2s ease-in-out 0.3s forwards;
+            opacity: 0;
+        }
+        @keyframes scan {
+            0%   { top: 60px; opacity: 1; }
+            100% { top: 340px; opacity: 0; }
+        }
+
+        /* ── HOW IT WORKS ── */
+        .section { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+        .section-eyebrow {
+            text-align: center;
+            font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+            color: var(--saffron); margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 42px); font-weight: 800;
+            text-align: center; margin-bottom: 16px;
+        }
+        .section-sub {
+            text-align: center; color: var(--muted); font-size: 16px; max-width: 560px; margin: 0 auto 56px;
+        }
+
+        .steps-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+        }
+        .step-card {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 18px; padding: 32px 28px;
+            transition: box-shadow .2s, transform .2s;
+        }
+        .step-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,.07); transform: translateY(-3px); }
+        .step-icon {
+            width: 48px; height: 48px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; margin-bottom: 20px;
+        }
+        .icon-green  { background: var(--green-l); color: var(--green); }
+        .icon-saff   { background: var(--saff-l);  color: var(--saffron); }
+        .icon-blue   { background: #dbeafe; color: #1d4ed8; }
+        .step-title  { font-weight: 700; font-size: 17px; margin-bottom: 8px; }
+        .step-body   { color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+        /* ── WHY SECTION ── */
+        .why-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+        }
+        .why-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(26px, 3.5vw, 38px); font-weight: 800;
+            margin-bottom: 20px; line-height: 1.2;
+        }
+        .why-text p { color: var(--muted); font-size: 15px; line-height: 1.75; margin-bottom: 16px; }
+        .why-points { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+        .why-points li {
+            display: flex; align-items: flex-start; gap: 12px;
+            font-size: 14px; color: var(--ink);
+        }
+        .why-check {
+            width: 22px; height: 22px; border-radius: 6px;
+            background: var(--green-l); color: var(--green);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px; flex-shrink: 0; margin-top: 1px;
+        }
+
+        .why-visual {
+            background: var(--white); border-radius: 20px;
+            border: 1px solid var(--border);
+            padding: 28px; display: flex; flex-direction: column; gap: 14px;
+        }
+        .market-card {
+            display: flex; align-items: center; gap: 14px;
+            padding: 14px 16px; border-radius: 12px; background: var(--cream);
+            border: 1px solid var(--border);
+        }
+        .market-icon { font-size: 24px; }
+        .market-name { font-weight: 600; font-size: 14px; }
+        .market-sub  { font-size: 12px; color: var(--muted); }
+        .market-price{
+            margin-left: auto; font-weight: 700; font-size: 15px;
+            color: var(--green);
+        }
+        .market-saving-tag {
+            font-size: 10px; font-weight: 700;
+            background: var(--green-l); color: var(--green);
+            padding: 2px 8px; border-radius: 99px; margin-left: 8px;
+        }
+
+        /* ── FEATURES ── */
+        .features-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+        }
+        .feat-card {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 16px; padding: 24px 22px;
+            display: flex; gap: 16px;
+        }
+        .feat-icon {
+            width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center; font-size: 16px;
+        }
+        .feat-title { font-weight: 700; font-size: 15px; margin-bottom: 5px; }
+        .feat-body  { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+        /* ── CTA BANNER ── */
+        .cta-banner {
+            max-width: 1100px; margin: 0 auto 80px; padding: 0 24px;
+        }
+        .cta-inner {
+            background: var(--green);
+            border-radius: 24px; padding: 60px 48px;
+            display: flex; align-items: center; justify-content: space-between; gap: 32px;
+            flex-wrap: wrap;
+            position: relative; overflow: hidden;
+        }
+        .cta-inner::before {
+            content: ''; position: absolute;
+            width: 300px; height: 300px; border-radius: 50%;
+            background: rgba(255,255,255,.04);
+            top: -80px; right: -60px;
+        }
+        .cta-inner::after {
+            content: ''; position: absolute;
+            width: 200px; height: 200px; border-radius: 50%;
+            background: rgba(255,255,255,.03);
+            bottom: -60px; left: 120px;
+        }
+        .cta-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 3vw, 36px); font-weight: 800;
+            color: #fff; margin-bottom: 8px;
+        }
+        .cta-text p { color: rgba(255,255,255,.7); font-size: 15px; }
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 12px;
+            background: #fff; color: var(--green);
+            font-size: 15px; font-weight: 700; text-decoration: none;
+            transition: transform .1s;
+            position: relative; z-index: 1;
+        }
+        .btn-white:hover { transform: translateY(-2px); }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 24px; text-align: center;
+            color: var(--muted); font-size: 13px;
+        }
+        .footer-logo { font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+
+        /* ── DIVIDER ── */
+        .section-divider {
+            max-width: 1100px; margin: 0 auto;
+            height: 1px; background: var(--border); opacity: .6;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 20px 40px; }
+            .hero-body { max-width: 100%; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .cta-inner { padding: 40px 28px; }
+            .receipt-demo { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+{% include "_nav.html" %}
+
+<!-- HERO -->
+<section>
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-eyebrow">
+                <i class="fas fa-map-marker-alt" style="font-size:10px;"></i>
+                Built for Nepal's grocery market
+            </div>
+            <h1 class="hero-title">
+                Stop paying more<br>than you should<br>at the <em>grocery store</em>
+            </h1>
+            <p class="hero-body">
+                Scan your receipt, discover cheaper alternatives across Bhatbhateni, Salesways, and local markets — and learn exactly where your money goes, every week.
+            </p>
+            <div class="hero-actions">
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('index') }}" class="btn-primary">
+                    <i class="fas fa-leaf"></i> Go to Analyzer
+                </a>
+                {% else %}
+                <a href="/register" class="btn-primary">
+                    <i class="fas fa-leaf"></i> Start saving today
+                </a>
+                {% endif %}
+                <a href="#how-it-works" class="btn-ghost">
+                    See how it works <i class="fas fa-arrow-down" style="font-size:12px;"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">23+</span>
+                    <span class="stat-lbl">Products tracked</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">NPR 0</span>
+                    <span class="stat-lbl">Cost to use</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">2 stores</span>
+                    <span class="stat-lbl">Compared today</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANIMATED RECEIPT -->
+        <div>
+            <div class="receipt-demo" id="receiptDemo">
+                <div class="scan-line" id="scanLine"></div>
+                <div class="receipt-header">
+                    <div class="receipt-header-dot"></div>
+                    <div class="receipt-header-dot"></div>
+                    <span style="font-size:13px; font-weight:600; margin-left:4px;">Receipt Analysis</span>
+                </div>
+                <div class="receipt-body">
+                    <div class="receipt-store">
+                        <div class="receipt-store-name">Bhatbhateni Superstore</div>
+                        <div class="receipt-store-sub">Kathmandu · Today</div>
+                    </div>
+
+                    <div class="receipt-row" id="row1">
+                        <div>
+                            <div class="receipt-item-name">Amul Milk 1L</div>
+                            <div class="receipt-saving" id="sav1"><i class="fas fa-arrow-down" style="font-size:8px;"></i> Mother Dairy saves 11%</div>
+                        </div>
+                        <div class="receipt-price">NPR 95</div>
+                    </div>
+
+                    <div class="receipt-row" id="row2">
+                        <div>
+                            <div class="receipt-item-name">Basmati Rice 1kg</div>
+                            <div class="receipt-saving" id="sav2"><i class="fas fa-check" style="font-size:8px;"></i> Best price in market</div>
+                        </div>
+                        <div class="receipt-price">NPR 180</div>
+                    </div>
+
+                    <div class="receipt-row" id="row3">
+                        <div>
+                            <div class="receipt-item-name">Coca Cola 2L</div>
+                            <div class="receipt-saving" id="sav3"><i class="fas fa-arrow-down" style="font-size:8px;"></i> Pepsi saves 6%</div>
+                        </div>
+                        <div class="receipt-price">NPR 160</div>
+                    </div>
+
+                    <div class="receipt-row" id="row4">
+                        <div>
+                            <div class="receipt-item-name">Sunflower Oil 1L</div>
+                            <div class="receipt-saving" id="sav4"><i class="fas fa-arrow-down" style="font-size:8px;"></i> Generic saves 19%</div>
+                        </div>
+                        <div class="receipt-price">NPR 350</div>
+                    </div>
+
+                    <div class="receipt-total" id="receiptTotal">
+                        <div>
+                            <div class="receipt-total-label">Total: NPR 785</div>
+                            <div style="font-size:12px; color:var(--muted); margin-top:2px;">You could pay NPR 712</div>
+                        </div>
+                        <div class="receipt-total-saving">Save NPR 73</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how-it-works">
+    <p class="section-eyebrow">Simple process</p>
+    <h2 class="section-title">Three steps to spend less</h2>
+    <p class="section-sub">No complicated setup. Enter your items, get instant recommendations tailored to what's actually in Nepali stores.</p>
+
+    <div class="steps-grid">
+        <div class="step-card">
+            <div class="step-icon icon-green">
+                <i class="fas fa-receipt"></i>
+            </div>
+            <div class="step-title">Enter your receipt</div>
+            <p class="step-body">Type items and prices directly, paste receipt text, or upload a photo. Works with any grocery store in Kathmandu.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-icon icon-saff">
+                <i class="fas fa-search-dollar"></i>
+            </div>
+            <div class="step-title">We find cheaper alternatives</div>
+            <p class="step-body">Our engine matches each item to products across Bhatbhateni, General Market, and more — and surfaces the ones that save you money.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-icon icon-blue">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="step-title">Track your savings over time</div>
+            <p class="step-body">Every analysis is saved to your history. See how much you're spending each week and where the opportunities are biggest.</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- WHY SECTION -->
+<section class="section" id="why">
+    <div class="why-grid">
+        <div class="why-text">
+            <p style="font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--saffron); margin-bottom:12px;">Why we built this</p>
+            <h2>Grocery prices in Nepal vary wildly — and most people don't realise it</h2>
+            <p>The same litre of milk can cost NPR 80 at one store and NPR 110 at another, just streets apart. A bag of rice can vary by 30% depending on the brand and where you buy it.</p>
+            <p>Most apps built for this problem are designed for Western supermarkets. We built Micro-Savings specifically for Kathmandu's market — the stores people actually shop at, the brands people actually buy, and prices that reflect reality.</p>
+            <ul class="why-points">
+                <li>
+                    <div class="why-check"><i class="fas fa-check" style="font-size:9px;"></i></div>
+                    <span>Prices pulled from real Kathmandu stores — Bhatbhateni, Salesways, General Market</span>
+                </li>
+                <li>
+                    <div class="why-check"><i class="fas fa-check" style="font-size:9px;"></i></div>
+                    <span>Recommendations always exclude the brand you already bought (no pointless same-brand suggestions)</span>
+                </li>
+                <li>
+                    <div class="why-check"><i class="fas fa-check" style="font-size:9px;"></i></div>
+                    <span>Healthier alternatives flagged for food items — not for soap or shampoo</span>
+                </li>
+                <li>
+                    <div class="why-check"><i class="fas fa-check" style="font-size:9px;"></i></div>
+                    <span>Prices update automatically when you log receipts — no manual maintenance needed</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="why-visual">
+            <div style="font-size:12px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px;">Amul Milk 1L — Price across stores</div>
+
+            <div class="market-card">
+                <div class="market-icon">🏪</div>
+                <div>
+                    <div class="market-name">Bhatbhateni</div>
+                    <div class="market-sub">Updated today</div>
+                </div>
+                <div class="market-price">NPR 95</div>
+            </div>
+
+            <div class="market-card" style="border-color: var(--green-m); background: #f0fdf4;">
+                <div class="market-icon">🛒</div>
+                <div>
+                    <div class="market-name">General Market</div>
+                    <div class="market-sub">Updated today</div>
+                </div>
+                <div class="market-price">
+                    NPR 85
+                    <span class="market-saving-tag">Cheapest</span>
+                </div>
+            </div>
+
+            <div class="market-card">
+                <div class="market-icon">🏬</div>
+                <div>
+                    <div class="market-name">Salesways</div>
+                    <div class="market-sub">2 days ago</div>
+                </div>
+                <div class="market-price">NPR 90</div>
+            </div>
+
+            <div style="background: var(--green); border-radius: 12px; padding: 14px 16px; color: #fff; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <div style="font-size:12px; opacity:.8;">Buy at General Market instead</div>
+                    <div style="font-weight:700; font-size:15px; margin-top:2px;">Save NPR 10 per litre</div>
+                </div>
+                <div style="font-size:22px; font-weight:800;">11%</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FEATURES -->
+<section class="section">
+    <p class="section-eyebrow">Everything included</p>
+    <h2 class="section-title">Built to be actually useful</h2>
+    <p class="section-sub">No premium plan. No hidden limits. Every feature is free.</p>
+
+    <div class="features-grid">
+        <div class="feat-card">
+            <div class="feat-icon icon-green"><i class="fas fa-table"></i></div>
+            <div>
+                <div class="feat-title">Structured item entry</div>
+                <p class="feat-body">Type items into a clean table with category, brand, and price. Or paste raw receipt text. Or upload a photo. Whatever's fastest for you.</p>
+            </div>
+        </div>
+        <div class="feat-card">
+            <div class="feat-icon icon-saff"><i class="fas fa-store-alt"></i></div>
+            <div>
+                <div class="feat-title">Store price comparison</div>
+                <p class="feat-body">See every product side-by-side across all stores you've shopped at. Green star = cheapest. Prices update from your own receipts.</p>
+            </div>
+        </div>
+        <div class="feat-card">
+            <div class="feat-icon icon-blue"><i class="fas fa-history"></i></div>
+            <div>
+                <div class="feat-title">Full savings history</div>
+                <p class="feat-body">Every receipt is saved. See your spending trend, total potential savings, and download any analysis as a CSV report.</p>
+            </div>
+        </div>
+        <div class="feat-card">
+            <div class="feat-icon" style="background:#fce7f3; color:#9d174d;"><i class="fas fa-heartbeat"></i></div>
+            <div>
+                <div class="feat-title">Nutrition-aware suggestions</div>
+                <p class="feat-body">For food items, we flag when a cheaper alternative also has a higher nutrition score. Spend less and eat better.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+    <div class="cta-inner">
+        <div class="cta-text">
+            <h2>Start finding savings on your next grocery run</h2>
+            <p>Free to use. No credit card. Just smarter shopping.</p>
+        </div>
+        {% if current_user.is_authenticated %}
+        <a href="{{ url_for('index') }}" class="btn-white">
+            <i class="fas fa-leaf" style="color:var(--green);"></i>
+            Go to Analyzer
+        </a>
+        {% else %}
+        <a href="/register" class="btn-white">
+            <i class="fas fa-leaf" style="color:var(--green);"></i>
+            Create free account
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">🌿 Micro-Savings</div>
+    <p>Built for Kathmandu's grocery shoppers &nbsp;·&nbsp; Free to use &nbsp;·&nbsp; <a href="{{ url_for('login') }}" style="color:inherit;">Login</a> &nbsp;·&nbsp; <a href="{{ url_for('register') }}" style="color:inherit;">Register</a></p>
+</footer>
+
+<script>
+// Animate the receipt demo rows on load
+const rows = ['row1','row2','row3','row4'];
+const savs = ['sav1','sav2','sav3','sav4'];
+
+rows.forEach((id, i) => {
+    setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add('visible');
+        setTimeout(() => {
+            const sav = document.getElementById(savs[i]);
+            if (sav) sav.classList.add('visible');
+        }, 400);
+    }, 800 + i * 450);
+});
+
+setTimeout(() => {
+    const total = document.getElementById('receiptTotal');
+    if (total) total.classList.add('visible');
+}, 800 + 4 * 450 + 200);
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+</script>
+</body>
+</html>
