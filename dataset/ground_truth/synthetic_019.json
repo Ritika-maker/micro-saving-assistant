@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_019",
+  "image_file": "synthetic_019.png",
+  "source": "synthetic",
+  "condition": "clear",
+  "store_name": "SUPER MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Bun Pack",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 168.75
+    },
+    {
+      "product_name": "Wai Wai Instant Noodles",
+      "quantity": 1,
+      "unit": "75g",
+      "price": 25.5
+    },
+    {
+      "product_name": "Brown Rice",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 120
+    },
+    {
+      "product_name": "Coca Cola",
+      "quantity": 1,
+      "unit": "2L",
+      "price": 160
+    }
+  ],
+  "total": 535.9
+}

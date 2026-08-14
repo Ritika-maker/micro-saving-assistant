@@ -1,0 +1,53 @@
+{
+  "receipt_id": "synthetic_014",
+  "image_file": "synthetic_014.jpg",
+  "source": "synthetic",
+  "condition": "blurry",
+  "store_name": "BIG MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 1,
+      "unit": "50g",
+      "price": 320.5
+    },
+    {
+      "product_name": "Amul Butter",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 620
+    },
+    {
+      "product_name": "Colgate Toothpaste",
+      "quantity": 1,
+      "unit": "100g",
+      "price": 180
+    },
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 1,
+      "unit": "50g",
+      "price": 320
+    },
+    {
+      "product_name": "Basmati Rice",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 850
+    },
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 320
+    },
+    {
+      "product_name": "Surf Detergent Powder",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 450
+    }
+  ],
+  "total": 3458.37
+}

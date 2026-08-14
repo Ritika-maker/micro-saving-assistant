@@ -1,0 +1,41 @@
+{
+  "receipt_id": "synthetic_006",
+  "image_file": "synthetic_006.png",
+  "source": "synthetic",
+  "condition": "low_contrast",
+  "store_name": "BHATBHATENI SUPERSTORE",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 1,
+      "unit": "50g",
+      "price": 320
+    },
+    {
+      "product_name": "Tomatoes",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 80.75
+    },
+    {
+      "product_name": "Tomatoes",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 80
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240.5
+    },
+    {
+      "product_name": "Lays Potato Chips",
+      "quantity": 1,
+      "unit": "100g",
+      "price": 95
+    }
+  ],
+  "total": 922.36
+}

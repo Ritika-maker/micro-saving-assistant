@@ -1,0 +1,107 @@
+{
+  "receipt_id": "synthetic_027",
+  "image_file": "synthetic_027.png",
+  "source": "synthetic",
+  "condition": "long",
+  "store_name": "NAMASTE SUPERMARKET",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 320
+    },
+    {
+      "product_name": "Lays Potato Chips",
+      "quantity": 1,
+      "unit": "100g",
+      "price": 95.25
+    },
+    {
+      "product_name": "Tokla Black Tea",
+      "quantity": 1,
+      "unit": "200g",
+      "price": 190.75
+    },
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 1,
+      "unit": "50g",
+      "price": 320
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240.25
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 600
+    },
+    {
+      "product_name": "Amul Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 90
+    },
+    {
+      "product_name": "Wai Wai Instant Noodles",
+      "quantity": 1,
+      "unit": "75g",
+      "price": 25.25
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 600
+    },
+    {
+      "product_name": "Apples",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 280
+    },
+    {
+      "product_name": "Tokla Black Tea",
+      "quantity": 1,
+      "unit": "200g",
+      "price": 190
+    },
+    {
+      "product_name": "Basmati Rice",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 850.75
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240
+    },
+    {
+      "product_name": "Basmati Rice",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 850
+    },
+    {
+      "product_name": "Tomatoes",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 80.75
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 600
+    }
+  ],
+  "total": 6297.49
+}

@@ -1,0 +1,59 @@
+{
+  "receipt_id": "synthetic_010",
+  "image_file": "synthetic_010.png",
+  "source": "synthetic",
+  "condition": "small",
+  "store_name": "LOCAL KIRANA STORE",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Bun Pack",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 168
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 168
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 120
+    },
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 320
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 84.25
+    },
+    {
+      "product_name": "Basmati Rice",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 850
+    },
+    {
+      "product_name": "Coca Cola",
+      "quantity": 1,
+      "unit": "2L",
+      "price": 160
+    },
+    {
+      "product_name": "Wai Wai Instant Noodles",
+      "quantity": 1,
+      "unit": "75g",
+      "price": 25
+    }
+  ],
+  "total": 2141.63
+}

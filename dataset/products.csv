@@ -1,0 +1,234 @@
+product_name,category,brand,unit,price,unit_price,health_score
+Amul Milk 1L,Dairy,Amul,liter,90,90,8
+Mother Dairy Milk 1L,Dairy,Mother Dairy,liter,95,95,8
+DDC Milk 1L,Dairy,DDC,liter,101,101,8
+Nestle Milk 1L,Dairy,Nestle,liter,106,106,8
+Sujal Milk 1L,Dairy,Sujal,liter,112,112,8
+Amul Milk 500ml,Dairy,Amul,liter,50,50,8
+Mother Dairy Milk 500ml,Dairy,Mother Dairy,liter,52,52,8
+DDC Milk 500ml,Dairy,DDC,liter,55,55,8
+Nestle Milk 500ml,Dairy,Nestle,liter,58,58,8
+Sujal Milk 500ml,Dairy,Sujal,liter,61,61,8
+Amul Yogurt 500g,Dairy,Amul,g,130,130,8
+DDC Yogurt 500g,Dairy,DDC,g,138,138,8
+Kwality Yogurt 500g,Dairy,Kwality,g,146,146,8
+Amul Yogurt 200g,Dairy,Amul,g,130,130,8
+DDC Yogurt 200g,Dairy,DDC,g,138,138,8
+Kwality Yogurt 200g,Dairy,Kwality,g,146,146,8
+Amul Butter 500g,Dairy,Amul,g,620,620,5
+Nestle Butter 500g,Dairy,Nestle,g,657,657,5
+Amul Butter 100g,Dairy,Amul,g,620,620,5
+Nestle Butter 100g,Dairy,Nestle,g,657,657,5
+Amul Cheese Slice 200g,Dairy,Amul,g,320,320,6
+Britannia Cheese Slice 200g,Dairy,Britannia,g,339,339,6
+Amul Paneer 200g,Dairy,Amul,g,190,190,7
+DDC Paneer 200g,Dairy,DDC,g,201,201,7
+Amul Ghee 1L,Dairy,Amul,liter,1150,1150,5
+Patanjali Ghee 1L,Dairy,Patanjali,liter,1219,1219,5
+DDC Ghee 1L,Dairy,DDC,liter,1288,1288,5
+Amul Ghee 500ml,Dairy,Amul,liter,632,632,5
+Patanjali Ghee 500ml,Dairy,Patanjali,liter,670,670,5
+DDC Ghee 500ml,Dairy,DDC,liter,708,708,5
+Whole Wheat Bread 400g,Bakery,Generic,g,120,120,9
+Krishna Whole Wheat Bread 400g,Bakery,Krishna,g,127,127,9
+Nebico Whole Wheat Bread 400g,Bakery,Nebico,g,134,134,9
+Whole Wheat Bread 800g,Bakery,Generic,g,228,228,9
+Krishna Whole Wheat Bread 800g,Bakery,Krishna,g,242,242,9
+Nebico Whole Wheat Bread 800g,Bakery,Nebico,g,255,255,9
+White Bread 400g,Bakery,Generic,g,90,90,6
+Krishna White Bread 400g,Bakery,Krishna,g,95,95,6
+Bun Pack 6pcs,Bakery,Generic,pcs,80,80,6
+Nebico Bun Pack 6pcs,Bakery,Nebico,pcs,85,85,6
+Nebico Rusk 300g,Bakery,Nebico,g,110,110,5
+Britannia Rusk 300g,Bakery,Britannia,g,117,117,5
+Basmati Rice 1kg,Grains,Generic,kg,180,180,8
+Kohinoor Basmati Rice 1kg,Grains,Kohinoor,kg,191,191,8
+Daawat Basmati Rice 1kg,Grains,Daawat,kg,202,202,8
+Basmati Rice 5kg,Grains,Generic,kg,846,846,8
+Kohinoor Basmati Rice 5kg,Grains,Kohinoor,kg,897,897,8
+Daawat Basmati Rice 5kg,Grains,Daawat,kg,948,948,8
+Brown Rice 1kg,Grains,Generic,kg,120,120,9
+Brown Rice 5kg,Grains,Generic,kg,564,564,9
+Jeera Masino Rice 5kg,Grains,Generic,kg,2914,2914,7
+Sona Jeera Masino Rice 5kg,Grains,Sona,kg,3089,3089,7
+Jeera Masino Rice 25kg,Grains,Generic,kg,2902,2902,7
+Sona Jeera Masino Rice 25kg,Grains,Sona,kg,3076,3076,7
+Wheat Flour 1kg,Grains,Generic,kg,95,95,8
+Aashirvaad Wheat Flour 1kg,Grains,Aashirvaad,kg,101,101,8
+Patanjali Wheat Flour 1kg,Grains,Patanjali,kg,106,106,8
+Wheat Flour 5kg,Grains,Generic,kg,446,446,8
+Aashirvaad Wheat Flour 5kg,Grains,Aashirvaad,kg,473,473,8
+Patanjali Wheat Flour 5kg,Grains,Patanjali,kg,500,500,8
+Maida 1kg,Grains,Generic,kg,90,90,5
+Aashirvaad Maida 1kg,Grains,Aashirvaad,kg,95,95,5
+Quaker Oats 500g,Grains,Quaker,g,280,280,9
+Patanjali Oats 500g,Grains,Patanjali,g,297,297,9
+Quaker Oats 1kg,Grains,Quaker,g,280,280,9
+Patanjali Oats 1kg,Grains,Patanjali,g,297,297,9
+Beaten Rice 1kg,Grains,Generic,kg,110,110,7
+Semolina 1kg,Grains,Generic,kg,100,100,7
+Eggs 12pcs,Protein,Generic,pcs,240,240,7
+Eggs 6pcs,Protein,Generic,pcs,240,240,7
+Eggs 30pcs,Protein,Generic,pcs,240,240,7
+Black Lentil 1kg,Protein,Generic,kg,210,210,8
+Tulsi Black Lentil 1kg,Protein,Tulsi,kg,223,223,8
+Red Lentil 1kg,Protein,Generic,kg,190,190,8
+Tulsi Red Lentil 1kg,Protein,Tulsi,kg,201,201,8
+Red Lentil 5kg,Protein,Generic,kg,893,893,8
+Tulsi Red Lentil 5kg,Protein,Tulsi,kg,947,947,8
+Chickpeas 1kg,Protein,Generic,kg,180,180,8
+Soybean 1kg,Protein,Generic,kg,200,200,8
+Chicken Breast 500g,Meat,Generic,g,350,350,6
+Nepali Farm Chicken Breast 500g,Meat,Nepali Farm,g,371,371,6
+Chicken Breast 1kg,Meat,Generic,g,350,350,6
+Nepali Farm Chicken Breast 1kg,Meat,Nepali Farm,g,371,371,6
+Chicken Curry Cut 1kg,Meat,Generic,kg,420,420,6
+Mutton 1kg,Meat,Generic,kg,1250,1250,5
+Fish Fillet 500g,Meat,Generic,g,380,380,7
+Apples 1kg,Fruits,Generic,kg,280,280,10
+Bananas 1kg,Fruits,Generic,kg,100,100,9
+Oranges 1kg,Fruits,Generic,kg,220,220,9
+Grapes 1kg,Fruits,Generic,kg,320,320,8
+Papaya 1kg,Fruits,Generic,kg,130,130,9
+Pomegranate 1kg,Fruits,Generic,kg,450,450,9
+Tomatoes 1kg,Vegetables,Generic,kg,80,80,10
+Potatoes 1kg,Vegetables,Generic,kg,50,50,9
+Potatoes 5kg,Vegetables,Generic,kg,235,235,9
+Onions 1kg,Vegetables,Generic,kg,90,90,9
+Cauliflower 1kg,Vegetables,Generic,kg,70,70,9
+Cabbage 1kg,Vegetables,Generic,kg,60,60,9
+Carrot 1kg,Vegetables,Generic,kg,95,95,10
+Spinach 500g,Vegetables,Generic,g,40,40,10
+Green Peas 1kg,Vegetables,Generic,kg,150,150,9
+Coca Cola Coca Cola 2L,Beverages,Coca Cola,liter,160,160,4
+Coca Cola Coca Cola 1.25L,Beverages,Coca Cola,liter,109,109,4
+Coca Cola Coca Cola 500ml,Beverages,Coca Cola,liter,88,88,4
+Pepsi Pepsi 2L,Beverages,Pepsi,liter,150,150,4
+Pepsi Pepsi 1.25L,Beverages,Pepsi,liter,102,102,4
+Coca Cola Sprite 2L,Beverages,Coca Cola,liter,155,155,4
+Real Mango Juice 1L,Beverages,Real,liter,210,210,5
+Frooti Mango Juice 1L,Beverages,Frooti,liter,223,223,5
+Real Mango Juice 200ml,Beverages,Real,liter,63,63,5
+Frooti Mango Juice 200ml,Beverages,Frooti,liter,67,67,5
+Tokla Black Tea 200g,Beverages,Tokla,g,190,190,7
+Ilam Black Tea 200g,Beverages,Ilam,g,201,201,7
+Gorkha Black Tea 200g,Beverages,Gorkha,g,213,213,7
+Tokla Black Tea 500g,Beverages,Tokla,g,190,190,7
+Ilam Black Tea 500g,Beverages,Ilam,g,201,201,7
+Gorkha Black Tea 500g,Beverages,Gorkha,g,213,213,7
+Tokla Green Tea 100g,Beverages,Tokla,g,240,240,9
+Ilam Green Tea 100g,Beverages,Ilam,g,254,254,9
+Nescafe Instant Coffee 50g,Beverages,Nescafe,g,176,176,5
+Bru Instant Coffee 50g,Beverages,Bru,g,187,187,5
+Nescafe Instant Coffee 100g,Beverages,Nescafe,g,582,582,5
+Bru Instant Coffee 100g,Beverages,Bru,g,617,617,5
+Mineral Water 1L,Beverages,Generic,liter,30,30,8
+Mineral Water 5L,Beverages,Generic,liter,138,138,8
+Fortune Sunflower Oil 1L,Oils,Fortune,liter,280,280,7
+Dhara Sunflower Oil 1L,Oils,Dhara,liter,297,297,7
+Sunflower Oil 1L,Oils,Generic,liter,314,314,7
+Fortune Sunflower Oil 5L,Oils,Fortune,liter,1288,1288,7
+Dhara Sunflower Oil 5L,Oils,Dhara,liter,1365,1365,7
+Sunflower Oil 5L,Oils,Generic,liter,1443,1443,7
+Mustard Oil 1L,Oils,Generic,liter,320,320,6
+Patanjali Mustard Oil 1L,Oils,Patanjali,liter,339,339,6
+Mustard Oil 5L,Oils,Generic,liter,1472,1472,6
+Patanjali Mustard Oil 5L,Oils,Patanjali,liter,1560,1560,6
+Olive Oil 500ml,Oils,Generic,ml,468,468,8
+Figaro Olive Oil 500ml,Oils,Figaro,ml,496,496,8
+Soybean Oil 1L,Oils,Generic,liter,260,260,6
+Soybean Oil 5L,Oils,Generic,liter,1196,1196,6
+Lays Potato Chips 50g,Snacks,Lays,g,33,33,3
+Kurkure Potato Chips 50g,Snacks,Kurkure,g,35,35,3
+Lays Potato Chips 100g,Snacks,Lays,g,109,109,3
+Kurkure Potato Chips 100g,Snacks,Kurkure,g,116,116,3
+Wai Wai Instant Noodles 75g,Snacks,Wai Wai,g,25,25,3
+Rara Instant Noodles 75g,Snacks,Rara,g,26,26,3
+Mayos Instant Noodles 75g,Snacks,Mayos,g,28,28,3
+Haldiram Namkeen Mixture 200g,Snacks,Haldiram,g,130,130,4
+Namkeen Mixture 200g,Snacks,Generic,g,138,138,4
+Haldiram Namkeen Mixture 400g,Snacks,Haldiram,g,130,130,4
+Namkeen Mixture 400g,Snacks,Generic,g,138,138,4
+Popcorn 100g,Snacks,Generic,g,90,90,6
+Britannia Digestive Biscuit 250g,Biscuits,Britannia,g,93,93,6
+Nebico Digestive Biscuit 250g,Biscuits,Nebico,g,99,99,6
+Britannia Digestive Biscuit 400g,Biscuits,Britannia,g,242,242,6
+Nebico Digestive Biscuit 400g,Biscuits,Nebico,g,256,256,6
+Britannia Glucose Biscuit 200g,Biscuits,Britannia,g,60,60,4
+Parle Glucose Biscuit 200g,Biscuits,Parle,g,64,64,4
+Britannia Cream Biscuit 150g,Biscuits,Britannia,g,98,98,3
+Nebico Cream Biscuit 150g,Biscuits,Nebico,g,104,104,3
+Parle Cream Biscuit 150g,Biscuits,Parle,g,110,110,3
+Nebico Salt Biscuit 200g,Biscuits,Nebico,g,65,65,5
+Kelloggs Corn Flakes 300g,Breakfast,Kelloggs,g,420,420,7
+Patanjali Corn Flakes 300g,Breakfast,Patanjali,g,445,445,7
+Kelloggs Corn Flakes 500g,Breakfast,Kelloggs,g,420,420,7
+Patanjali Corn Flakes 500g,Breakfast,Patanjali,g,445,445,7
+Kelloggs Muesli 500g,Breakfast,Kelloggs,g,620,620,8
+Bagrrys Muesli 500g,Breakfast,Bagrrys,g,657,657,8
+Dabur Honey 500g,Breakfast,Dabur,g,560,560,7
+Patanjali Honey 500g,Breakfast,Patanjali,g,594,594,7
+Dabur Honey 250g,Breakfast,Dabur,g,347,347,7
+Patanjali Honey 250g,Breakfast,Patanjali,g,368,368,7
+Pintola Peanut Butter 400g,Breakfast,Pintola,g,480,480,7
+Peanut Butter 400g,Breakfast,Generic,g,509,509,7
+Kissan Jam 500g,Breakfast,Kissan,g,320,320,4
+Jam 500g,Breakfast,Generic,g,339,339,4
+Everest Turmeric Powder 100g,Spices,Everest,g,70,70,8
+MDH Turmeric Powder 100g,Spices,MDH,g,74,74,8
+Turmeric Powder 100g,Spices,Generic,g,78,78,8
+Everest Turmeric Powder 500g,Spices,Everest,g,70,70,8
+MDH Turmeric Powder 500g,Spices,MDH,g,74,74,8
+Turmeric Powder 500g,Spices,Generic,g,78,78,8
+Everest Chilli Powder 100g,Spices,Everest,g,90,90,7
+MDH Chilli Powder 100g,Spices,MDH,g,95,95,7
+Everest Chilli Powder 500g,Spices,Everest,g,90,90,7
+MDH Chilli Powder 500g,Spices,MDH,g,95,95,7
+Everest Coriander Powder 100g,Spices,Everest,g,65,65,8
+Coriander Powder 100g,Spices,Generic,g,69,69,8
+Cumin Seed 100g,Spices,Generic,g,120,120,8
+Everest Garam Masala 50g,Spices,Everest,g,47,47,7
+MDH Garam Masala 50g,Spices,MDH,g,50,50,7
+Tata Salt 1kg,Spices,Tata,kg,30,30,6
+Salt 1kg,Spices,Generic,kg,32,32,6
+Sugar 1kg,Spices,Generic,kg,110,110,3
+Sugar 5kg,Spices,Generic,kg,517,517,3
+Colgate Toothpaste 100g,Personal Care,Colgate,g,180,180,7
+Close Up Toothpaste 100g,Personal Care,Close Up,g,191,191,7
+Dabur Toothpaste 100g,Personal Care,Dabur,g,202,202,7
+Colgate Toothpaste 200g,Personal Care,Colgate,g,180,180,7
+Close Up Toothpaste 200g,Personal Care,Close Up,g,191,191,7
+Dabur Toothpaste 200g,Personal Care,Dabur,g,202,202,7
+Head & Shoulders Shampoo 200ml,Personal Care,Head & Shoulders,ml,114,114,6
+Sunsilk Shampoo 200ml,Personal Care,Sunsilk,ml,121,121,6
+Clinic Plus Shampoo 200ml,Personal Care,Clinic Plus,ml,128,128,6
+Head & Shoulders Shampoo 400ml,Personal Care,Head & Shoulders,ml,2407,2407,6
+Sunsilk Shampoo 400ml,Personal Care,Sunsilk,ml,2551,2551,6
+Clinic Plus Shampoo 400ml,Personal Care,Clinic Plus,ml,2695,2695,6
+Dove Bath Soap 4pcs,Personal Care,Dove,pcs,250,250,8
+Lifebuoy Bath Soap 4pcs,Personal Care,Lifebuoy,pcs,265,265,8
+Lux Bath Soap 4pcs,Personal Care,Lux,pcs,280,280,8
+Dove Bath Soap 1pcs,Personal Care,Dove,pcs,75,75,8
+Lifebuoy Bath Soap 1pcs,Personal Care,Lifebuoy,pcs,80,80,8
+Lux Bath Soap 1pcs,Personal Care,Lux,pcs,84,84,8
+Dettol Hand Wash 200ml,Personal Care,Dettol,ml,48,48,7
+Lifebuoy Hand Wash 200ml,Personal Care,Lifebuoy,ml,51,51,7
+Nivea Face Cream 50g,Personal Care,Nivea,g,160,160,6
+Ponds Face Cream 50g,Personal Care,Ponds,g,169,169,6
+Parachute Hair Oil 200ml,Personal Care,Parachute,ml,63,63,6
+Dabur Hair Oil 200ml,Personal Care,Dabur,ml,67,67,6
+Surf Detergent Powder 1kg,Household,Surf,kg,450,450,5
+Wheel Detergent Powder 1kg,Household,Wheel,kg,477,477,5
+Rin Detergent Powder 1kg,Household,Rin,kg,504,504,5
+Surf Detergent Powder 500g,Household,Surf,kg,450,450,5
+Wheel Detergent Powder 500g,Household,Wheel,kg,477,477,5
+Rin Detergent Powder 500g,Household,Rin,kg,504,504,5
+Vim Dishwash Liquid 500ml,Household,Vim,ml,105,105,5
+Dishwash Liquid 500ml,Household,Generic,ml,111,111,5
+Harpic Toilet Cleaner 500ml,Household,Harpic,ml,127,127,5
+Toilet Cleaner 500ml,Household,Generic,ml,134,134,5
+Lizol Floor Cleaner 500ml,Household,Lizol,ml,154,154,5
+Floor Cleaner 500ml,Household,Generic,ml,163,163,5
+Garbage Bags 30pcs,Household,Generic,pcs,150,150,5
+Toilet Paper 4pcs,Household,Generic,pcs,220,220,5
+Origami Toilet Paper 4pcs,Household,Origami,pcs,233,233,5

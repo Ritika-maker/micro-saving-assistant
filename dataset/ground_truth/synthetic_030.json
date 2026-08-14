@@ -1,0 +1,53 @@
+{
+  "receipt_id": "synthetic_030",
+  "image_file": "synthetic_030.png",
+  "source": "synthetic",
+  "condition": "small",
+  "store_name": "NAMASTE SUPERMARKET",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Wai Wai Instant Noodles",
+      "quantity": 1,
+      "unit": "75g",
+      "price": 25
+    },
+    {
+      "product_name": "Coca Cola",
+      "quantity": 1,
+      "unit": "2L",
+      "price": 160.25
+    },
+    {
+      "product_name": "Tokla Black Tea",
+      "quantity": 1,
+      "unit": "200g",
+      "price": 190
+    },
+    {
+      "product_name": "Sunflower Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 280
+    },
+    {
+      "product_name": "Tomatoes",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 80.75
+    },
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 1,
+      "unit": "50g",
+      "price": 320
+    },
+    {
+      "product_name": "Apples",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 280
+    }
+  ],
+  "total": 1509.68
+}

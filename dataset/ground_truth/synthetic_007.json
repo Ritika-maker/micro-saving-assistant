@@ -1,0 +1,95 @@
+{
+  "receipt_id": "synthetic_007",
+  "image_file": "synthetic_007.png",
+  "source": "synthetic",
+  "condition": "long",
+  "store_name": "SUPER MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Tokla Black Tea",
+      "quantity": 1,
+      "unit": "200g",
+      "price": 190
+    },
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 1,
+      "unit": "50g",
+      "price": 320
+    },
+    {
+      "product_name": "Pepsi",
+      "quantity": 1,
+      "unit": "1.25L",
+      "price": 110
+    },
+    {
+      "product_name": "Lays Potato Chips",
+      "quantity": 1,
+      "unit": "100g",
+      "price": 95
+    },
+    {
+      "product_name": "Quaker Oats",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 280
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 600
+    },
+    {
+      "product_name": "Lays Potato Chips",
+      "quantity": 1,
+      "unit": "100g",
+      "price": 95.75
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 120
+    },
+    {
+      "product_name": "Amul Butter",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 620
+    },
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 320.25
+    },
+    {
+      "product_name": "Tomatoes",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 80.25
+    },
+    {
+      "product_name": "Quaker Oats",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 280
+    },
+    {
+      "product_name": "Tomatoes",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 80.25
+    },
+    {
+      "product_name": "Sunflower Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 280
+    }
+  ],
+  "total": 3922.8
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Analysis – Micro-Savings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .conf-high   { background:#dcfce7; color:#15803d; }
+        .conf-medium { background:#fef3c7; color:#b45309; }
+        .conf-low    { background:#fee2e2; color:#b91c1c; }
+        .conf-none   { background:#f3f4f6; color:#6b7280; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+{% include "_nav.html" %}
+
+<div class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+
+    <!-- HEADER -->
+    <div class="flex items-start justify-between gap-4 flex-wrap mb-6">
+        <div>
+            <a href="{{ url_for('dashboard') }}" class="text-xs text-gray-400 hover:text-gray-600">
+                <i class="fas fa-arrow-left mr-1"></i> Back to dashboard
+            </a>
+            <h1 class="text-2xl font-bold text-gray-900 mt-2">Receipt Analysis</h1>
+            <p class="text-sm text-gray-500 mt-1">
+                <i class="fas fa-store text-green-600 mr-1"></i>{{ analysis.store_name or 'Unknown store' }}
+                &nbsp;·&nbsp; {{ analysis.analysis_date[:16].replace('T', ' ') }}
+                &nbsp;·&nbsp; {{ analysis.items_count }} item{{ 's' if analysis.items_count != 1 }}
+            </p>
+        </div>
+        <a href="{{ url_for('export_report', analysis_id=analysis.id) }}"
+           class="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-100 px-4 py-2 rounded-xl hover:bg-blue-100">
+            <i class="fas fa-download"></i> Download CSV
+        </a>
+    </div>
+
+    <!-- SUMMARY CARDS -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
+        <div class="bg-white rounded-2xl border border-gray-100 p-4">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Total Spent</p>
+            <p class="text-2xl font-extrabold text-gray-900 mt-1">NPR {{ analysis.total_spent | round | int }}</p>
+        </div>
+        <div class="bg-green-50 rounded-2xl border border-green-100 p-4">
+            <p class="text-xs font-semibold text-green-600 uppercase tracking-wide">Potential Savings</p>
+            <p class="text-2xl font-extrabold text-green-700 mt-1">NPR {{ analysis.total_savings | round | int }}</p>
+            <p class="text-[11px] text-green-500 mt-1">If cheaper alternatives were chosen</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 p-4">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Savings Rate</p>
+            <p class="text-2xl font-extrabold text-gray-900 mt-1">{{ analysis.savings_pct }}%</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 p-4">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Actual Savings</p>
+            <p class="text-2xl font-extrabold text-gray-900 mt-1" id="actualSavings">NPR {{ analysis.actual_savings | round | int }}</p>
+            <p class="text-[11px] text-gray-400 mt-1">Confirmed by you</p>
+        </div>
+    </div>
+
+    <!-- BEST STORE FOR THIS BASKET -->
+    {% set basket = data.get('basket') or [] %}
+    {% if basket %}
+    <div class="bg-white rounded-2xl border border-gray-100 p-5 mb-8">
+        <h2 class="font-semibold text-gray-800 text-sm mb-1">
+            <i class="fas fa-store-alt text-green-600 mr-1"></i> Best store for this basket
+        </h2>
+        <p class="text-xs text-gray-400 mb-4">Estimated from the latest stored price for each item. Stores without enough price data are marked.</p>
+        <div class="space-y-2">
+            {% for store in basket %}
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl border
+                        {{ 'border-green-200 bg-green-50' if loop.first and store.sufficient_data else 'border-gray-100 bg-gray-50' }}">
+                <div class="min-w-0">
+                    <p class="text-sm font-semibold text-gray-800 truncate">
+                        {{ store.store_name }}
+                        {% if loop.first and store.sufficient_data %}
+                        <span class="ml-1 text-[10px] font-bold bg-green-600 text-white px-2 py-0.5 rounded-full">CHEAPEST</span>
+                        {% endif %}
+                    </p>
+                    <p class="text-[11px] text-gray-400">
+                        {{ store.items_priced }}/{{ store.items_requested }} items priced · {{ store.freshness_label }}
+                    </p>
+                </div>
+                <div class="text-right shrink-0">
+                    {% if store.sufficient_data %}
+                    <p class="font-bold text-gray-900">NPR {{ store.total }}</p>
+                    {% else %}
+                    <p class="text-xs font-semibold text-amber-600">Insufficient price data</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- ITEMS -->
+    <h2 class="font-semibold text-gray-800 text-sm mb-3">Extracted items &amp; recommendations</h2>
+    <div class="space-y-3">
+        {% for item in data.get('items', []) %}
+        {% set recs = (data.get('recommendations') or {}).get(item.name, []) %}
+        <div class="bg-white rounded-2xl border border-gray-100 p-5">
+
+            <div class="flex items-start justify-between gap-4 flex-wrap">
+                <div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <p class="font-semibold text-gray-800 text-sm">{{ item.product_name or item.name }}</p>
+                        <span class="text-[11px] px-2 py-0.5 rounded-full font-semibold conf-{{ item.confidence_level or 'none' }}">
+                            {{ item.confidence or 0 }}% · {{ item.confidence_label or 'No match' }}
+                        </span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">
+                        Qty {{ item.quantity or 1 }}{% if item.unit %} · {{ item.unit }}{% endif %}
+                        {% if item.normalized and item.normalized != (item.product_name or item.name) %}
+                        · matched to <span class="text-gray-600">{{ item.normalized }}</span>
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="text-right">
+                    <p class="font-bold text-gray-900">NPR {{ item.price | round | int }}</p>
+                    {# analyses saved before unit pricing have no unit_price #}
+                    <p class="text-[11px] text-gray-400">NPR {{ (item.unit_price or item.price) | round | int }} per unit</p>
+                </div>
+            </div>
+
+            {% if recs %}
+            <div class="mt-4 space-y-3">
+                {% for rec in recs %}
+                <div class="rounded-xl border {{ 'border-green-200 bg-green-50' if loop.first else 'border-gray-100 bg-gray-50' }} p-4">
+                    <div class="flex items-start justify-between gap-3 flex-wrap">
+                        <div class="min-w-0">
+                            <p class="text-sm font-semibold text-gray-800">
+                                {{ rec.alternative }}
+                                {% if rec.is_healthier %}
+                                <span class="ml-1 text-[10px] bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-bold">HEALTHIER</span>
+                                {% endif %}
+                            </p>
+                            <p class="text-xs text-gray-500 mt-1">{{ rec.reason }}</p>
+                        </div>
+                        <div class="text-right shrink-0">
+                            <p class="font-bold text-green-700">NPR {{ rec.alt_price }}</p>
+                            <p class="text-[11px] text-gray-400">save NPR {{ rec.savings_amount or 0 }} ({{ rec.savings_pct }}%)</p>
+                        </div>
+                    </div>
+
+                    <details class="mt-3">
+                        <summary class="text-[11px] font-semibold text-gray-500 cursor-pointer select-none">
+                            Why this recommendation?
+                        </summary>
+                        <ul class="mt-2 space-y-1">
+                            {% for factor in rec.factors or [] %}
+                            <li class="text-[11px] text-gray-600"><i class="fas fa-check text-green-600 mr-1"></i>{{ factor }}</li>
+                            {% endfor %}
+                            {% if rec.recommendation_score %}
+                            <li class="text-[11px] text-gray-400 pt-1">
+                                Recommendation score {{ rec.recommendation_score }}
+                                {% if rec.score_components %}
+                                (savings {{ rec.score_components.savings }}, similarity {{ rec.score_components.similarity }},
+                                 health {{ rec.score_components.health }}, relevance {{ rec.score_components.relevance }})
+                                {% endif %}
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </details>
+
+                    {% if loop.first and rec.savings_amount %}
+                    <button type="button"
+                            class="mt-3 text-[11px] font-semibold text-green-700 border border-green-200 bg-white px-3 py-1.5 rounded-lg hover:bg-green-100"
+                            onclick="markUsed(this, {{ rec.savings_amount }})">
+                        <i class="fas fa-check-circle mr-1"></i> I used this recommendation
+                    </button>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p class="mt-3 text-xs text-gray-400">
+                <i class="fas fa-info-circle mr-1"></i> No cheaper alternative found in the catalogue for this item.
+            </p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- STRUCTURED DATABASE RECORD -->
+    {% if stored_items %}
+    <details class="mt-8 bg-white rounded-2xl border border-gray-100 p-5">
+        <summary class="text-sm font-semibold text-gray-700 cursor-pointer">
+            Stored analysis record ({{ stored_items | length }} items)
+        </summary>
+        <p class="text-xs text-gray-400 mt-2 mb-3">
+            The same results as saved in the <code>analysis_items</code> and
+            <code>recommendations</code> tables.
+        </p>
+        <div class="overflow-x-auto">
+            <table class="w-full text-xs">
+                <thead>
+                    <tr class="text-left text-gray-500 border-b border-gray-100">
+                        <th class="py-2 pr-3">Item</th>
+                        <th class="py-2 pr-3">Matched product</th>
+                        <th class="py-2 pr-3">Qty</th>
+                        <th class="py-2 pr-3">Unit</th>
+                        <th class="py-2 pr-3">Price</th>
+                        <th class="py-2 pr-3">Unit price</th>
+                        <th class="py-2 pr-3">Conf.</th>
+                        <th class="py-2">Top recommendation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in stored_items %}
+                    {% set top = (row.recommendations or [])[0] if row.recommendations else none %}
+                    <tr class="border-b border-gray-50 text-gray-700">
+                        <td class="py-2 pr-3">{{ row.original_name }}</td>
+                        <td class="py-2 pr-3">{{ row.normalized_name }}</td>
+                        <td class="py-2 pr-3">{{ row.quantity }}</td>
+                        <td class="py-2 pr-3">{{ row.unit or '—' }}</td>
+                        <td class="py-2 pr-3">{{ row.price | round | int }}</td>
+                        <td class="py-2 pr-3">{{ row.unit_price | round | int }}</td>
+                        <td class="py-2 pr-3">{{ row.confidence }}%</td>
+                        <td class="py-2">
+                            {% if top %}
+                            {{ top.alternative_name }} · NPR {{ top.alternative_price | round | int }}
+                            · save {{ top.savings_amount | round | int }}
+                            (score {{ top.recommendation_score }})
+                            {% else %}—{% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </details>
+    {% endif %}
+
+    <!-- RAW RECEIPT TEXT -->
+    {% if analysis.receipt_text %}
+    <details class="mt-8 bg-white rounded-2xl border border-gray-100 p-5">
+        <summary class="text-sm font-semibold text-gray-700 cursor-pointer">Receipt text used</summary>
+        <pre class="mt-3 text-xs text-gray-500 whitespace-pre-wrap">{{ analysis.receipt_text }}</pre>
+    </details>
+    {% endif %}
+</div>
+
+<script>
+async function markUsed(button, amount) {
+    button.disabled = true;
+    try {
+        const res = await fetch('{{ url_for("mark_recommendation_used", analysis_id=analysis.id) }}', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount: amount })
+        });
+        const data = await res.json();
+        if (!res.ok || data.error) { alert(data.error || 'Could not save that.'); button.disabled = false; return; }
+        const cell = document.getElementById('actualSavings');
+        cell.textContent = 'NPR ' + (parseInt(cell.textContent.replace(/\D/g, '') || 0) + Math.round(amount));
+        button.innerHTML = '<i class="fas fa-check-circle mr-1"></i> Counted in actual savings';
+        button.classList.add('bg-green-100');
+    } catch (e) {
+        alert('Could not save that. Please try again.');
+        button.disabled = false;
+    }
+}
+</script>
+</body>
+</html>

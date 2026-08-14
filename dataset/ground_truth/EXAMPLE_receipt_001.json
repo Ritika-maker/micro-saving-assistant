@@ -1,0 +1,13 @@
+{
+  "receipt_id": "receipt_001",
+  "image_file": "receipt_001.jpg",
+  "condition": "clear",
+  "store_name": "Example Super Market",
+  "notes": "EXAMPLE FILE - shows the required ground-truth format. Replace with a real hand-checked transcription of your own receipt image.",
+  "items": [
+    { "product_name": "Amul Milk",    "quantity": 1,  "unit": "1L",  "price": 100 },
+    { "product_name": "Basmati Rice", "quantity": 1,  "unit": "5kg", "price": 750 },
+    { "product_name": "Eggs",         "quantity": 12, "unit": "pcs", "price": 210 }
+  ],
+  "total": 1060
+}

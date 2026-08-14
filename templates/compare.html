@@ -263,13 +263,17 @@ function renderBody(vis) {
                 ? '<i class="fas fa-arrow-up" style="color:#f59e0b; font-size:9px; margin-right:3px;"></i>'
                 : '';
             const age    = sp.updated_at ? daysAgo(sp.updated_at) : null;
-            const ageTxt = age !== null ? `Updated ${age === 0 ? 'today' : age + 'd ago'}` : '';
+            const ageTxt = sp.freshness_label
+                || (age !== null ? `Updated ${age === 0 ? 'today' : age + 'd ago'}` : '');
+            // Freshness dot: green = fresh, amber = recent, grey = older
+            const dotColour = { fresh: '#22c55e', recent: '#f59e0b', older: '#9ca3af' }[sp.freshness_level] || '#d1d5db';
+            const freshDot = `<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${dotColour};margin-right:4px;"></span>`;
             // Show shelf price (sp.price), not unit_price
             priceCells += `
                 <td class="price-cell ${cls} has-tooltip">
                     <div style="font-weight:600; font-size:13px; color:#111827;">${icon}NPR ${sp.price}</div>
-                    ${ageTxt ? `<div style="font-size:11px; color:#9ca3af;">${ageTxt}</div>` : ''}
-                    <div class="tooltip-text">${ageTxt || 'Price data'}</div>
+                    ${ageTxt ? `<div style="font-size:11px; color:#9ca3af;">${freshDot}${ageTxt}</div>` : ''}
+                    <div class="tooltip-text">${ageTxt || 'Price data'} · from stored dataset &amp; your receipts</div>
                 </td>`;
         });
 
@@ -284,7 +288,12 @@ function renderBody(vis) {
 
         rows.push(`<tr>
             <td class="sticky-col">
-                <div style="font-weight:500; font-size:13px; color:#111827;">${p.product_name}</div>
+                <div style="font-weight:500; font-size:13px; color:#111827; cursor:pointer;"
+                     title="Show recorded price history"
+                     onclick="showPriceHistory('${p.product_name.replace(/'/g, "\\'")}')">
+                    ${p.product_name}
+                    <i class="fas fa-chart-line" style="font-size:10px; color:#9ca3af; margin-left:4px;"></i>
+                </div>
                 <div style="font-size:11px; color:#9ca3af; margin-top:2px;">${p.brand || ''} · ${p.unit || ''}</div>
             </td>
             <td><span class="cat-pill cat-${(p.category||'').replace(/\s+/g,'')}">${p.category||''}</span></td>
@@ -316,6 +325,63 @@ function confBadgeHtml(avg, history) {
 
 function daysAgo(iso) { try { return Math.floor((Date.now()-new Date(iso).getTime())/86400000); } catch { return null; } }
 
+// ── Price history panel ─────────────────────────────────────────────────────
+// Shows only prices actually recorded in price_history (dataset imports and
+// your own receipts). Nothing is estimated or back-filled.
+async function showPriceHistory(productName) {
+    const panel = document.getElementById('historyPanel');
+    const body  = document.getElementById('historyBody');
+    document.getElementById('historyTitle').textContent = productName;
+    body.innerHTML = '<p style="font-size:12px;color:#9ca3af;">Loading…</p>';
+    panel.style.display = 'flex';
+
+    try {
+        const res  = await fetch('/api/price-history?product=' + encodeURIComponent(productName));
+        const data = await res.json();
+        const rows = data.history || [];
+        if (!rows.length) {
+            body.innerHTML = `<p style="font-size:12px;color:#9ca3af;">
+                No price observations recorded yet for this product.
+                History is collected from receipts you analyze and from dataset imports.</p>`;
+            return;
+        }
+        const max = Math.max(...rows.map(r => r.unit_price));
+        body.innerHTML = `
+            <table style="width:100%; font-size:12px; border-collapse:collapse;">
+                <thead>
+                    <tr style="text-align:left; color:#6b7280;">
+                        <th style="padding:6px 4px;">Date</th>
+                        <th style="padding:6px 4px;">Store</th>
+                        <th style="padding:6px 4px;">Price</th>
+                        <th style="padding:6px 4px; width:40%;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${rows.map(r => `
+                        <tr style="border-top:1px solid #f3f4f6;">
+                            <td style="padding:6px 4px; color:#6b7280;">${r.date}</td>
+                            <td style="padding:6px 4px;">${r.store_name}</td>
+                            <td style="padding:6px 4px; font-weight:600;">NPR ${r.unit_price}</td>
+                            <td style="padding:6px 4px;">
+                                <div style="height:8px;border-radius:4px;background:#16a34a;
+                                            width:${Math.max(4, Math.round(r.unit_price / max * 100))}%;"></div>
+                            </td>
+                        </tr>`).join('')}
+                </tbody>
+            </table>
+            <p style="font-size:11px;color:#9ca3af;margin-top:10px;">
+                ${rows.length} recorded observation${rows.length !== 1 ? 's' : ''} ·
+                source: your receipts and the stored dataset
+            </p>`;
+    } catch (e) {
+        body.innerHTML = '<p style="font-size:12px;color:#b91c1c;">Could not load price history.</p>';
+    }
+}
+
+function closePriceHistory() {
+    document.getElementById('historyPanel').style.display = 'none';
+}
+
 function exportCSV() {
     if (!allData || !filtered.length) return;
     const vis = allData.stores.filter(s => activeStores.has(s.id));
@@ -329,5 +395,25 @@ function exportCSV() {
     a.download = 'price_comparison.csv'; a.click();
 }
 </script>
+
+<!-- PRICE HISTORY PANEL -->
+<div id="historyPanel" onclick="if (event.target === this) closePriceHistory()"
+     style="display:none; position:fixed; inset:0; background:rgba(17,24,39,.35);
+            align-items:center; justify-content:center; padding:20px; z-index:50;">
+    <div style="background:#fff; border-radius:16px; padding:20px; width:100%; max-width:520px;
+                max-height:80vh; overflow:auto; box-shadow:0 20px 60px rgba(0,0,0,.2);">
+        <div style="display:flex; justify-content:space-between; align-items:start; gap:12px; margin-bottom:12px;">
+            <div>
+                <p style="font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:#9ca3af;">Price history</p>
+                <h3 id="historyTitle" style="font-size:15px; font-weight:700; color:#111827;"></h3>
+            </div>
+            <button onclick="closePriceHistory()"
+                    style="border:none; background:#f3f4f6; border-radius:8px; padding:6px 10px; cursor:pointer; color:#6b7280;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="historyBody"></div>
+    </div>
+</div>
 </body>
 </html>

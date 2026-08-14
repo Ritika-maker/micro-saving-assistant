@@ -1,0 +1,1399 @@
+product_name,store_name,price,unit_price,updated_at
+Amul Milk 1L,General Market,90,90,2026-08-14T19:48:07.219816
+Mother Dairy Milk 1L,General Market,95,95,2026-08-14T19:48:07.219816
+DDC Milk 1L,General Market,101,101,2026-08-14T19:48:07.219816
+Nestle Milk 1L,General Market,106,106,2026-08-14T19:48:07.219816
+Sujal Milk 1L,General Market,112,112,2026-08-14T19:48:07.219816
+Amul Milk 500ml,General Market,50,50,2026-08-14T19:48:07.219816
+Mother Dairy Milk 500ml,General Market,52,52,2026-08-14T19:48:07.219816
+DDC Milk 500ml,General Market,55,55,2026-08-14T19:48:07.219816
+Nestle Milk 500ml,General Market,58,58,2026-08-14T19:48:07.219816
+Sujal Milk 500ml,General Market,61,61,2026-08-14T19:48:07.219816
+Amul Yogurt 500g,General Market,130,130,2026-08-14T19:48:07.219816
+DDC Yogurt 500g,General Market,138,138,2026-08-14T19:48:07.219816
+Kwality Yogurt 500g,General Market,146,146,2026-08-14T19:48:07.219816
+Amul Yogurt 200g,General Market,130,130,2026-08-14T19:48:07.219816
+DDC Yogurt 200g,General Market,138,138,2026-08-14T19:48:07.219816
+Kwality Yogurt 200g,General Market,146,146,2026-08-14T19:48:07.219816
+Amul Butter 500g,General Market,620,620,2026-08-14T19:48:07.219816
+Nestle Butter 500g,General Market,657,657,2026-08-14T19:48:07.219816
+Amul Butter 100g,General Market,620,620,2026-08-14T19:48:07.219816
+Nestle Butter 100g,General Market,657,657,2026-08-14T19:48:07.219816
+Amul Cheese Slice 200g,General Market,320,320,2026-08-14T19:48:07.219816
+Britannia Cheese Slice 200g,General Market,339,339,2026-08-14T19:48:07.219816
+Amul Paneer 200g,General Market,190,190,2026-08-14T19:48:07.219816
+DDC Paneer 200g,General Market,201,201,2026-08-14T19:48:07.219816
+Amul Ghee 1L,General Market,1150,1150,2026-08-14T19:48:07.219816
+Patanjali Ghee 1L,General Market,1219,1219,2026-08-14T19:48:07.219816
+DDC Ghee 1L,General Market,1288,1288,2026-08-14T19:48:07.219816
+Amul Ghee 500ml,General Market,632,632,2026-08-14T19:48:07.219816
+Patanjali Ghee 500ml,General Market,670,670,2026-08-14T19:48:07.219816
+DDC Ghee 500ml,General Market,708,708,2026-08-14T19:48:07.219816
+Whole Wheat Bread 400g,General Market,120,120,2026-08-14T19:48:07.219816
+Krishna Whole Wheat Bread 400g,General Market,127,127,2026-08-14T19:48:07.219816
+Nebico Whole Wheat Bread 400g,General Market,134,134,2026-08-14T19:48:07.219816
+Whole Wheat Bread 800g,General Market,228,228,2026-08-14T19:48:07.219816
+Krishna Whole Wheat Bread 800g,General Market,242,242,2026-08-14T19:48:07.219816
+Nebico Whole Wheat Bread 800g,General Market,255,255,2026-08-14T19:48:07.219816
+White Bread 400g,General Market,90,90,2026-08-14T19:48:07.219816
+Krishna White Bread 400g,General Market,95,95,2026-08-14T19:48:07.219816
+Bun Pack 6pcs,General Market,80,80,2026-08-14T19:48:07.219816
+Nebico Bun Pack 6pcs,General Market,85,85,2026-08-14T19:48:07.219816
+Nebico Rusk 300g,General Market,110,110,2026-08-14T19:48:07.219816
+Britannia Rusk 300g,General Market,117,117,2026-08-14T19:48:07.219816
+Basmati Rice 1kg,General Market,180,180,2026-08-14T19:48:07.219816
+Kohinoor Basmati Rice 1kg,General Market,191,191,2026-08-14T19:48:07.219816
+Daawat Basmati Rice 1kg,General Market,202,202,2026-08-14T19:48:07.219816
+Basmati Rice 5kg,General Market,846,846,2026-08-14T19:48:07.219816
+Kohinoor Basmati Rice 5kg,General Market,897,897,2026-08-14T19:48:07.219816
+Daawat Basmati Rice 5kg,General Market,948,948,2026-08-14T19:48:07.219816
+Brown Rice 1kg,General Market,120,120,2026-08-14T19:48:07.219816
+Brown Rice 5kg,General Market,564,564,2026-08-14T19:48:07.219816
+Jeera Masino Rice 5kg,General Market,2914,2914,2026-08-14T19:48:07.219816
+Sona Jeera Masino Rice 5kg,General Market,3089,3089,2026-08-14T19:48:07.219816
+Jeera Masino Rice 25kg,General Market,2902,2902,2026-08-14T19:48:07.219816
+Sona Jeera Masino Rice 25kg,General Market,3076,3076,2026-08-14T19:48:07.219816
+Wheat Flour 1kg,General Market,95,95,2026-08-14T19:48:07.219816
+Aashirvaad Wheat Flour 1kg,General Market,101,101,2026-08-14T19:48:07.219816
+Patanjali Wheat Flour 1kg,General Market,106,106,2026-08-14T19:48:07.219816
+Wheat Flour 5kg,General Market,446,446,2026-08-14T19:48:07.219816
+Aashirvaad Wheat Flour 5kg,General Market,473,473,2026-08-14T19:48:07.219816
+Patanjali Wheat Flour 5kg,General Market,500,500,2026-08-14T19:48:07.219816
+Maida 1kg,General Market,90,90,2026-08-14T19:48:07.219816
+Aashirvaad Maida 1kg,General Market,95,95,2026-08-14T19:48:07.219816
+Quaker Oats 500g,General Market,280,280,2026-08-14T19:48:07.219816
+Patanjali Oats 500g,General Market,297,297,2026-08-14T19:48:07.219816
+Quaker Oats 1kg,General Market,280,280,2026-08-14T19:48:07.219816
+Patanjali Oats 1kg,General Market,297,297,2026-08-14T19:48:07.219816
+Beaten Rice 1kg,General Market,110,110,2026-08-14T19:48:07.219816
+Semolina 1kg,General Market,100,100,2026-08-14T19:48:07.219816
+Eggs 12pcs,General Market,240,240,2026-08-14T19:48:07.219816
+Eggs 6pcs,General Market,240,240,2026-08-14T19:48:07.219816
+Eggs 30pcs,General Market,240,240,2026-08-14T19:48:07.219816
+Black Lentil 1kg,General Market,210,210,2026-08-14T19:48:07.219816
+Tulsi Black Lentil 1kg,General Market,223,223,2026-08-14T19:48:07.219816
+Red Lentil 1kg,General Market,190,190,2026-08-14T19:48:07.219816
+Tulsi Red Lentil 1kg,General Market,201,201,2026-08-14T19:48:07.219816
+Red Lentil 5kg,General Market,893,893,2026-08-14T19:48:07.219816
+Tulsi Red Lentil 5kg,General Market,947,947,2026-08-14T19:48:07.219816
+Chickpeas 1kg,General Market,180,180,2026-08-14T19:48:07.219816
+Soybean 1kg,General Market,200,200,2026-08-14T19:48:07.219816
+Chicken Breast 500g,General Market,350,350,2026-08-14T19:48:07.219816
+Nepali Farm Chicken Breast 500g,General Market,371,371,2026-08-14T19:48:07.219816
+Chicken Breast 1kg,General Market,350,350,2026-08-14T19:48:07.219816
+Nepali Farm Chicken Breast 1kg,General Market,371,371,2026-08-14T19:48:07.219816
+Chicken Curry Cut 1kg,General Market,420,420,2026-08-14T19:48:07.219816
+Mutton 1kg,General Market,1250,1250,2026-08-14T19:48:07.219816
+Fish Fillet 500g,General Market,380,380,2026-08-14T19:48:07.219816
+Apples 1kg,General Market,280,280,2026-08-14T19:48:07.219816
+Bananas 1kg,General Market,100,100,2026-08-14T19:48:07.219816
+Oranges 1kg,General Market,220,220,2026-08-14T19:48:07.219816
+Grapes 1kg,General Market,320,320,2026-08-14T19:48:07.219816
+Papaya 1kg,General Market,130,130,2026-08-14T19:48:07.219816
+Pomegranate 1kg,General Market,450,450,2026-08-14T19:48:07.219816
+Tomatoes 1kg,General Market,80,80,2026-08-14T19:48:07.219816
+Potatoes 1kg,General Market,50,50,2026-08-14T19:48:07.219816
+Potatoes 5kg,General Market,235,235,2026-08-14T19:48:07.219816
+Onions 1kg,General Market,90,90,2026-08-14T19:48:07.219816
+Cauliflower 1kg,General Market,70,70,2026-08-14T19:48:07.219816
+Cabbage 1kg,General Market,60,60,2026-08-14T19:48:07.219816
+Carrot 1kg,General Market,95,95,2026-08-14T19:48:07.219816
+Spinach 500g,General Market,40,40,2026-08-14T19:48:07.219816
+Green Peas 1kg,General Market,150,150,2026-08-14T19:48:07.219816
+Coca Cola Coca Cola 2L,General Market,160,160,2026-08-14T19:48:07.219816
+Coca Cola Coca Cola 1.25L,General Market,109,109,2026-08-14T19:48:07.219816
+Coca Cola Coca Cola 500ml,General Market,88,88,2026-08-14T19:48:07.219816
+Pepsi Pepsi 2L,General Market,150,150,2026-08-14T19:48:07.219816
+Pepsi Pepsi 1.25L,General Market,102,102,2026-08-14T19:48:07.219816
+Coca Cola Sprite 2L,General Market,155,155,2026-08-14T19:48:07.219816
+Real Mango Juice 1L,General Market,210,210,2026-08-14T19:48:07.219816
+Frooti Mango Juice 1L,General Market,223,223,2026-08-14T19:48:07.219816
+Real Mango Juice 200ml,General Market,63,63,2026-08-14T19:48:07.219816
+Frooti Mango Juice 200ml,General Market,67,67,2026-08-14T19:48:07.219816
+Tokla Black Tea 200g,General Market,190,190,2026-08-14T19:48:07.219816
+Ilam Black Tea 200g,General Market,201,201,2026-08-14T19:48:07.219816
+Gorkha Black Tea 200g,General Market,213,213,2026-08-14T19:48:07.219816
+Tokla Black Tea 500g,General Market,190,190,2026-08-14T19:48:07.219816
+Ilam Black Tea 500g,General Market,201,201,2026-08-14T19:48:07.219816
+Gorkha Black Tea 500g,General Market,213,213,2026-08-14T19:48:07.219816
+Tokla Green Tea 100g,General Market,240,240,2026-08-14T19:48:07.219816
+Ilam Green Tea 100g,General Market,254,254,2026-08-14T19:48:07.219816
+Nescafe Instant Coffee 50g,General Market,176,176,2026-08-14T19:48:07.219816
+Bru Instant Coffee 50g,General Market,187,187,2026-08-14T19:48:07.219816
+Nescafe Instant Coffee 100g,General Market,582,582,2026-08-14T19:48:07.219816
+Bru Instant Coffee 100g,General Market,617,617,2026-08-14T19:48:07.219816
+Mineral Water 1L,General Market,30,30,2026-08-14T19:48:07.219816
+Mineral Water 5L,General Market,138,138,2026-08-14T19:48:07.219816
+Fortune Sunflower Oil 1L,General Market,280,280,2026-08-14T19:48:07.219816
+Dhara Sunflower Oil 1L,General Market,297,297,2026-08-14T19:48:07.219816
+Sunflower Oil 1L,General Market,314,314,2026-08-14T19:48:07.219816
+Fortune Sunflower Oil 5L,General Market,1288,1288,2026-08-14T19:48:07.219816
+Dhara Sunflower Oil 5L,General Market,1365,1365,2026-08-14T19:48:07.219816
+Sunflower Oil 5L,General Market,1443,1443,2026-08-14T19:48:07.219816
+Mustard Oil 1L,General Market,320,320,2026-08-14T19:48:07.219816
+Patanjali Mustard Oil 1L,General Market,339,339,2026-08-14T19:48:07.219816
+Mustard Oil 5L,General Market,1472,1472,2026-08-14T19:48:07.219816
+Patanjali Mustard Oil 5L,General Market,1560,1560,2026-08-14T19:48:07.219816
+Olive Oil 500ml,General Market,468,468,2026-08-14T19:48:07.219816
+Figaro Olive Oil 500ml,General Market,496,496,2026-08-14T19:48:07.219816
+Soybean Oil 1L,General Market,260,260,2026-08-14T19:48:07.219816
+Soybean Oil 5L,General Market,1196,1196,2026-08-14T19:48:07.219816
+Lays Potato Chips 50g,General Market,33,33,2026-08-14T19:48:07.219816
+Kurkure Potato Chips 50g,General Market,35,35,2026-08-14T19:48:07.219816
+Lays Potato Chips 100g,General Market,109,109,2026-08-14T19:48:07.219816
+Kurkure Potato Chips 100g,General Market,116,116,2026-08-14T19:48:07.219816
+Wai Wai Instant Noodles 75g,General Market,25,25,2026-08-14T19:48:07.219816
+Rara Instant Noodles 75g,General Market,26,26,2026-08-14T19:48:07.219816
+Mayos Instant Noodles 75g,General Market,28,28,2026-08-14T19:48:07.219816
+Haldiram Namkeen Mixture 200g,General Market,130,130,2026-08-14T19:48:07.219816
+Namkeen Mixture 200g,General Market,138,138,2026-08-14T19:48:07.219816
+Haldiram Namkeen Mixture 400g,General Market,130,130,2026-08-14T19:48:07.219816
+Namkeen Mixture 400g,General Market,138,138,2026-08-14T19:48:07.219816
+Popcorn 100g,General Market,90,90,2026-08-14T19:48:07.219816
+Britannia Digestive Biscuit 250g,General Market,93,93,2026-08-14T19:48:07.219816
+Nebico Digestive Biscuit 250g,General Market,99,99,2026-08-14T19:48:07.219816
+Britannia Digestive Biscuit 400g,General Market,242,242,2026-08-14T19:48:07.219816
+Nebico Digestive Biscuit 400g,General Market,256,256,2026-08-14T19:48:07.219816
+Britannia Glucose Biscuit 200g,General Market,60,60,2026-08-14T19:48:07.219816
+Parle Glucose Biscuit 200g,General Market,64,64,2026-08-14T19:48:07.219816
+Britannia Cream Biscuit 150g,General Market,98,98,2026-08-14T19:48:07.219816
+Nebico Cream Biscuit 150g,General Market,104,104,2026-08-14T19:48:07.219816
+Parle Cream Biscuit 150g,General Market,110,110,2026-08-14T19:48:07.219816
+Nebico Salt Biscuit 200g,General Market,65,65,2026-08-14T19:48:07.219816
+Kelloggs Corn Flakes 300g,General Market,420,420,2026-08-14T19:48:07.219816
+Patanjali Corn Flakes 300g,General Market,445,445,2026-08-14T19:48:07.219816
+Kelloggs Corn Flakes 500g,General Market,420,420,2026-08-14T19:48:07.219816
+Patanjali Corn Flakes 500g,General Market,445,445,2026-08-14T19:48:07.219816
+Kelloggs Muesli 500g,General Market,620,620,2026-08-14T19:48:07.219816
+Bagrrys Muesli 500g,General Market,657,657,2026-08-14T19:48:07.219816
+Dabur Honey 500g,General Market,560,560,2026-08-14T19:48:07.219816
+Patanjali Honey 500g,General Market,594,594,2026-08-14T19:48:07.219816
+Dabur Honey 250g,General Market,347,347,2026-08-14T19:48:07.219816
+Patanjali Honey 250g,General Market,368,368,2026-08-14T19:48:07.219816
+Pintola Peanut Butter 400g,General Market,480,480,2026-08-14T19:48:07.219816
+Peanut Butter 400g,General Market,509,509,2026-08-14T19:48:07.219816
+Kissan Jam 500g,General Market,320,320,2026-08-14T19:48:07.219816
+Jam 500g,General Market,339,339,2026-08-14T19:48:07.219816
+Everest Turmeric Powder 100g,General Market,70,70,2026-08-14T19:48:07.219816
+MDH Turmeric Powder 100g,General Market,74,74,2026-08-14T19:48:07.219816
+Turmeric Powder 100g,General Market,78,78,2026-08-14T19:48:07.219816
+Everest Turmeric Powder 500g,General Market,70,70,2026-08-14T19:48:07.219816
+MDH Turmeric Powder 500g,General Market,74,74,2026-08-14T19:48:07.219816
+Turmeric Powder 500g,General Market,78,78,2026-08-14T19:48:07.219816
+Everest Chilli Powder 100g,General Market,90,90,2026-08-14T19:48:07.219816
+MDH Chilli Powder 100g,General Market,95,95,2026-08-14T19:48:07.219816
+Everest Chilli Powder 500g,General Market,90,90,2026-08-14T19:48:07.219816
+MDH Chilli Powder 500g,General Market,95,95,2026-08-14T19:48:07.219816
+Everest Coriander Powder 100g,General Market,65,65,2026-08-14T19:48:07.219816
+Coriander Powder 100g,General Market,69,69,2026-08-14T19:48:07.219816
+Cumin Seed 100g,General Market,120,120,2026-08-14T19:48:07.219816
+Everest Garam Masala 50g,General Market,47,47,2026-08-14T19:48:07.219816
+MDH Garam Masala 50g,General Market,50,50,2026-08-14T19:48:07.219816
+Tata Salt 1kg,General Market,30,30,2026-08-14T19:48:07.219816
+Salt 1kg,General Market,32,32,2026-08-14T19:48:07.219816
+Sugar 1kg,General Market,110,110,2026-08-14T19:48:07.219816
+Sugar 5kg,General Market,517,517,2026-08-14T19:48:07.219816
+Colgate Toothpaste 100g,General Market,180,180,2026-08-14T19:48:07.219816
+Close Up Toothpaste 100g,General Market,191,191,2026-08-14T19:48:07.219816
+Dabur Toothpaste 100g,General Market,202,202,2026-08-14T19:48:07.219816
+Colgate Toothpaste 200g,General Market,180,180,2026-08-14T19:48:07.219816
+Close Up Toothpaste 200g,General Market,191,191,2026-08-14T19:48:07.219816
+Dabur Toothpaste 200g,General Market,202,202,2026-08-14T19:48:07.219816
+Head & Shoulders Shampoo 200ml,General Market,114,114,2026-08-14T19:48:07.219816
+Sunsilk Shampoo 200ml,General Market,121,121,2026-08-14T19:48:07.219816
+Clinic Plus Shampoo 200ml,General Market,128,128,2026-08-14T19:48:07.219816
+Head & Shoulders Shampoo 400ml,General Market,2407,2407,2026-08-14T19:48:07.219816
+Sunsilk Shampoo 400ml,General Market,2551,2551,2026-08-14T19:48:07.219816
+Clinic Plus Shampoo 400ml,General Market,2695,2695,2026-08-14T19:48:07.219816
+Dove Bath Soap 4pcs,General Market,250,250,2026-08-14T19:48:07.219816
+Lifebuoy Bath Soap 4pcs,General Market,265,265,2026-08-14T19:48:07.219816
+Lux Bath Soap 4pcs,General Market,280,280,2026-08-14T19:48:07.219816
+Dove Bath Soap 1pcs,General Market,75,75,2026-08-14T19:48:07.219816
+Lifebuoy Bath Soap 1pcs,General Market,80,80,2026-08-14T19:48:07.219816
+Lux Bath Soap 1pcs,General Market,84,84,2026-08-14T19:48:07.219816
+Dettol Hand Wash 200ml,General Market,48,48,2026-08-14T19:48:07.219816
+Lifebuoy Hand Wash 200ml,General Market,51,51,2026-08-14T19:48:07.219816
+Nivea Face Cream 50g,General Market,160,160,2026-08-14T19:48:07.219816
+Ponds Face Cream 50g,General Market,169,169,2026-08-14T19:48:07.219816
+Parachute Hair Oil 200ml,General Market,63,63,2026-08-14T19:48:07.219816
+Dabur Hair Oil 200ml,General Market,67,67,2026-08-14T19:48:07.219816
+Surf Detergent Powder 1kg,General Market,450,450,2026-08-14T19:48:07.219816
+Wheel Detergent Powder 1kg,General Market,477,477,2026-08-14T19:48:07.219816
+Rin Detergent Powder 1kg,General Market,504,504,2026-08-14T19:48:07.219816
+Surf Detergent Powder 500g,General Market,450,450,2026-08-14T19:48:07.219816
+Wheel Detergent Powder 500g,General Market,477,477,2026-08-14T19:48:07.219816
+Rin Detergent Powder 500g,General Market,504,504,2026-08-14T19:48:07.219816
+Vim Dishwash Liquid 500ml,General Market,105,105,2026-08-14T19:48:07.219816
+Dishwash Liquid 500ml,General Market,111,111,2026-08-14T19:48:07.219816
+Harpic Toilet Cleaner 500ml,General Market,127,127,2026-08-14T19:48:07.219816
+Toilet Cleaner 500ml,General Market,134,134,2026-08-14T19:48:07.219816
+Lizol Floor Cleaner 500ml,General Market,154,154,2026-08-14T19:48:07.219816
+Floor Cleaner 500ml,General Market,163,163,2026-08-14T19:48:07.219816
+Garbage Bags 30pcs,General Market,150,150,2026-08-14T19:48:07.219816
+Toilet Paper 4pcs,General Market,220,220,2026-08-14T19:48:07.219816
+Origami Toilet Paper 4pcs,General Market,233,233,2026-08-14T19:48:07.219816
+Amul Milk 1L,Bhatbhateni,97,97,2026-08-13T19:48:07.219816
+Mother Dairy Milk 1L,Bhatbhateni,103,103,2026-08-13T19:48:07.219816
+DDC Milk 1L,Bhatbhateni,109,109,2026-08-13T19:48:07.219816
+Nestle Milk 1L,Bhatbhateni,114,114,2026-08-13T19:48:07.219816
+Sujal Milk 1L,Bhatbhateni,121,121,2026-08-13T19:48:07.219816
+Amul Milk 500ml,Bhatbhateni,54,54,2026-08-13T19:48:07.219816
+Mother Dairy Milk 500ml,Bhatbhateni,56,56,2026-08-13T19:48:07.219816
+DDC Milk 500ml,Bhatbhateni,59,59,2026-08-13T19:48:07.219816
+Nestle Milk 500ml,Bhatbhateni,63,63,2026-08-13T19:48:07.219816
+Sujal Milk 500ml,Bhatbhateni,66,66,2026-08-13T19:48:07.219816
+Amul Yogurt 500g,Bhatbhateni,140,140,2026-08-13T19:48:07.219816
+DDC Yogurt 500g,Bhatbhateni,149,149,2026-08-13T19:48:07.219816
+Kwality Yogurt 500g,Bhatbhateni,158,158,2026-08-13T19:48:07.219816
+Amul Yogurt 200g,Bhatbhateni,140,140,2026-08-13T19:48:07.219816
+DDC Yogurt 200g,Bhatbhateni,149,149,2026-08-13T19:48:07.219816
+Kwality Yogurt 200g,Bhatbhateni,158,158,2026-08-13T19:48:07.219816
+Amul Butter 500g,Bhatbhateni,670,670,2026-08-13T19:48:07.219816
+Nestle Butter 500g,Bhatbhateni,710,710,2026-08-13T19:48:07.219816
+Amul Butter 100g,Bhatbhateni,670,670,2026-08-13T19:48:07.219816
+Nestle Butter 100g,Bhatbhateni,710,710,2026-08-13T19:48:07.219816
+Amul Cheese Slice 200g,Bhatbhateni,346,346,2026-08-13T19:48:07.219816
+Britannia Cheese Slice 200g,Bhatbhateni,366,366,2026-08-13T19:48:07.219816
+Amul Paneer 200g,Bhatbhateni,205,205,2026-08-13T19:48:07.219816
+DDC Paneer 200g,Bhatbhateni,217,217,2026-08-13T19:48:07.219816
+Amul Ghee 1L,Bhatbhateni,1242,1242,2026-08-13T19:48:07.219816
+Patanjali Ghee 1L,Bhatbhateni,1317,1317,2026-08-13T19:48:07.219816
+DDC Ghee 1L,Bhatbhateni,1391,1391,2026-08-13T19:48:07.219816
+Amul Ghee 500ml,Bhatbhateni,683,683,2026-08-13T19:48:07.219816
+Patanjali Ghee 500ml,Bhatbhateni,724,724,2026-08-13T19:48:07.219816
+DDC Ghee 500ml,Bhatbhateni,765,765,2026-08-13T19:48:07.219816
+Whole Wheat Bread 400g,Bhatbhateni,130,130,2026-08-13T19:48:07.219816
+Krishna Whole Wheat Bread 400g,Bhatbhateni,137,137,2026-08-13T19:48:07.219816
+Nebico Whole Wheat Bread 400g,Bhatbhateni,145,145,2026-08-13T19:48:07.219816
+Whole Wheat Bread 800g,Bhatbhateni,246,246,2026-08-13T19:48:07.219816
+Krishna Whole Wheat Bread 800g,Bhatbhateni,261,261,2026-08-13T19:48:07.219816
+Nebico Whole Wheat Bread 800g,Bhatbhateni,275,275,2026-08-13T19:48:07.219816
+White Bread 400g,Bhatbhateni,97,97,2026-08-13T19:48:07.219816
+Krishna White Bread 400g,Bhatbhateni,103,103,2026-08-13T19:48:07.219816
+Bun Pack 6pcs,Bhatbhateni,86,86,2026-08-13T19:48:07.219816
+Nebico Bun Pack 6pcs,Bhatbhateni,92,92,2026-08-13T19:48:07.219816
+Nebico Rusk 300g,Bhatbhateni,119,119,2026-08-13T19:48:07.219816
+Britannia Rusk 300g,Bhatbhateni,126,126,2026-08-13T19:48:07.219816
+Basmati Rice 1kg,Bhatbhateni,194,194,2026-08-13T19:48:07.219816
+Kohinoor Basmati Rice 1kg,Bhatbhateni,206,206,2026-08-13T19:48:07.219816
+Daawat Basmati Rice 1kg,Bhatbhateni,218,218,2026-08-13T19:48:07.219816
+Basmati Rice 5kg,Bhatbhateni,914,914,2026-08-13T19:48:07.219816
+Kohinoor Basmati Rice 5kg,Bhatbhateni,969,969,2026-08-13T19:48:07.219816
+Daawat Basmati Rice 5kg,Bhatbhateni,1024,1024,2026-08-13T19:48:07.219816
+Brown Rice 1kg,Bhatbhateni,130,130,2026-08-13T19:48:07.219816
+Brown Rice 5kg,Bhatbhateni,609,609,2026-08-13T19:48:07.219816
+Jeera Masino Rice 5kg,Bhatbhateni,3147,3147,2026-08-13T19:48:07.219816
+Sona Jeera Masino Rice 5kg,Bhatbhateni,3336,3336,2026-08-13T19:48:07.219816
+Jeera Masino Rice 25kg,Bhatbhateni,3134,3134,2026-08-13T19:48:07.219816
+Sona Jeera Masino Rice 25kg,Bhatbhateni,3322,3322,2026-08-13T19:48:07.219816
+Wheat Flour 1kg,Bhatbhateni,103,103,2026-08-13T19:48:07.219816
+Aashirvaad Wheat Flour 1kg,Bhatbhateni,109,109,2026-08-13T19:48:07.219816
+Patanjali Wheat Flour 1kg,Bhatbhateni,114,114,2026-08-13T19:48:07.219816
+Wheat Flour 5kg,Bhatbhateni,482,482,2026-08-13T19:48:07.219816
+Aashirvaad Wheat Flour 5kg,Bhatbhateni,511,511,2026-08-13T19:48:07.219816
+Patanjali Wheat Flour 5kg,Bhatbhateni,540,540,2026-08-13T19:48:07.219816
+Maida 1kg,Bhatbhateni,97,97,2026-08-13T19:48:07.219816
+Aashirvaad Maida 1kg,Bhatbhateni,103,103,2026-08-13T19:48:07.219816
+Quaker Oats 500g,Bhatbhateni,302,302,2026-08-13T19:48:07.219816
+Patanjali Oats 500g,Bhatbhateni,321,321,2026-08-13T19:48:07.219816
+Quaker Oats 1kg,Bhatbhateni,302,302,2026-08-13T19:48:07.219816
+Patanjali Oats 1kg,Bhatbhateni,321,321,2026-08-13T19:48:07.219816
+Beaten Rice 1kg,Bhatbhateni,119,119,2026-08-13T19:48:07.219816
+Semolina 1kg,Bhatbhateni,108,108,2026-08-13T19:48:07.219816
+Eggs 12pcs,Bhatbhateni,259,259,2026-08-13T19:48:07.219816
+Eggs 6pcs,Bhatbhateni,259,259,2026-08-13T19:48:07.219816
+Eggs 30pcs,Bhatbhateni,259,259,2026-08-13T19:48:07.219816
+Black Lentil 1kg,Bhatbhateni,227,227,2026-08-13T19:48:07.219816
+Tulsi Black Lentil 1kg,Bhatbhateni,241,241,2026-08-13T19:48:07.219816
+Red Lentil 1kg,Bhatbhateni,205,205,2026-08-13T19:48:07.219816
+Tulsi Red Lentil 1kg,Bhatbhateni,217,217,2026-08-13T19:48:07.219816
+Red Lentil 5kg,Bhatbhateni,964,964,2026-08-13T19:48:07.219816
+Tulsi Red Lentil 5kg,Bhatbhateni,1023,1023,2026-08-13T19:48:07.219816
+Chickpeas 1kg,Bhatbhateni,194,194,2026-08-13T19:48:07.219816
+Soybean 1kg,Bhatbhateni,216,216,2026-08-13T19:48:07.219816
+Chicken Breast 500g,Bhatbhateni,378,378,2026-08-13T19:48:07.219816
+Nepali Farm Chicken Breast 500g,Bhatbhateni,401,401,2026-08-13T19:48:07.219816
+Chicken Breast 1kg,Bhatbhateni,378,378,2026-08-13T19:48:07.219816
+Nepali Farm Chicken Breast 1kg,Bhatbhateni,401,401,2026-08-13T19:48:07.219816
+Chicken Curry Cut 1kg,Bhatbhateni,454,454,2026-08-13T19:48:07.219816
+Mutton 1kg,Bhatbhateni,1350,1350,2026-08-13T19:48:07.219816
+Fish Fillet 500g,Bhatbhateni,410,410,2026-08-13T19:48:07.219816
+Apples 1kg,Bhatbhateni,302,302,2026-08-13T19:48:07.219816
+Bananas 1kg,Bhatbhateni,108,108,2026-08-13T19:48:07.219816
+Oranges 1kg,Bhatbhateni,238,238,2026-08-13T19:48:07.219816
+Grapes 1kg,Bhatbhateni,346,346,2026-08-13T19:48:07.219816
+Papaya 1kg,Bhatbhateni,140,140,2026-08-13T19:48:07.219816
+Pomegranate 1kg,Bhatbhateni,486,486,2026-08-13T19:48:07.219816
+Tomatoes 1kg,Bhatbhateni,86,86,2026-08-13T19:48:07.219816
+Potatoes 1kg,Bhatbhateni,54,54,2026-08-13T19:48:07.219816
+Potatoes 5kg,Bhatbhateni,254,254,2026-08-13T19:48:07.219816
+Onions 1kg,Bhatbhateni,97,97,2026-08-13T19:48:07.219816
+Cauliflower 1kg,Bhatbhateni,76,76,2026-08-13T19:48:07.219816
+Cabbage 1kg,Bhatbhateni,65,65,2026-08-13T19:48:07.219816
+Carrot 1kg,Bhatbhateni,103,103,2026-08-13T19:48:07.219816
+Spinach 500g,Bhatbhateni,43,43,2026-08-13T19:48:07.219816
+Green Peas 1kg,Bhatbhateni,162,162,2026-08-13T19:48:07.219816
+Coca Cola Coca Cola 2L,Bhatbhateni,173,173,2026-08-13T19:48:07.219816
+Coca Cola Coca Cola 1.25L,Bhatbhateni,118,118,2026-08-13T19:48:07.219816
+Coca Cola Coca Cola 500ml,Bhatbhateni,95,95,2026-08-13T19:48:07.219816
+Pepsi Pepsi 2L,Bhatbhateni,162,162,2026-08-13T19:48:07.219816
+Pepsi Pepsi 1.25L,Bhatbhateni,110,110,2026-08-13T19:48:07.219816
+Coca Cola Sprite 2L,Bhatbhateni,167,167,2026-08-13T19:48:07.219816
+Real Mango Juice 1L,Bhatbhateni,227,227,2026-08-13T19:48:07.219816
+Frooti Mango Juice 1L,Bhatbhateni,241,241,2026-08-13T19:48:07.219816
+Real Mango Juice 200ml,Bhatbhateni,68,68,2026-08-13T19:48:07.219816
+Frooti Mango Juice 200ml,Bhatbhateni,72,72,2026-08-13T19:48:07.219816
+Tokla Black Tea 200g,Bhatbhateni,205,205,2026-08-13T19:48:07.219816
+Ilam Black Tea 200g,Bhatbhateni,217,217,2026-08-13T19:48:07.219816
+Gorkha Black Tea 200g,Bhatbhateni,230,230,2026-08-13T19:48:07.219816
+Tokla Black Tea 500g,Bhatbhateni,205,205,2026-08-13T19:48:07.219816
+Ilam Black Tea 500g,Bhatbhateni,217,217,2026-08-13T19:48:07.219816
+Gorkha Black Tea 500g,Bhatbhateni,230,230,2026-08-13T19:48:07.219816
+Tokla Green Tea 100g,Bhatbhateni,259,259,2026-08-13T19:48:07.219816
+Ilam Green Tea 100g,Bhatbhateni,274,274,2026-08-13T19:48:07.219816
+Nescafe Instant Coffee 50g,Bhatbhateni,190,190,2026-08-13T19:48:07.219816
+Bru Instant Coffee 50g,Bhatbhateni,202,202,2026-08-13T19:48:07.219816
+Nescafe Instant Coffee 100g,Bhatbhateni,629,629,2026-08-13T19:48:07.219816
+Bru Instant Coffee 100g,Bhatbhateni,666,666,2026-08-13T19:48:07.219816
+Mineral Water 1L,Bhatbhateni,32,32,2026-08-13T19:48:07.219816
+Mineral Water 5L,Bhatbhateni,149,149,2026-08-13T19:48:07.219816
+Fortune Sunflower Oil 1L,Bhatbhateni,302,302,2026-08-13T19:48:07.219816
+Dhara Sunflower Oil 1L,Bhatbhateni,321,321,2026-08-13T19:48:07.219816
+Sunflower Oil 1L,Bhatbhateni,339,339,2026-08-13T19:48:07.219816
+Fortune Sunflower Oil 5L,Bhatbhateni,1391,1391,2026-08-13T19:48:07.219816
+Dhara Sunflower Oil 5L,Bhatbhateni,1474,1474,2026-08-13T19:48:07.219816
+Sunflower Oil 5L,Bhatbhateni,1558,1558,2026-08-13T19:48:07.219816
+Mustard Oil 1L,Bhatbhateni,346,346,2026-08-13T19:48:07.219816
+Patanjali Mustard Oil 1L,Bhatbhateni,366,366,2026-08-13T19:48:07.219816
+Mustard Oil 5L,Bhatbhateni,1590,1590,2026-08-13T19:48:07.219816
+Patanjali Mustard Oil 5L,Bhatbhateni,1685,1685,2026-08-13T19:48:07.219816
+Olive Oil 500ml,Bhatbhateni,505,505,2026-08-13T19:48:07.219816
+Figaro Olive Oil 500ml,Bhatbhateni,536,536,2026-08-13T19:48:07.219816
+Soybean Oil 1L,Bhatbhateni,281,281,2026-08-13T19:48:07.219816
+Soybean Oil 5L,Bhatbhateni,1292,1292,2026-08-13T19:48:07.219816
+Lays Potato Chips 50g,Bhatbhateni,36,36,2026-08-13T19:48:07.219816
+Kurkure Potato Chips 50g,Bhatbhateni,38,38,2026-08-13T19:48:07.219816
+Lays Potato Chips 100g,Bhatbhateni,118,118,2026-08-13T19:48:07.219816
+Kurkure Potato Chips 100g,Bhatbhateni,125,125,2026-08-13T19:48:07.219816
+Wai Wai Instant Noodles 75g,Bhatbhateni,27,27,2026-08-13T19:48:07.219816
+Rara Instant Noodles 75g,Bhatbhateni,28,28,2026-08-13T19:48:07.219816
+Mayos Instant Noodles 75g,Bhatbhateni,30,30,2026-08-13T19:48:07.219816
+Haldiram Namkeen Mixture 200g,Bhatbhateni,140,140,2026-08-13T19:48:07.219816
+Namkeen Mixture 200g,Bhatbhateni,149,149,2026-08-13T19:48:07.219816
+Haldiram Namkeen Mixture 400g,Bhatbhateni,140,140,2026-08-13T19:48:07.219816
+Namkeen Mixture 400g,Bhatbhateni,149,149,2026-08-13T19:48:07.219816
+Popcorn 100g,Bhatbhateni,97,97,2026-08-13T19:48:07.219816
+Britannia Digestive Biscuit 250g,Bhatbhateni,100,100,2026-08-13T19:48:07.219816
+Nebico Digestive Biscuit 250g,Bhatbhateni,107,107,2026-08-13T19:48:07.219816
+Britannia Digestive Biscuit 400g,Bhatbhateni,261,261,2026-08-13T19:48:07.219816
+Nebico Digestive Biscuit 400g,Bhatbhateni,276,276,2026-08-13T19:48:07.219816
+Britannia Glucose Biscuit 200g,Bhatbhateni,65,65,2026-08-13T19:48:07.219816
+Parle Glucose Biscuit 200g,Bhatbhateni,69,69,2026-08-13T19:48:07.219816
+Britannia Cream Biscuit 150g,Bhatbhateni,106,106,2026-08-13T19:48:07.219816
+Nebico Cream Biscuit 150g,Bhatbhateni,112,112,2026-08-13T19:48:07.219816
+Parle Cream Biscuit 150g,Bhatbhateni,119,119,2026-08-13T19:48:07.219816
+Nebico Salt Biscuit 200g,Bhatbhateni,70,70,2026-08-13T19:48:07.219816
+Kelloggs Corn Flakes 300g,Bhatbhateni,454,454,2026-08-13T19:48:07.219816
+Patanjali Corn Flakes 300g,Bhatbhateni,481,481,2026-08-13T19:48:07.219816
+Kelloggs Corn Flakes 500g,Bhatbhateni,454,454,2026-08-13T19:48:07.219816
+Patanjali Corn Flakes 500g,Bhatbhateni,481,481,2026-08-13T19:48:07.219816
+Kelloggs Muesli 500g,Bhatbhateni,670,670,2026-08-13T19:48:07.219816
+Bagrrys Muesli 500g,Bhatbhateni,710,710,2026-08-13T19:48:07.219816
+Dabur Honey 500g,Bhatbhateni,605,605,2026-08-13T19:48:07.219816
+Patanjali Honey 500g,Bhatbhateni,642,642,2026-08-13T19:48:07.219816
+Dabur Honey 250g,Bhatbhateni,375,375,2026-08-13T19:48:07.219816
+Patanjali Honey 250g,Bhatbhateni,397,397,2026-08-13T19:48:07.219816
+Pintola Peanut Butter 400g,Bhatbhateni,518,518,2026-08-13T19:48:07.219816
+Peanut Butter 400g,Bhatbhateni,550,550,2026-08-13T19:48:07.219816
+Kissan Jam 500g,Bhatbhateni,346,346,2026-08-13T19:48:07.219816
+Jam 500g,Bhatbhateni,366,366,2026-08-13T19:48:07.219816
+Everest Turmeric Powder 100g,Bhatbhateni,76,76,2026-08-13T19:48:07.219816
+MDH Turmeric Powder 100g,Bhatbhateni,80,80,2026-08-13T19:48:07.219816
+Turmeric Powder 100g,Bhatbhateni,84,84,2026-08-13T19:48:07.219816
+Everest Turmeric Powder 500g,Bhatbhateni,76,76,2026-08-13T19:48:07.219816
+MDH Turmeric Powder 500g,Bhatbhateni,80,80,2026-08-13T19:48:07.219816
+Turmeric Powder 500g,Bhatbhateni,84,84,2026-08-13T19:48:07.219816
+Everest Chilli Powder 100g,Bhatbhateni,97,97,2026-08-13T19:48:07.219816
+MDH Chilli Powder 100g,Bhatbhateni,103,103,2026-08-13T19:48:07.219816
+Everest Chilli Powder 500g,Bhatbhateni,97,97,2026-08-13T19:48:07.219816
+MDH Chilli Powder 500g,Bhatbhateni,103,103,2026-08-13T19:48:07.219816
+Everest Coriander Powder 100g,Bhatbhateni,70,70,2026-08-13T19:48:07.219816
+Coriander Powder 100g,Bhatbhateni,75,75,2026-08-13T19:48:07.219816
+Cumin Seed 100g,Bhatbhateni,130,130,2026-08-13T19:48:07.219816
+Everest Garam Masala 50g,Bhatbhateni,51,51,2026-08-13T19:48:07.219816
+MDH Garam Masala 50g,Bhatbhateni,54,54,2026-08-13T19:48:07.219816
+Tata Salt 1kg,Bhatbhateni,32,32,2026-08-13T19:48:07.219816
+Salt 1kg,Bhatbhateni,35,35,2026-08-13T19:48:07.219816
+Sugar 1kg,Bhatbhateni,119,119,2026-08-13T19:48:07.219816
+Sugar 5kg,Bhatbhateni,558,558,2026-08-13T19:48:07.219816
+Colgate Toothpaste 100g,Bhatbhateni,194,194,2026-08-13T19:48:07.219816
+Close Up Toothpaste 100g,Bhatbhateni,206,206,2026-08-13T19:48:07.219816
+Dabur Toothpaste 100g,Bhatbhateni,218,218,2026-08-13T19:48:07.219816
+Colgate Toothpaste 200g,Bhatbhateni,194,194,2026-08-13T19:48:07.219816
+Close Up Toothpaste 200g,Bhatbhateni,206,206,2026-08-13T19:48:07.219816
+Dabur Toothpaste 200g,Bhatbhateni,218,218,2026-08-13T19:48:07.219816
+Head & Shoulders Shampoo 200ml,Bhatbhateni,123,123,2026-08-13T19:48:07.219816
+Sunsilk Shampoo 200ml,Bhatbhateni,131,131,2026-08-13T19:48:07.219816
+Clinic Plus Shampoo 200ml,Bhatbhateni,138,138,2026-08-13T19:48:07.219816
+Head & Shoulders Shampoo 400ml,Bhatbhateni,2600,2600,2026-08-13T19:48:07.219816
+Sunsilk Shampoo 400ml,Bhatbhateni,2755,2755,2026-08-13T19:48:07.219816
+Clinic Plus Shampoo 400ml,Bhatbhateni,2911,2911,2026-08-13T19:48:07.219816
+Dove Bath Soap 4pcs,Bhatbhateni,270,270,2026-08-13T19:48:07.219816
+Lifebuoy Bath Soap 4pcs,Bhatbhateni,286,286,2026-08-13T19:48:07.219816
+Lux Bath Soap 4pcs,Bhatbhateni,302,302,2026-08-13T19:48:07.219816
+Dove Bath Soap 1pcs,Bhatbhateni,81,81,2026-08-13T19:48:07.219816
+Lifebuoy Bath Soap 1pcs,Bhatbhateni,86,86,2026-08-13T19:48:07.219816
+Lux Bath Soap 1pcs,Bhatbhateni,91,91,2026-08-13T19:48:07.219816
+Dettol Hand Wash 200ml,Bhatbhateni,52,52,2026-08-13T19:48:07.219816
+Lifebuoy Hand Wash 200ml,Bhatbhateni,55,55,2026-08-13T19:48:07.219816
+Nivea Face Cream 50g,Bhatbhateni,173,173,2026-08-13T19:48:07.219816
+Ponds Face Cream 50g,Bhatbhateni,183,183,2026-08-13T19:48:07.219816
+Parachute Hair Oil 200ml,Bhatbhateni,68,68,2026-08-13T19:48:07.219816
+Dabur Hair Oil 200ml,Bhatbhateni,72,72,2026-08-13T19:48:07.219816
+Surf Detergent Powder 1kg,Bhatbhateni,486,486,2026-08-13T19:48:07.219816
+Wheel Detergent Powder 1kg,Bhatbhateni,515,515,2026-08-13T19:48:07.219816
+Rin Detergent Powder 1kg,Bhatbhateni,544,544,2026-08-13T19:48:07.219816
+Surf Detergent Powder 500g,Bhatbhateni,486,486,2026-08-13T19:48:07.219816
+Wheel Detergent Powder 500g,Bhatbhateni,515,515,2026-08-13T19:48:07.219816
+Rin Detergent Powder 500g,Bhatbhateni,544,544,2026-08-13T19:48:07.219816
+Vim Dishwash Liquid 500ml,Bhatbhateni,113,113,2026-08-13T19:48:07.219816
+Dishwash Liquid 500ml,Bhatbhateni,120,120,2026-08-13T19:48:07.219816
+Harpic Toilet Cleaner 500ml,Bhatbhateni,137,137,2026-08-13T19:48:07.219816
+Toilet Cleaner 500ml,Bhatbhateni,145,145,2026-08-13T19:48:07.219816
+Lizol Floor Cleaner 500ml,Bhatbhateni,166,166,2026-08-13T19:48:07.219816
+Floor Cleaner 500ml,Bhatbhateni,176,176,2026-08-13T19:48:07.219816
+Garbage Bags 30pcs,Bhatbhateni,162,162,2026-08-13T19:48:07.219816
+Toilet Paper 4pcs,Bhatbhateni,238,238,2026-08-13T19:48:07.219816
+Origami Toilet Paper 4pcs,Bhatbhateni,252,252,2026-08-13T19:48:07.219816
+Amul Milk 1L,Big Mart,94,94,2026-08-11T19:48:07.219816
+Mother Dairy Milk 1L,Big Mart,100,100,2026-08-11T19:48:07.219816
+DDC Milk 1L,Big Mart,106,106,2026-08-11T19:48:07.219816
+Nestle Milk 1L,Big Mart,111,111,2026-08-11T19:48:07.219816
+Sujal Milk 1L,Big Mart,118,118,2026-08-11T19:48:07.219816
+Amul Milk 500ml,Big Mart,52,52,2026-08-11T19:48:07.219816
+Mother Dairy Milk 500ml,Big Mart,55,55,2026-08-11T19:48:07.219816
+DDC Milk 500ml,Big Mart,58,58,2026-08-11T19:48:07.219816
+Nestle Milk 500ml,Big Mart,61,61,2026-08-11T19:48:07.219816
+Sujal Milk 500ml,Big Mart,64,64,2026-08-11T19:48:07.219816
+Amul Yogurt 500g,Big Mart,136,136,2026-08-11T19:48:07.219816
+DDC Yogurt 500g,Big Mart,145,145,2026-08-11T19:48:07.219816
+Kwality Yogurt 500g,Big Mart,153,153,2026-08-11T19:48:07.219816
+Amul Yogurt 200g,Big Mart,136,136,2026-08-11T19:48:07.219816
+DDC Yogurt 200g,Big Mart,145,145,2026-08-11T19:48:07.219816
+Kwality Yogurt 200g,Big Mart,153,153,2026-08-11T19:48:07.219816
+Amul Butter 500g,Big Mart,651,651,2026-08-11T19:48:07.219816
+Nestle Butter 500g,Big Mart,690,690,2026-08-11T19:48:07.219816
+Amul Butter 100g,Big Mart,651,651,2026-08-11T19:48:07.219816
+Nestle Butter 100g,Big Mart,690,690,2026-08-11T19:48:07.219816
+Amul Cheese Slice 200g,Big Mart,336,336,2026-08-11T19:48:07.219816
+Britannia Cheese Slice 200g,Big Mart,356,356,2026-08-11T19:48:07.219816
+Amul Paneer 200g,Big Mart,200,200,2026-08-11T19:48:07.219816
+DDC Paneer 200g,Big Mart,211,211,2026-08-11T19:48:07.219816
+Amul Ghee 1L,Big Mart,1208,1208,2026-08-11T19:48:07.219816
+Patanjali Ghee 1L,Big Mart,1280,1280,2026-08-11T19:48:07.219816
+DDC Ghee 1L,Big Mart,1352,1352,2026-08-11T19:48:07.219816
+Amul Ghee 500ml,Big Mart,664,664,2026-08-11T19:48:07.219816
+Patanjali Ghee 500ml,Big Mart,704,704,2026-08-11T19:48:07.219816
+DDC Ghee 500ml,Big Mart,743,743,2026-08-11T19:48:07.219816
+Whole Wheat Bread 400g,Big Mart,126,126,2026-08-11T19:48:07.219816
+Krishna Whole Wheat Bread 400g,Big Mart,133,133,2026-08-11T19:48:07.219816
+Nebico Whole Wheat Bread 400g,Big Mart,141,141,2026-08-11T19:48:07.219816
+Whole Wheat Bread 800g,Big Mart,239,239,2026-08-11T19:48:07.219816
+Krishna Whole Wheat Bread 800g,Big Mart,254,254,2026-08-11T19:48:07.219816
+Nebico Whole Wheat Bread 800g,Big Mart,268,268,2026-08-11T19:48:07.219816
+White Bread 400g,Big Mart,94,94,2026-08-11T19:48:07.219816
+Krishna White Bread 400g,Big Mart,100,100,2026-08-11T19:48:07.219816
+Bun Pack 6pcs,Big Mart,84,84,2026-08-11T19:48:07.219816
+Nebico Bun Pack 6pcs,Big Mart,89,89,2026-08-11T19:48:07.219816
+Nebico Rusk 300g,Big Mart,116,116,2026-08-11T19:48:07.219816
+Britannia Rusk 300g,Big Mart,123,123,2026-08-11T19:48:07.219816
+Basmati Rice 1kg,Big Mart,189,189,2026-08-11T19:48:07.219816
+Kohinoor Basmati Rice 1kg,Big Mart,201,201,2026-08-11T19:48:07.219816
+Daawat Basmati Rice 1kg,Big Mart,212,212,2026-08-11T19:48:07.219816
+Basmati Rice 5kg,Big Mart,888,888,2026-08-11T19:48:07.219816
+Kohinoor Basmati Rice 5kg,Big Mart,942,942,2026-08-11T19:48:07.219816
+Daawat Basmati Rice 5kg,Big Mart,995,995,2026-08-11T19:48:07.219816
+Brown Rice 1kg,Big Mart,126,126,2026-08-11T19:48:07.219816
+Brown Rice 5kg,Big Mart,592,592,2026-08-11T19:48:07.219816
+Jeera Masino Rice 5kg,Big Mart,3060,3060,2026-08-11T19:48:07.219816
+Sona Jeera Masino Rice 5kg,Big Mart,3243,3243,2026-08-11T19:48:07.219816
+Jeera Masino Rice 25kg,Big Mart,3047,3047,2026-08-11T19:48:07.219816
+Sona Jeera Masino Rice 25kg,Big Mart,3230,3230,2026-08-11T19:48:07.219816
+Wheat Flour 1kg,Big Mart,100,100,2026-08-11T19:48:07.219816
+Aashirvaad Wheat Flour 1kg,Big Mart,106,106,2026-08-11T19:48:07.219816
+Patanjali Wheat Flour 1kg,Big Mart,111,111,2026-08-11T19:48:07.219816
+Wheat Flour 5kg,Big Mart,468,468,2026-08-11T19:48:07.219816
+Aashirvaad Wheat Flour 5kg,Big Mart,497,497,2026-08-11T19:48:07.219816
+Patanjali Wheat Flour 5kg,Big Mart,525,525,2026-08-11T19:48:07.219816
+Maida 1kg,Big Mart,94,94,2026-08-11T19:48:07.219816
+Aashirvaad Maida 1kg,Big Mart,100,100,2026-08-11T19:48:07.219816
+Quaker Oats 500g,Big Mart,294,294,2026-08-11T19:48:07.219816
+Patanjali Oats 500g,Big Mart,312,312,2026-08-11T19:48:07.219816
+Quaker Oats 1kg,Big Mart,294,294,2026-08-11T19:48:07.219816
+Patanjali Oats 1kg,Big Mart,312,312,2026-08-11T19:48:07.219816
+Beaten Rice 1kg,Big Mart,116,116,2026-08-11T19:48:07.219816
+Semolina 1kg,Big Mart,105,105,2026-08-11T19:48:07.219816
+Eggs 12pcs,Big Mart,252,252,2026-08-11T19:48:07.219816
+Eggs 6pcs,Big Mart,252,252,2026-08-11T19:48:07.219816
+Eggs 30pcs,Big Mart,252,252,2026-08-11T19:48:07.219816
+Black Lentil 1kg,Big Mart,220,220,2026-08-11T19:48:07.219816
+Tulsi Black Lentil 1kg,Big Mart,234,234,2026-08-11T19:48:07.219816
+Red Lentil 1kg,Big Mart,200,200,2026-08-11T19:48:07.219816
+Tulsi Red Lentil 1kg,Big Mart,211,211,2026-08-11T19:48:07.219816
+Red Lentil 5kg,Big Mart,938,938,2026-08-11T19:48:07.219816
+Tulsi Red Lentil 5kg,Big Mart,994,994,2026-08-11T19:48:07.219816
+Chickpeas 1kg,Big Mart,189,189,2026-08-11T19:48:07.219816
+Soybean 1kg,Big Mart,210,210,2026-08-11T19:48:07.219816
+Chicken Breast 500g,Big Mart,368,368,2026-08-11T19:48:07.219816
+Nepali Farm Chicken Breast 500g,Big Mart,390,390,2026-08-11T19:48:07.219816
+Chicken Breast 1kg,Big Mart,368,368,2026-08-11T19:48:07.219816
+Nepali Farm Chicken Breast 1kg,Big Mart,390,390,2026-08-11T19:48:07.219816
+Chicken Curry Cut 1kg,Big Mart,441,441,2026-08-11T19:48:07.219816
+Mutton 1kg,Big Mart,1312,1312,2026-08-11T19:48:07.219816
+Fish Fillet 500g,Big Mart,399,399,2026-08-11T19:48:07.219816
+Apples 1kg,Big Mart,294,294,2026-08-11T19:48:07.219816
+Bananas 1kg,Big Mart,105,105,2026-08-11T19:48:07.219816
+Oranges 1kg,Big Mart,231,231,2026-08-11T19:48:07.219816
+Grapes 1kg,Big Mart,336,336,2026-08-11T19:48:07.219816
+Papaya 1kg,Big Mart,136,136,2026-08-11T19:48:07.219816
+Pomegranate 1kg,Big Mart,472,472,2026-08-11T19:48:07.219816
+Tomatoes 1kg,Big Mart,84,84,2026-08-11T19:48:07.219816
+Potatoes 1kg,Big Mart,52,52,2026-08-11T19:48:07.219816
+Potatoes 5kg,Big Mart,247,247,2026-08-11T19:48:07.219816
+Onions 1kg,Big Mart,94,94,2026-08-11T19:48:07.219816
+Cauliflower 1kg,Big Mart,74,74,2026-08-11T19:48:07.219816
+Cabbage 1kg,Big Mart,63,63,2026-08-11T19:48:07.219816
+Carrot 1kg,Big Mart,100,100,2026-08-11T19:48:07.219816
+Spinach 500g,Big Mart,42,42,2026-08-11T19:48:07.219816
+Green Peas 1kg,Big Mart,158,158,2026-08-11T19:48:07.219816
+Coca Cola Coca Cola 2L,Big Mart,168,168,2026-08-11T19:48:07.219816
+Coca Cola Coca Cola 1.25L,Big Mart,114,114,2026-08-11T19:48:07.219816
+Coca Cola Coca Cola 500ml,Big Mart,92,92,2026-08-11T19:48:07.219816
+Pepsi Pepsi 2L,Big Mart,158,158,2026-08-11T19:48:07.219816
+Pepsi Pepsi 1.25L,Big Mart,107,107,2026-08-11T19:48:07.219816
+Coca Cola Sprite 2L,Big Mart,163,163,2026-08-11T19:48:07.219816
+Real Mango Juice 1L,Big Mart,220,220,2026-08-11T19:48:07.219816
+Frooti Mango Juice 1L,Big Mart,234,234,2026-08-11T19:48:07.219816
+Real Mango Juice 200ml,Big Mart,66,66,2026-08-11T19:48:07.219816
+Frooti Mango Juice 200ml,Big Mart,70,70,2026-08-11T19:48:07.219816
+Tokla Black Tea 200g,Big Mart,200,200,2026-08-11T19:48:07.219816
+Ilam Black Tea 200g,Big Mart,211,211,2026-08-11T19:48:07.219816
+Gorkha Black Tea 200g,Big Mart,224,224,2026-08-11T19:48:07.219816
+Tokla Black Tea 500g,Big Mart,200,200,2026-08-11T19:48:07.219816
+Ilam Black Tea 500g,Big Mart,211,211,2026-08-11T19:48:07.219816
+Gorkha Black Tea 500g,Big Mart,224,224,2026-08-11T19:48:07.219816
+Tokla Green Tea 100g,Big Mart,252,252,2026-08-11T19:48:07.219816
+Ilam Green Tea 100g,Big Mart,267,267,2026-08-11T19:48:07.219816
+Nescafe Instant Coffee 50g,Big Mart,185,185,2026-08-11T19:48:07.219816
+Bru Instant Coffee 50g,Big Mart,196,196,2026-08-11T19:48:07.219816
+Nescafe Instant Coffee 100g,Big Mart,611,611,2026-08-11T19:48:07.219816
+Bru Instant Coffee 100g,Big Mart,648,648,2026-08-11T19:48:07.219816
+Mineral Water 1L,Big Mart,32,32,2026-08-11T19:48:07.219816
+Mineral Water 5L,Big Mart,145,145,2026-08-11T19:48:07.219816
+Fortune Sunflower Oil 1L,Big Mart,294,294,2026-08-11T19:48:07.219816
+Dhara Sunflower Oil 1L,Big Mart,312,312,2026-08-11T19:48:07.219816
+Sunflower Oil 1L,Big Mart,330,330,2026-08-11T19:48:07.219816
+Fortune Sunflower Oil 5L,Big Mart,1352,1352,2026-08-11T19:48:07.219816
+Dhara Sunflower Oil 5L,Big Mart,1433,1433,2026-08-11T19:48:07.219816
+Sunflower Oil 5L,Big Mart,1515,1515,2026-08-11T19:48:07.219816
+Mustard Oil 1L,Big Mart,336,336,2026-08-11T19:48:07.219816
+Patanjali Mustard Oil 1L,Big Mart,356,356,2026-08-11T19:48:07.219816
+Mustard Oil 5L,Big Mart,1546,1546,2026-08-11T19:48:07.219816
+Patanjali Mustard Oil 5L,Big Mart,1638,1638,2026-08-11T19:48:07.219816
+Olive Oil 500ml,Big Mart,491,491,2026-08-11T19:48:07.219816
+Figaro Olive Oil 500ml,Big Mart,521,521,2026-08-11T19:48:07.219816
+Soybean Oil 1L,Big Mart,273,273,2026-08-11T19:48:07.219816
+Soybean Oil 5L,Big Mart,1256,1256,2026-08-11T19:48:07.219816
+Lays Potato Chips 50g,Big Mart,35,35,2026-08-11T19:48:07.219816
+Kurkure Potato Chips 50g,Big Mart,37,37,2026-08-11T19:48:07.219816
+Lays Potato Chips 100g,Big Mart,114,114,2026-08-11T19:48:07.219816
+Kurkure Potato Chips 100g,Big Mart,122,122,2026-08-11T19:48:07.219816
+Wai Wai Instant Noodles 75g,Big Mart,26,26,2026-08-11T19:48:07.219816
+Rara Instant Noodles 75g,Big Mart,27,27,2026-08-11T19:48:07.219816
+Mayos Instant Noodles 75g,Big Mart,29,29,2026-08-11T19:48:07.219816
+Haldiram Namkeen Mixture 200g,Big Mart,136,136,2026-08-11T19:48:07.219816
+Namkeen Mixture 200g,Big Mart,145,145,2026-08-11T19:48:07.219816
+Haldiram Namkeen Mixture 400g,Big Mart,136,136,2026-08-11T19:48:07.219816
+Namkeen Mixture 400g,Big Mart,145,145,2026-08-11T19:48:07.219816
+Popcorn 100g,Big Mart,94,94,2026-08-11T19:48:07.219816
+Britannia Digestive Biscuit 250g,Big Mart,98,98,2026-08-11T19:48:07.219816
+Nebico Digestive Biscuit 250g,Big Mart,104,104,2026-08-11T19:48:07.219816
+Britannia Digestive Biscuit 400g,Big Mart,254,254,2026-08-11T19:48:07.219816
+Nebico Digestive Biscuit 400g,Big Mart,269,269,2026-08-11T19:48:07.219816
+Britannia Glucose Biscuit 200g,Big Mart,63,63,2026-08-11T19:48:07.219816
+Parle Glucose Biscuit 200g,Big Mart,67,67,2026-08-11T19:48:07.219816
+Britannia Cream Biscuit 150g,Big Mart,103,103,2026-08-11T19:48:07.219816
+Nebico Cream Biscuit 150g,Big Mart,109,109,2026-08-11T19:48:07.219816
+Parle Cream Biscuit 150g,Big Mart,116,116,2026-08-11T19:48:07.219816
+Nebico Salt Biscuit 200g,Big Mart,68,68,2026-08-11T19:48:07.219816
+Kelloggs Corn Flakes 300g,Big Mart,441,441,2026-08-11T19:48:07.219816
+Patanjali Corn Flakes 300g,Big Mart,467,467,2026-08-11T19:48:07.219816
+Kelloggs Corn Flakes 500g,Big Mart,441,441,2026-08-11T19:48:07.219816
+Patanjali Corn Flakes 500g,Big Mart,467,467,2026-08-11T19:48:07.219816
+Kelloggs Muesli 500g,Big Mart,651,651,2026-08-11T19:48:07.219816
+Bagrrys Muesli 500g,Big Mart,690,690,2026-08-11T19:48:07.219816
+Dabur Honey 500g,Big Mart,588,588,2026-08-11T19:48:07.219816
+Patanjali Honey 500g,Big Mart,624,624,2026-08-11T19:48:07.219816
+Dabur Honey 250g,Big Mart,364,364,2026-08-11T19:48:07.219816
+Patanjali Honey 250g,Big Mart,386,386,2026-08-11T19:48:07.219816
+Pintola Peanut Butter 400g,Big Mart,504,504,2026-08-11T19:48:07.219816
+Peanut Butter 400g,Big Mart,534,534,2026-08-11T19:48:07.219816
+Kissan Jam 500g,Big Mart,336,336,2026-08-11T19:48:07.219816
+Jam 500g,Big Mart,356,356,2026-08-11T19:48:07.219816
+Everest Turmeric Powder 100g,Big Mart,74,74,2026-08-11T19:48:07.219816
+MDH Turmeric Powder 100g,Big Mart,78,78,2026-08-11T19:48:07.219816
+Turmeric Powder 100g,Big Mart,82,82,2026-08-11T19:48:07.219816
+Everest Turmeric Powder 500g,Big Mart,74,74,2026-08-11T19:48:07.219816
+MDH Turmeric Powder 500g,Big Mart,78,78,2026-08-11T19:48:07.219816
+Turmeric Powder 500g,Big Mart,82,82,2026-08-11T19:48:07.219816
+Everest Chilli Powder 100g,Big Mart,94,94,2026-08-11T19:48:07.219816
+MDH Chilli Powder 100g,Big Mart,100,100,2026-08-11T19:48:07.219816
+Everest Chilli Powder 500g,Big Mart,94,94,2026-08-11T19:48:07.219816
+MDH Chilli Powder 500g,Big Mart,100,100,2026-08-11T19:48:07.219816
+Everest Coriander Powder 100g,Big Mart,68,68,2026-08-11T19:48:07.219816
+Coriander Powder 100g,Big Mart,72,72,2026-08-11T19:48:07.219816
+Cumin Seed 100g,Big Mart,126,126,2026-08-11T19:48:07.219816
+Everest Garam Masala 50g,Big Mart,49,49,2026-08-11T19:48:07.219816
+MDH Garam Masala 50g,Big Mart,52,52,2026-08-11T19:48:07.219816
+Tata Salt 1kg,Big Mart,32,32,2026-08-11T19:48:07.219816
+Salt 1kg,Big Mart,34,34,2026-08-11T19:48:07.219816
+Sugar 1kg,Big Mart,116,116,2026-08-11T19:48:07.219816
+Sugar 5kg,Big Mart,543,543,2026-08-11T19:48:07.219816
+Colgate Toothpaste 100g,Big Mart,189,189,2026-08-11T19:48:07.219816
+Close Up Toothpaste 100g,Big Mart,201,201,2026-08-11T19:48:07.219816
+Dabur Toothpaste 100g,Big Mart,212,212,2026-08-11T19:48:07.219816
+Colgate Toothpaste 200g,Big Mart,189,189,2026-08-11T19:48:07.219816
+Close Up Toothpaste 200g,Big Mart,201,201,2026-08-11T19:48:07.219816
+Dabur Toothpaste 200g,Big Mart,212,212,2026-08-11T19:48:07.219816
+Head & Shoulders Shampoo 200ml,Big Mart,120,120,2026-08-11T19:48:07.219816
+Sunsilk Shampoo 200ml,Big Mart,127,127,2026-08-11T19:48:07.219816
+Clinic Plus Shampoo 200ml,Big Mart,134,134,2026-08-11T19:48:07.219816
+Head & Shoulders Shampoo 400ml,Big Mart,2527,2527,2026-08-11T19:48:07.219816
+Sunsilk Shampoo 400ml,Big Mart,2679,2679,2026-08-11T19:48:07.219816
+Clinic Plus Shampoo 400ml,Big Mart,2830,2830,2026-08-11T19:48:07.219816
+Dove Bath Soap 4pcs,Big Mart,262,262,2026-08-11T19:48:07.219816
+Lifebuoy Bath Soap 4pcs,Big Mart,278,278,2026-08-11T19:48:07.219816
+Lux Bath Soap 4pcs,Big Mart,294,294,2026-08-11T19:48:07.219816
+Dove Bath Soap 1pcs,Big Mart,79,79,2026-08-11T19:48:07.219816
+Lifebuoy Bath Soap 1pcs,Big Mart,84,84,2026-08-11T19:48:07.219816
+Lux Bath Soap 1pcs,Big Mart,88,88,2026-08-11T19:48:07.219816
+Dettol Hand Wash 200ml,Big Mart,50,50,2026-08-11T19:48:07.219816
+Lifebuoy Hand Wash 200ml,Big Mart,54,54,2026-08-11T19:48:07.219816
+Nivea Face Cream 50g,Big Mart,168,168,2026-08-11T19:48:07.219816
+Ponds Face Cream 50g,Big Mart,177,177,2026-08-11T19:48:07.219816
+Parachute Hair Oil 200ml,Big Mart,66,66,2026-08-11T19:48:07.219816
+Dabur Hair Oil 200ml,Big Mart,70,70,2026-08-11T19:48:07.219816
+Surf Detergent Powder 1kg,Big Mart,472,472,2026-08-11T19:48:07.219816
+Wheel Detergent Powder 1kg,Big Mart,501,501,2026-08-11T19:48:07.219816
+Rin Detergent Powder 1kg,Big Mart,529,529,2026-08-11T19:48:07.219816
+Surf Detergent Powder 500g,Big Mart,472,472,2026-08-11T19:48:07.219816
+Wheel Detergent Powder 500g,Big Mart,501,501,2026-08-11T19:48:07.219816
+Rin Detergent Powder 500g,Big Mart,529,529,2026-08-11T19:48:07.219816
+Vim Dishwash Liquid 500ml,Big Mart,110,110,2026-08-11T19:48:07.219816
+Dishwash Liquid 500ml,Big Mart,117,117,2026-08-11T19:48:07.219816
+Harpic Toilet Cleaner 500ml,Big Mart,133,133,2026-08-11T19:48:07.219816
+Toilet Cleaner 500ml,Big Mart,141,141,2026-08-11T19:48:07.219816
+Lizol Floor Cleaner 500ml,Big Mart,162,162,2026-08-11T19:48:07.219816
+Floor Cleaner 500ml,Big Mart,171,171,2026-08-11T19:48:07.219816
+Garbage Bags 30pcs,Big Mart,158,158,2026-08-11T19:48:07.219816
+Toilet Paper 4pcs,Big Mart,231,231,2026-08-11T19:48:07.219816
+Origami Toilet Paper 4pcs,Big Mart,245,245,2026-08-11T19:48:07.219816
+Amul Milk 1L,Salesways,95,95,2026-08-08T19:48:07.219816
+Mother Dairy Milk 1L,Salesways,101,101,2026-08-08T19:48:07.219816
+DDC Milk 1L,Salesways,107,107,2026-08-08T19:48:07.219816
+Nestle Milk 1L,Salesways,112,112,2026-08-08T19:48:07.219816
+Sujal Milk 1L,Salesways,119,119,2026-08-08T19:48:07.219816
+Amul Milk 500ml,Salesways,53,53,2026-08-08T19:48:07.219816
+Mother Dairy Milk 500ml,Salesways,55,55,2026-08-08T19:48:07.219816
+DDC Milk 500ml,Salesways,58,58,2026-08-08T19:48:07.219816
+Nestle Milk 500ml,Salesways,61,61,2026-08-08T19:48:07.219816
+Sujal Milk 500ml,Salesways,65,65,2026-08-08T19:48:07.219816
+Amul Yogurt 500g,Salesways,138,138,2026-08-08T19:48:07.219816
+DDC Yogurt 500g,Salesways,146,146,2026-08-08T19:48:07.219816
+Kwality Yogurt 500g,Salesways,155,155,2026-08-08T19:48:07.219816
+Amul Yogurt 200g,Salesways,138,138,2026-08-08T19:48:07.219816
+DDC Yogurt 200g,Salesways,146,146,2026-08-08T19:48:07.219816
+Kwality Yogurt 200g,Salesways,155,155,2026-08-08T19:48:07.219816
+Amul Butter 500g,Salesways,657,657,2026-08-08T19:48:07.219816
+Nestle Butter 500g,Salesways,696,696,2026-08-08T19:48:07.219816
+Amul Butter 100g,Salesways,657,657,2026-08-08T19:48:07.219816
+Nestle Butter 100g,Salesways,696,696,2026-08-08T19:48:07.219816
+Amul Cheese Slice 200g,Salesways,339,339,2026-08-08T19:48:07.219816
+Britannia Cheese Slice 200g,Salesways,359,359,2026-08-08T19:48:07.219816
+Amul Paneer 200g,Salesways,201,201,2026-08-08T19:48:07.219816
+DDC Paneer 200g,Salesways,213,213,2026-08-08T19:48:07.219816
+Amul Ghee 1L,Salesways,1219,1219,2026-08-08T19:48:07.219816
+Patanjali Ghee 1L,Salesways,1292,1292,2026-08-08T19:48:07.219816
+DDC Ghee 1L,Salesways,1365,1365,2026-08-08T19:48:07.219816
+Amul Ghee 500ml,Salesways,670,670,2026-08-08T19:48:07.219816
+Patanjali Ghee 500ml,Salesways,710,710,2026-08-08T19:48:07.219816
+DDC Ghee 500ml,Salesways,750,750,2026-08-08T19:48:07.219816
+Whole Wheat Bread 400g,Salesways,127,127,2026-08-08T19:48:07.219816
+Krishna Whole Wheat Bread 400g,Salesways,135,135,2026-08-08T19:48:07.219816
+Nebico Whole Wheat Bread 400g,Salesways,142,142,2026-08-08T19:48:07.219816
+Whole Wheat Bread 800g,Salesways,242,242,2026-08-08T19:48:07.219816
+Krishna Whole Wheat Bread 800g,Salesways,257,257,2026-08-08T19:48:07.219816
+Nebico Whole Wheat Bread 800g,Salesways,270,270,2026-08-08T19:48:07.219816
+White Bread 400g,Salesways,95,95,2026-08-08T19:48:07.219816
+Krishna White Bread 400g,Salesways,101,101,2026-08-08T19:48:07.219816
+Bun Pack 6pcs,Salesways,85,85,2026-08-08T19:48:07.219816
+Nebico Bun Pack 6pcs,Salesways,90,90,2026-08-08T19:48:07.219816
+Nebico Rusk 300g,Salesways,117,117,2026-08-08T19:48:07.219816
+Britannia Rusk 300g,Salesways,124,124,2026-08-08T19:48:07.219816
+Basmati Rice 1kg,Salesways,191,191,2026-08-08T19:48:07.219816
+Kohinoor Basmati Rice 1kg,Salesways,202,202,2026-08-08T19:48:07.219816
+Daawat Basmati Rice 1kg,Salesways,214,214,2026-08-08T19:48:07.219816
+Basmati Rice 5kg,Salesways,897,897,2026-08-08T19:48:07.219816
+Kohinoor Basmati Rice 5kg,Salesways,951,951,2026-08-08T19:48:07.219816
+Daawat Basmati Rice 5kg,Salesways,1005,1005,2026-08-08T19:48:07.219816
+Brown Rice 1kg,Salesways,127,127,2026-08-08T19:48:07.219816
+Brown Rice 5kg,Salesways,598,598,2026-08-08T19:48:07.219816
+Jeera Masino Rice 5kg,Salesways,3089,3089,2026-08-08T19:48:07.219816
+Sona Jeera Masino Rice 5kg,Salesways,3274,3274,2026-08-08T19:48:07.219816
+Jeera Masino Rice 25kg,Salesways,3076,3076,2026-08-08T19:48:07.219816
+Sona Jeera Masino Rice 25kg,Salesways,3261,3261,2026-08-08T19:48:07.219816
+Wheat Flour 1kg,Salesways,101,101,2026-08-08T19:48:07.219816
+Aashirvaad Wheat Flour 1kg,Salesways,107,107,2026-08-08T19:48:07.219816
+Patanjali Wheat Flour 1kg,Salesways,112,112,2026-08-08T19:48:07.219816
+Wheat Flour 5kg,Salesways,473,473,2026-08-08T19:48:07.219816
+Aashirvaad Wheat Flour 5kg,Salesways,501,501,2026-08-08T19:48:07.219816
+Patanjali Wheat Flour 5kg,Salesways,530,530,2026-08-08T19:48:07.219816
+Maida 1kg,Salesways,95,95,2026-08-08T19:48:07.219816
+Aashirvaad Maida 1kg,Salesways,101,101,2026-08-08T19:48:07.219816
+Quaker Oats 500g,Salesways,297,297,2026-08-08T19:48:07.219816
+Patanjali Oats 500g,Salesways,315,315,2026-08-08T19:48:07.219816
+Quaker Oats 1kg,Salesways,297,297,2026-08-08T19:48:07.219816
+Patanjali Oats 1kg,Salesways,315,315,2026-08-08T19:48:07.219816
+Beaten Rice 1kg,Salesways,117,117,2026-08-08T19:48:07.219816
+Semolina 1kg,Salesways,106,106,2026-08-08T19:48:07.219816
+Eggs 12pcs,Salesways,254,254,2026-08-08T19:48:07.219816
+Eggs 6pcs,Salesways,254,254,2026-08-08T19:48:07.219816
+Eggs 30pcs,Salesways,254,254,2026-08-08T19:48:07.219816
+Black Lentil 1kg,Salesways,223,223,2026-08-08T19:48:07.219816
+Tulsi Black Lentil 1kg,Salesways,236,236,2026-08-08T19:48:07.219816
+Red Lentil 1kg,Salesways,201,201,2026-08-08T19:48:07.219816
+Tulsi Red Lentil 1kg,Salesways,213,213,2026-08-08T19:48:07.219816
+Red Lentil 5kg,Salesways,947,947,2026-08-08T19:48:07.219816
+Tulsi Red Lentil 5kg,Salesways,1004,1004,2026-08-08T19:48:07.219816
+Chickpeas 1kg,Salesways,191,191,2026-08-08T19:48:07.219816
+Soybean 1kg,Salesways,212,212,2026-08-08T19:48:07.219816
+Chicken Breast 500g,Salesways,371,371,2026-08-08T19:48:07.219816
+Nepali Farm Chicken Breast 500g,Salesways,393,393,2026-08-08T19:48:07.219816
+Chicken Breast 1kg,Salesways,371,371,2026-08-08T19:48:07.219816
+Nepali Farm Chicken Breast 1kg,Salesways,393,393,2026-08-08T19:48:07.219816
+Chicken Curry Cut 1kg,Salesways,445,445,2026-08-08T19:48:07.219816
+Mutton 1kg,Salesways,1325,1325,2026-08-08T19:48:07.219816
+Fish Fillet 500g,Salesways,403,403,2026-08-08T19:48:07.219816
+Apples 1kg,Salesways,297,297,2026-08-08T19:48:07.219816
+Bananas 1kg,Salesways,106,106,2026-08-08T19:48:07.219816
+Oranges 1kg,Salesways,233,233,2026-08-08T19:48:07.219816
+Grapes 1kg,Salesways,339,339,2026-08-08T19:48:07.219816
+Papaya 1kg,Salesways,138,138,2026-08-08T19:48:07.219816
+Pomegranate 1kg,Salesways,477,477,2026-08-08T19:48:07.219816
+Tomatoes 1kg,Salesways,85,85,2026-08-08T19:48:07.219816
+Potatoes 1kg,Salesways,53,53,2026-08-08T19:48:07.219816
+Potatoes 5kg,Salesways,249,249,2026-08-08T19:48:07.219816
+Onions 1kg,Salesways,95,95,2026-08-08T19:48:07.219816
+Cauliflower 1kg,Salesways,74,74,2026-08-08T19:48:07.219816
+Cabbage 1kg,Salesways,64,64,2026-08-08T19:48:07.219816
+Carrot 1kg,Salesways,101,101,2026-08-08T19:48:07.219816
+Spinach 500g,Salesways,42,42,2026-08-08T19:48:07.219816
+Green Peas 1kg,Salesways,159,159,2026-08-08T19:48:07.219816
+Coca Cola Coca Cola 2L,Salesways,170,170,2026-08-08T19:48:07.219816
+Coca Cola Coca Cola 1.25L,Salesways,116,116,2026-08-08T19:48:07.219816
+Coca Cola Coca Cola 500ml,Salesways,93,93,2026-08-08T19:48:07.219816
+Pepsi Pepsi 2L,Salesways,159,159,2026-08-08T19:48:07.219816
+Pepsi Pepsi 1.25L,Salesways,108,108,2026-08-08T19:48:07.219816
+Coca Cola Sprite 2L,Salesways,164,164,2026-08-08T19:48:07.219816
+Real Mango Juice 1L,Salesways,223,223,2026-08-08T19:48:07.219816
+Frooti Mango Juice 1L,Salesways,236,236,2026-08-08T19:48:07.219816
+Real Mango Juice 200ml,Salesways,67,67,2026-08-08T19:48:07.219816
+Frooti Mango Juice 200ml,Salesways,71,71,2026-08-08T19:48:07.219816
+Tokla Black Tea 200g,Salesways,201,201,2026-08-08T19:48:07.219816
+Ilam Black Tea 200g,Salesways,213,213,2026-08-08T19:48:07.219816
+Gorkha Black Tea 200g,Salesways,226,226,2026-08-08T19:48:07.219816
+Tokla Black Tea 500g,Salesways,201,201,2026-08-08T19:48:07.219816
+Ilam Black Tea 500g,Salesways,213,213,2026-08-08T19:48:07.219816
+Gorkha Black Tea 500g,Salesways,226,226,2026-08-08T19:48:07.219816
+Tokla Green Tea 100g,Salesways,254,254,2026-08-08T19:48:07.219816
+Ilam Green Tea 100g,Salesways,269,269,2026-08-08T19:48:07.219816
+Nescafe Instant Coffee 50g,Salesways,187,187,2026-08-08T19:48:07.219816
+Bru Instant Coffee 50g,Salesways,198,198,2026-08-08T19:48:07.219816
+Nescafe Instant Coffee 100g,Salesways,617,617,2026-08-08T19:48:07.219816
+Bru Instant Coffee 100g,Salesways,654,654,2026-08-08T19:48:07.219816
+Mineral Water 1L,Salesways,32,32,2026-08-08T19:48:07.219816
+Mineral Water 5L,Salesways,146,146,2026-08-08T19:48:07.219816
+Fortune Sunflower Oil 1L,Salesways,297,297,2026-08-08T19:48:07.219816
+Dhara Sunflower Oil 1L,Salesways,315,315,2026-08-08T19:48:07.219816
+Sunflower Oil 1L,Salesways,333,333,2026-08-08T19:48:07.219816
+Fortune Sunflower Oil 5L,Salesways,1365,1365,2026-08-08T19:48:07.219816
+Dhara Sunflower Oil 5L,Salesways,1447,1447,2026-08-08T19:48:07.219816
+Sunflower Oil 5L,Salesways,1530,1530,2026-08-08T19:48:07.219816
+Mustard Oil 1L,Salesways,339,339,2026-08-08T19:48:07.219816
+Patanjali Mustard Oil 1L,Salesways,359,359,2026-08-08T19:48:07.219816
+Mustard Oil 5L,Salesways,1560,1560,2026-08-08T19:48:07.219816
+Patanjali Mustard Oil 5L,Salesways,1654,1654,2026-08-08T19:48:07.219816
+Olive Oil 500ml,Salesways,496,496,2026-08-08T19:48:07.219816
+Figaro Olive Oil 500ml,Salesways,526,526,2026-08-08T19:48:07.219816
+Soybean Oil 1L,Salesways,276,276,2026-08-08T19:48:07.219816
+Soybean Oil 5L,Salesways,1268,1268,2026-08-08T19:48:07.219816
+Lays Potato Chips 50g,Salesways,35,35,2026-08-08T19:48:07.219816
+Kurkure Potato Chips 50g,Salesways,37,37,2026-08-08T19:48:07.219816
+Lays Potato Chips 100g,Salesways,116,116,2026-08-08T19:48:07.219816
+Kurkure Potato Chips 100g,Salesways,123,123,2026-08-08T19:48:07.219816
+Wai Wai Instant Noodles 75g,Salesways,26,26,2026-08-08T19:48:07.219816
+Rara Instant Noodles 75g,Salesways,28,28,2026-08-08T19:48:07.219816
+Mayos Instant Noodles 75g,Salesways,30,30,2026-08-08T19:48:07.219816
+Haldiram Namkeen Mixture 200g,Salesways,138,138,2026-08-08T19:48:07.219816
+Namkeen Mixture 200g,Salesways,146,146,2026-08-08T19:48:07.219816
+Haldiram Namkeen Mixture 400g,Salesways,138,138,2026-08-08T19:48:07.219816
+Namkeen Mixture 400g,Salesways,146,146,2026-08-08T19:48:07.219816
+Popcorn 100g,Salesways,95,95,2026-08-08T19:48:07.219816
+Britannia Digestive Biscuit 250g,Salesways,99,99,2026-08-08T19:48:07.219816
+Nebico Digestive Biscuit 250g,Salesways,105,105,2026-08-08T19:48:07.219816
+Britannia Digestive Biscuit 400g,Salesways,257,257,2026-08-08T19:48:07.219816
+Nebico Digestive Biscuit 400g,Salesways,271,271,2026-08-08T19:48:07.219816
+Britannia Glucose Biscuit 200g,Salesways,64,64,2026-08-08T19:48:07.219816
+Parle Glucose Biscuit 200g,Salesways,68,68,2026-08-08T19:48:07.219816
+Britannia Cream Biscuit 150g,Salesways,104,104,2026-08-08T19:48:07.219816
+Nebico Cream Biscuit 150g,Salesways,110,110,2026-08-08T19:48:07.219816
+Parle Cream Biscuit 150g,Salesways,117,117,2026-08-08T19:48:07.219816
+Nebico Salt Biscuit 200g,Salesways,69,69,2026-08-08T19:48:07.219816
+Kelloggs Corn Flakes 300g,Salesways,445,445,2026-08-08T19:48:07.219816
+Patanjali Corn Flakes 300g,Salesways,472,472,2026-08-08T19:48:07.219816
+Kelloggs Corn Flakes 500g,Salesways,445,445,2026-08-08T19:48:07.219816
+Patanjali Corn Flakes 500g,Salesways,472,472,2026-08-08T19:48:07.219816
+Kelloggs Muesli 500g,Salesways,657,657,2026-08-08T19:48:07.219816
+Bagrrys Muesli 500g,Salesways,696,696,2026-08-08T19:48:07.219816
+Dabur Honey 500g,Salesways,594,594,2026-08-08T19:48:07.219816
+Patanjali Honey 500g,Salesways,630,630,2026-08-08T19:48:07.219816
+Dabur Honey 250g,Salesways,368,368,2026-08-08T19:48:07.219816
+Patanjali Honey 250g,Salesways,390,390,2026-08-08T19:48:07.219816
+Pintola Peanut Butter 400g,Salesways,509,509,2026-08-08T19:48:07.219816
+Peanut Butter 400g,Salesways,540,540,2026-08-08T19:48:07.219816
+Kissan Jam 500g,Salesways,339,339,2026-08-08T19:48:07.219816
+Jam 500g,Salesways,359,359,2026-08-08T19:48:07.219816
+Everest Turmeric Powder 100g,Salesways,74,74,2026-08-08T19:48:07.219816
+MDH Turmeric Powder 100g,Salesways,78,78,2026-08-08T19:48:07.219816
+Turmeric Powder 100g,Salesways,83,83,2026-08-08T19:48:07.219816
+Everest Turmeric Powder 500g,Salesways,74,74,2026-08-08T19:48:07.219816
+MDH Turmeric Powder 500g,Salesways,78,78,2026-08-08T19:48:07.219816
+Turmeric Powder 500g,Salesways,83,83,2026-08-08T19:48:07.219816
+Everest Chilli Powder 100g,Salesways,95,95,2026-08-08T19:48:07.219816
+MDH Chilli Powder 100g,Salesways,101,101,2026-08-08T19:48:07.219816
+Everest Chilli Powder 500g,Salesways,95,95,2026-08-08T19:48:07.219816
+MDH Chilli Powder 500g,Salesways,101,101,2026-08-08T19:48:07.219816
+Everest Coriander Powder 100g,Salesways,69,69,2026-08-08T19:48:07.219816
+Coriander Powder 100g,Salesways,73,73,2026-08-08T19:48:07.219816
+Cumin Seed 100g,Salesways,127,127,2026-08-08T19:48:07.219816
+Everest Garam Masala 50g,Salesways,50,50,2026-08-08T19:48:07.219816
+MDH Garam Masala 50g,Salesways,53,53,2026-08-08T19:48:07.219816
+Tata Salt 1kg,Salesways,32,32,2026-08-08T19:48:07.219816
+Salt 1kg,Salesways,34,34,2026-08-08T19:48:07.219816
+Sugar 1kg,Salesways,117,117,2026-08-08T19:48:07.219816
+Sugar 5kg,Salesways,548,548,2026-08-08T19:48:07.219816
+Colgate Toothpaste 100g,Salesways,191,191,2026-08-08T19:48:07.219816
+Close Up Toothpaste 100g,Salesways,202,202,2026-08-08T19:48:07.219816
+Dabur Toothpaste 100g,Salesways,214,214,2026-08-08T19:48:07.219816
+Colgate Toothpaste 200g,Salesways,191,191,2026-08-08T19:48:07.219816
+Close Up Toothpaste 200g,Salesways,202,202,2026-08-08T19:48:07.219816
+Dabur Toothpaste 200g,Salesways,214,214,2026-08-08T19:48:07.219816
+Head & Shoulders Shampoo 200ml,Salesways,121,121,2026-08-08T19:48:07.219816
+Sunsilk Shampoo 200ml,Salesways,128,128,2026-08-08T19:48:07.219816
+Clinic Plus Shampoo 200ml,Salesways,136,136,2026-08-08T19:48:07.219816
+Head & Shoulders Shampoo 400ml,Salesways,2551,2551,2026-08-08T19:48:07.219816
+Sunsilk Shampoo 400ml,Salesways,2704,2704,2026-08-08T19:48:07.219816
+Clinic Plus Shampoo 400ml,Salesways,2857,2857,2026-08-08T19:48:07.219816
+Dove Bath Soap 4pcs,Salesways,265,265,2026-08-08T19:48:07.219816
+Lifebuoy Bath Soap 4pcs,Salesways,281,281,2026-08-08T19:48:07.219816
+Lux Bath Soap 4pcs,Salesways,297,297,2026-08-08T19:48:07.219816
+Dove Bath Soap 1pcs,Salesways,80,80,2026-08-08T19:48:07.219816
+Lifebuoy Bath Soap 1pcs,Salesways,85,85,2026-08-08T19:48:07.219816
+Lux Bath Soap 1pcs,Salesways,89,89,2026-08-08T19:48:07.219816
+Dettol Hand Wash 200ml,Salesways,51,51,2026-08-08T19:48:07.219816
+Lifebuoy Hand Wash 200ml,Salesways,54,54,2026-08-08T19:48:07.219816
+Nivea Face Cream 50g,Salesways,170,170,2026-08-08T19:48:07.219816
+Ponds Face Cream 50g,Salesways,179,179,2026-08-08T19:48:07.219816
+Parachute Hair Oil 200ml,Salesways,67,67,2026-08-08T19:48:07.219816
+Dabur Hair Oil 200ml,Salesways,71,71,2026-08-08T19:48:07.219816
+Surf Detergent Powder 1kg,Salesways,477,477,2026-08-08T19:48:07.219816
+Wheel Detergent Powder 1kg,Salesways,506,506,2026-08-08T19:48:07.219816
+Rin Detergent Powder 1kg,Salesways,534,534,2026-08-08T19:48:07.219816
+Surf Detergent Powder 500g,Salesways,477,477,2026-08-08T19:48:07.219816
+Wheel Detergent Powder 500g,Salesways,506,506,2026-08-08T19:48:07.219816
+Rin Detergent Powder 500g,Salesways,534,534,2026-08-08T19:48:07.219816
+Vim Dishwash Liquid 500ml,Salesways,111,111,2026-08-08T19:48:07.219816
+Dishwash Liquid 500ml,Salesways,118,118,2026-08-08T19:48:07.219816
+Harpic Toilet Cleaner 500ml,Salesways,135,135,2026-08-08T19:48:07.219816
+Toilet Cleaner 500ml,Salesways,142,142,2026-08-08T19:48:07.219816
+Lizol Floor Cleaner 500ml,Salesways,163,163,2026-08-08T19:48:07.219816
+Floor Cleaner 500ml,Salesways,173,173,2026-08-08T19:48:07.219816
+Garbage Bags 30pcs,Salesways,159,159,2026-08-08T19:48:07.219816
+Toilet Paper 4pcs,Salesways,233,233,2026-08-08T19:48:07.219816
+Origami Toilet Paper 4pcs,Salesways,247,247,2026-08-08T19:48:07.219816
+Amul Milk 1L,Namaste Super,92,92,2026-08-02T19:48:07.219816
+Mother Dairy Milk 1L,Namaste Super,97,97,2026-08-02T19:48:07.219816
+DDC Milk 1L,Namaste Super,103,103,2026-08-02T19:48:07.219816
+Nestle Milk 1L,Namaste Super,108,108,2026-08-02T19:48:07.219816
+Sujal Milk 1L,Namaste Super,114,114,2026-08-02T19:48:07.219816
+Amul Milk 500ml,Namaste Super,51,51,2026-08-02T19:48:07.219816
+Mother Dairy Milk 500ml,Namaste Super,53,53,2026-08-02T19:48:07.219816
+DDC Milk 500ml,Namaste Super,56,56,2026-08-02T19:48:07.219816
+Nestle Milk 500ml,Namaste Super,59,59,2026-08-02T19:48:07.219816
+Sujal Milk 500ml,Namaste Super,62,62,2026-08-02T19:48:07.219816
+Amul Yogurt 500g,Namaste Super,133,133,2026-08-02T19:48:07.219816
+DDC Yogurt 500g,Namaste Super,141,141,2026-08-02T19:48:07.219816
+Kwality Yogurt 500g,Namaste Super,149,149,2026-08-02T19:48:07.219816
+Amul Yogurt 200g,Namaste Super,133,133,2026-08-02T19:48:07.219816
+DDC Yogurt 200g,Namaste Super,141,141,2026-08-02T19:48:07.219816
+Kwality Yogurt 200g,Namaste Super,149,149,2026-08-02T19:48:07.219816
+Amul Butter 500g,Namaste Super,632,632,2026-08-02T19:48:07.219816
+Nestle Butter 500g,Namaste Super,670,670,2026-08-02T19:48:07.219816
+Amul Butter 100g,Namaste Super,632,632,2026-08-02T19:48:07.219816
+Nestle Butter 100g,Namaste Super,670,670,2026-08-02T19:48:07.219816
+Amul Cheese Slice 200g,Namaste Super,326,326,2026-08-02T19:48:07.219816
+Britannia Cheese Slice 200g,Namaste Super,346,346,2026-08-02T19:48:07.219816
+Amul Paneer 200g,Namaste Super,194,194,2026-08-02T19:48:07.219816
+DDC Paneer 200g,Namaste Super,205,205,2026-08-02T19:48:07.219816
+Amul Ghee 1L,Namaste Super,1173,1173,2026-08-02T19:48:07.219816
+Patanjali Ghee 1L,Namaste Super,1243,1243,2026-08-02T19:48:07.219816
+DDC Ghee 1L,Namaste Super,1314,1314,2026-08-02T19:48:07.219816
+Amul Ghee 500ml,Namaste Super,645,645,2026-08-02T19:48:07.219816
+Patanjali Ghee 500ml,Namaste Super,683,683,2026-08-02T19:48:07.219816
+DDC Ghee 500ml,Namaste Super,722,722,2026-08-02T19:48:07.219816
+Whole Wheat Bread 400g,Namaste Super,122,122,2026-08-02T19:48:07.219816
+Krishna Whole Wheat Bread 400g,Namaste Super,130,130,2026-08-02T19:48:07.219816
+Nebico Whole Wheat Bread 400g,Namaste Super,137,137,2026-08-02T19:48:07.219816
+Whole Wheat Bread 800g,Namaste Super,233,233,2026-08-02T19:48:07.219816
+Krishna Whole Wheat Bread 800g,Namaste Super,247,247,2026-08-02T19:48:07.219816
+Nebico Whole Wheat Bread 800g,Namaste Super,260,260,2026-08-02T19:48:07.219816
+White Bread 400g,Namaste Super,92,92,2026-08-02T19:48:07.219816
+Krishna White Bread 400g,Namaste Super,97,97,2026-08-02T19:48:07.219816
+Bun Pack 6pcs,Namaste Super,82,82,2026-08-02T19:48:07.219816
+Nebico Bun Pack 6pcs,Namaste Super,87,87,2026-08-02T19:48:07.219816
+Nebico Rusk 300g,Namaste Super,112,112,2026-08-02T19:48:07.219816
+Britannia Rusk 300g,Namaste Super,119,119,2026-08-02T19:48:07.219816
+Basmati Rice 1kg,Namaste Super,184,184,2026-08-02T19:48:07.219816
+Kohinoor Basmati Rice 1kg,Namaste Super,195,195,2026-08-02T19:48:07.219816
+Daawat Basmati Rice 1kg,Namaste Super,206,206,2026-08-02T19:48:07.219816
+Basmati Rice 5kg,Namaste Super,863,863,2026-08-02T19:48:07.219816
+Kohinoor Basmati Rice 5kg,Namaste Super,915,915,2026-08-02T19:48:07.219816
+Daawat Basmati Rice 5kg,Namaste Super,967,967,2026-08-02T19:48:07.219816
+Brown Rice 1kg,Namaste Super,122,122,2026-08-02T19:48:07.219816
+Brown Rice 5kg,Namaste Super,575,575,2026-08-02T19:48:07.219816
+Jeera Masino Rice 5kg,Namaste Super,2972,2972,2026-08-02T19:48:07.219816
+Sona Jeera Masino Rice 5kg,Namaste Super,3151,3151,2026-08-02T19:48:07.219816
+Jeera Masino Rice 25kg,Namaste Super,2960,2960,2026-08-02T19:48:07.219816
+Sona Jeera Masino Rice 25kg,Namaste Super,3138,3138,2026-08-02T19:48:07.219816
+Wheat Flour 1kg,Namaste Super,97,97,2026-08-02T19:48:07.219816
+Aashirvaad Wheat Flour 1kg,Namaste Super,103,103,2026-08-02T19:48:07.219816
+Patanjali Wheat Flour 1kg,Namaste Super,108,108,2026-08-02T19:48:07.219816
+Wheat Flour 5kg,Namaste Super,455,455,2026-08-02T19:48:07.219816
+Aashirvaad Wheat Flour 5kg,Namaste Super,482,482,2026-08-02T19:48:07.219816
+Patanjali Wheat Flour 5kg,Namaste Super,510,510,2026-08-02T19:48:07.219816
+Maida 1kg,Namaste Super,92,92,2026-08-02T19:48:07.219816
+Aashirvaad Maida 1kg,Namaste Super,97,97,2026-08-02T19:48:07.219816
+Quaker Oats 500g,Namaste Super,286,286,2026-08-02T19:48:07.219816
+Patanjali Oats 500g,Namaste Super,303,303,2026-08-02T19:48:07.219816
+Quaker Oats 1kg,Namaste Super,286,286,2026-08-02T19:48:07.219816
+Patanjali Oats 1kg,Namaste Super,303,303,2026-08-02T19:48:07.219816
+Beaten Rice 1kg,Namaste Super,112,112,2026-08-02T19:48:07.219816
+Semolina 1kg,Namaste Super,102,102,2026-08-02T19:48:07.219816
+Eggs 12pcs,Namaste Super,245,245,2026-08-02T19:48:07.219816
+Eggs 6pcs,Namaste Super,245,245,2026-08-02T19:48:07.219816
+Eggs 30pcs,Namaste Super,245,245,2026-08-02T19:48:07.219816
+Black Lentil 1kg,Namaste Super,214,214,2026-08-02T19:48:07.219816
+Tulsi Black Lentil 1kg,Namaste Super,227,227,2026-08-02T19:48:07.219816
+Red Lentil 1kg,Namaste Super,194,194,2026-08-02T19:48:07.219816
+Tulsi Red Lentil 1kg,Namaste Super,205,205,2026-08-02T19:48:07.219816
+Red Lentil 5kg,Namaste Super,911,911,2026-08-02T19:48:07.219816
+Tulsi Red Lentil 5kg,Namaste Super,966,966,2026-08-02T19:48:07.219816
+Chickpeas 1kg,Namaste Super,184,184,2026-08-02T19:48:07.219816
+Soybean 1kg,Namaste Super,204,204,2026-08-02T19:48:07.219816
+Chicken Breast 500g,Namaste Super,357,357,2026-08-02T19:48:07.219816
+Nepali Farm Chicken Breast 500g,Namaste Super,378,378,2026-08-02T19:48:07.219816
+Chicken Breast 1kg,Namaste Super,357,357,2026-08-02T19:48:07.219816
+Nepali Farm Chicken Breast 1kg,Namaste Super,378,378,2026-08-02T19:48:07.219816
+Chicken Curry Cut 1kg,Namaste Super,428,428,2026-08-02T19:48:07.219816
+Mutton 1kg,Namaste Super,1275,1275,2026-08-02T19:48:07.219816
+Fish Fillet 500g,Namaste Super,388,388,2026-08-02T19:48:07.219816
+Apples 1kg,Namaste Super,286,286,2026-08-02T19:48:07.219816
+Bananas 1kg,Namaste Super,102,102,2026-08-02T19:48:07.219816
+Oranges 1kg,Namaste Super,224,224,2026-08-02T19:48:07.219816
+Grapes 1kg,Namaste Super,326,326,2026-08-02T19:48:07.219816
+Papaya 1kg,Namaste Super,133,133,2026-08-02T19:48:07.219816
+Pomegranate 1kg,Namaste Super,459,459,2026-08-02T19:48:07.219816
+Tomatoes 1kg,Namaste Super,82,82,2026-08-02T19:48:07.219816
+Potatoes 1kg,Namaste Super,51,51,2026-08-02T19:48:07.219816
+Potatoes 5kg,Namaste Super,240,240,2026-08-02T19:48:07.219816
+Onions 1kg,Namaste Super,92,92,2026-08-02T19:48:07.219816
+Cauliflower 1kg,Namaste Super,71,71,2026-08-02T19:48:07.219816
+Cabbage 1kg,Namaste Super,61,61,2026-08-02T19:48:07.219816
+Carrot 1kg,Namaste Super,97,97,2026-08-02T19:48:07.219816
+Spinach 500g,Namaste Super,41,41,2026-08-02T19:48:07.219816
+Green Peas 1kg,Namaste Super,153,153,2026-08-02T19:48:07.219816
+Coca Cola Coca Cola 2L,Namaste Super,163,163,2026-08-02T19:48:07.219816
+Coca Cola Coca Cola 1.25L,Namaste Super,111,111,2026-08-02T19:48:07.219816
+Coca Cola Coca Cola 500ml,Namaste Super,90,90,2026-08-02T19:48:07.219816
+Pepsi Pepsi 2L,Namaste Super,153,153,2026-08-02T19:48:07.219816
+Pepsi Pepsi 1.25L,Namaste Super,104,104,2026-08-02T19:48:07.219816
+Coca Cola Sprite 2L,Namaste Super,158,158,2026-08-02T19:48:07.219816
+Real Mango Juice 1L,Namaste Super,214,214,2026-08-02T19:48:07.219816
+Frooti Mango Juice 1L,Namaste Super,227,227,2026-08-02T19:48:07.219816
+Real Mango Juice 200ml,Namaste Super,64,64,2026-08-02T19:48:07.219816
+Frooti Mango Juice 200ml,Namaste Super,68,68,2026-08-02T19:48:07.219816
+Tokla Black Tea 200g,Namaste Super,194,194,2026-08-02T19:48:07.219816
+Ilam Black Tea 200g,Namaste Super,205,205,2026-08-02T19:48:07.219816
+Gorkha Black Tea 200g,Namaste Super,217,217,2026-08-02T19:48:07.219816
+Tokla Black Tea 500g,Namaste Super,194,194,2026-08-02T19:48:07.219816
+Ilam Black Tea 500g,Namaste Super,205,205,2026-08-02T19:48:07.219816
+Gorkha Black Tea 500g,Namaste Super,217,217,2026-08-02T19:48:07.219816
+Tokla Green Tea 100g,Namaste Super,245,245,2026-08-02T19:48:07.219816
+Ilam Green Tea 100g,Namaste Super,259,259,2026-08-02T19:48:07.219816
+Nescafe Instant Coffee 50g,Namaste Super,180,180,2026-08-02T19:48:07.219816
+Bru Instant Coffee 50g,Namaste Super,191,191,2026-08-02T19:48:07.219816
+Nescafe Instant Coffee 100g,Namaste Super,594,594,2026-08-02T19:48:07.219816
+Bru Instant Coffee 100g,Namaste Super,629,629,2026-08-02T19:48:07.219816
+Mineral Water 1L,Namaste Super,31,31,2026-08-02T19:48:07.219816
+Mineral Water 5L,Namaste Super,141,141,2026-08-02T19:48:07.219816
+Fortune Sunflower Oil 1L,Namaste Super,286,286,2026-08-02T19:48:07.219816
+Dhara Sunflower Oil 1L,Namaste Super,303,303,2026-08-02T19:48:07.219816
+Sunflower Oil 1L,Namaste Super,320,320,2026-08-02T19:48:07.219816
+Fortune Sunflower Oil 5L,Namaste Super,1314,1314,2026-08-02T19:48:07.219816
+Dhara Sunflower Oil 5L,Namaste Super,1392,1392,2026-08-02T19:48:07.219816
+Sunflower Oil 5L,Namaste Super,1472,1472,2026-08-02T19:48:07.219816
+Mustard Oil 1L,Namaste Super,326,326,2026-08-02T19:48:07.219816
+Patanjali Mustard Oil 1L,Namaste Super,346,346,2026-08-02T19:48:07.219816
+Mustard Oil 5L,Namaste Super,1501,1501,2026-08-02T19:48:07.219816
+Patanjali Mustard Oil 5L,Namaste Super,1591,1591,2026-08-02T19:48:07.219816
+Olive Oil 500ml,Namaste Super,477,477,2026-08-02T19:48:07.219816
+Figaro Olive Oil 500ml,Namaste Super,506,506,2026-08-02T19:48:07.219816
+Soybean Oil 1L,Namaste Super,265,265,2026-08-02T19:48:07.219816
+Soybean Oil 5L,Namaste Super,1220,1220,2026-08-02T19:48:07.219816
+Lays Potato Chips 50g,Namaste Super,34,34,2026-08-02T19:48:07.219816
+Kurkure Potato Chips 50g,Namaste Super,36,36,2026-08-02T19:48:07.219816
+Lays Potato Chips 100g,Namaste Super,111,111,2026-08-02T19:48:07.219816
+Kurkure Potato Chips 100g,Namaste Super,118,118,2026-08-02T19:48:07.219816
+Wai Wai Instant Noodles 75g,Namaste Super,26,26,2026-08-02T19:48:07.219816
+Rara Instant Noodles 75g,Namaste Super,27,27,2026-08-02T19:48:07.219816
+Mayos Instant Noodles 75g,Namaste Super,29,29,2026-08-02T19:48:07.219816
+Haldiram Namkeen Mixture 200g,Namaste Super,133,133,2026-08-02T19:48:07.219816
+Namkeen Mixture 200g,Namaste Super,141,141,2026-08-02T19:48:07.219816
+Haldiram Namkeen Mixture 400g,Namaste Super,133,133,2026-08-02T19:48:07.219816
+Namkeen Mixture 400g,Namaste Super,141,141,2026-08-02T19:48:07.219816
+Popcorn 100g,Namaste Super,92,92,2026-08-02T19:48:07.219816
+Britannia Digestive Biscuit 250g,Namaste Super,95,95,2026-08-02T19:48:07.219816
+Nebico Digestive Biscuit 250g,Namaste Super,101,101,2026-08-02T19:48:07.219816
+Britannia Digestive Biscuit 400g,Namaste Super,247,247,2026-08-02T19:48:07.219816
+Nebico Digestive Biscuit 400g,Namaste Super,261,261,2026-08-02T19:48:07.219816
+Britannia Glucose Biscuit 200g,Namaste Super,61,61,2026-08-02T19:48:07.219816
+Parle Glucose Biscuit 200g,Namaste Super,65,65,2026-08-02T19:48:07.219816
+Britannia Cream Biscuit 150g,Namaste Super,100,100,2026-08-02T19:48:07.219816
+Nebico Cream Biscuit 150g,Namaste Super,106,106,2026-08-02T19:48:07.219816
+Parle Cream Biscuit 150g,Namaste Super,112,112,2026-08-02T19:48:07.219816
+Nebico Salt Biscuit 200g,Namaste Super,66,66,2026-08-02T19:48:07.219816
+Kelloggs Corn Flakes 300g,Namaste Super,428,428,2026-08-02T19:48:07.219816
+Patanjali Corn Flakes 300g,Namaste Super,454,454,2026-08-02T19:48:07.219816
+Kelloggs Corn Flakes 500g,Namaste Super,428,428,2026-08-02T19:48:07.219816
+Patanjali Corn Flakes 500g,Namaste Super,454,454,2026-08-02T19:48:07.219816
+Kelloggs Muesli 500g,Namaste Super,632,632,2026-08-02T19:48:07.219816
+Bagrrys Muesli 500g,Namaste Super,670,670,2026-08-02T19:48:07.219816
+Dabur Honey 500g,Namaste Super,571,571,2026-08-02T19:48:07.219816
+Patanjali Honey 500g,Namaste Super,606,606,2026-08-02T19:48:07.219816
+Dabur Honey 250g,Namaste Super,354,354,2026-08-02T19:48:07.219816
+Patanjali Honey 250g,Namaste Super,375,375,2026-08-02T19:48:07.219816
+Pintola Peanut Butter 400g,Namaste Super,490,490,2026-08-02T19:48:07.219816
+Peanut Butter 400g,Namaste Super,519,519,2026-08-02T19:48:07.219816
+Kissan Jam 500g,Namaste Super,326,326,2026-08-02T19:48:07.219816
+Jam 500g,Namaste Super,346,346,2026-08-02T19:48:07.219816
+Everest Turmeric Powder 100g,Namaste Super,71,71,2026-08-02T19:48:07.219816
+MDH Turmeric Powder 100g,Namaste Super,75,75,2026-08-02T19:48:07.219816
+Turmeric Powder 100g,Namaste Super,80,80,2026-08-02T19:48:07.219816
+Everest Turmeric Powder 500g,Namaste Super,71,71,2026-08-02T19:48:07.219816
+MDH Turmeric Powder 500g,Namaste Super,75,75,2026-08-02T19:48:07.219816
+Turmeric Powder 500g,Namaste Super,80,80,2026-08-02T19:48:07.219816
+Everest Chilli Powder 100g,Namaste Super,92,92,2026-08-02T19:48:07.219816
+MDH Chilli Powder 100g,Namaste Super,97,97,2026-08-02T19:48:07.219816
+Everest Chilli Powder 500g,Namaste Super,92,92,2026-08-02T19:48:07.219816
+MDH Chilli Powder 500g,Namaste Super,97,97,2026-08-02T19:48:07.219816
+Everest Coriander Powder 100g,Namaste Super,66,66,2026-08-02T19:48:07.219816
+Coriander Powder 100g,Namaste Super,70,70,2026-08-02T19:48:07.219816
+Cumin Seed 100g,Namaste Super,122,122,2026-08-02T19:48:07.219816
+Everest Garam Masala 50g,Namaste Super,48,48,2026-08-02T19:48:07.219816
+MDH Garam Masala 50g,Namaste Super,51,51,2026-08-02T19:48:07.219816
+Tata Salt 1kg,Namaste Super,31,31,2026-08-02T19:48:07.219816
+Salt 1kg,Namaste Super,33,33,2026-08-02T19:48:07.219816
+Sugar 1kg,Namaste Super,112,112,2026-08-02T19:48:07.219816
+Sugar 5kg,Namaste Super,527,527,2026-08-02T19:48:07.219816
+Colgate Toothpaste 100g,Namaste Super,184,184,2026-08-02T19:48:07.219816
+Close Up Toothpaste 100g,Namaste Super,195,195,2026-08-02T19:48:07.219816
+Dabur Toothpaste 100g,Namaste Super,206,206,2026-08-02T19:48:07.219816
+Colgate Toothpaste 200g,Namaste Super,184,184,2026-08-02T19:48:07.219816
+Close Up Toothpaste 200g,Namaste Super,195,195,2026-08-02T19:48:07.219816
+Dabur Toothpaste 200g,Namaste Super,206,206,2026-08-02T19:48:07.219816
+Head & Shoulders Shampoo 200ml,Namaste Super,116,116,2026-08-02T19:48:07.219816
+Sunsilk Shampoo 200ml,Namaste Super,123,123,2026-08-02T19:48:07.219816
+Clinic Plus Shampoo 200ml,Namaste Super,131,131,2026-08-02T19:48:07.219816
+Head & Shoulders Shampoo 400ml,Namaste Super,2455,2455,2026-08-02T19:48:07.219816
+Sunsilk Shampoo 400ml,Namaste Super,2602,2602,2026-08-02T19:48:07.219816
+Clinic Plus Shampoo 400ml,Namaste Super,2749,2749,2026-08-02T19:48:07.219816
+Dove Bath Soap 4pcs,Namaste Super,255,255,2026-08-02T19:48:07.219816
+Lifebuoy Bath Soap 4pcs,Namaste Super,270,270,2026-08-02T19:48:07.219816
+Lux Bath Soap 4pcs,Namaste Super,286,286,2026-08-02T19:48:07.219816
+Dove Bath Soap 1pcs,Namaste Super,76,76,2026-08-02T19:48:07.219816
+Lifebuoy Bath Soap 1pcs,Namaste Super,82,82,2026-08-02T19:48:07.219816
+Lux Bath Soap 1pcs,Namaste Super,86,86,2026-08-02T19:48:07.219816
+Dettol Hand Wash 200ml,Namaste Super,49,49,2026-08-02T19:48:07.219816
+Lifebuoy Hand Wash 200ml,Namaste Super,52,52,2026-08-02T19:48:07.219816
+Nivea Face Cream 50g,Namaste Super,163,163,2026-08-02T19:48:07.219816
+Ponds Face Cream 50g,Namaste Super,172,172,2026-08-02T19:48:07.219816
+Parachute Hair Oil 200ml,Namaste Super,64,64,2026-08-02T19:48:07.219816
+Dabur Hair Oil 200ml,Namaste Super,68,68,2026-08-02T19:48:07.219816
+Surf Detergent Powder 1kg,Namaste Super,459,459,2026-08-02T19:48:07.219816
+Wheel Detergent Powder 1kg,Namaste Super,487,487,2026-08-02T19:48:07.219816
+Rin Detergent Powder 1kg,Namaste Super,514,514,2026-08-02T19:48:07.219816
+Surf Detergent Powder 500g,Namaste Super,459,459,2026-08-02T19:48:07.219816
+Wheel Detergent Powder 500g,Namaste Super,487,487,2026-08-02T19:48:07.219816
+Rin Detergent Powder 500g,Namaste Super,514,514,2026-08-02T19:48:07.219816
+Vim Dishwash Liquid 500ml,Namaste Super,107,107,2026-08-02T19:48:07.219816
+Dishwash Liquid 500ml,Namaste Super,113,113,2026-08-02T19:48:07.219816
+Harpic Toilet Cleaner 500ml,Namaste Super,130,130,2026-08-02T19:48:07.219816
+Toilet Cleaner 500ml,Namaste Super,137,137,2026-08-02T19:48:07.219816
+Lizol Floor Cleaner 500ml,Namaste Super,157,157,2026-08-02T19:48:07.219816
+Floor Cleaner 500ml,Namaste Super,166,166,2026-08-02T19:48:07.219816
+Garbage Bags 30pcs,Namaste Super,153,153,2026-08-02T19:48:07.219816
+Toilet Paper 4pcs,Namaste Super,224,224,2026-08-02T19:48:07.219816
+Origami Toilet Paper 4pcs,Namaste Super,238,238,2026-08-02T19:48:07.219816
+Amul Milk 1L,Local Kirana,87,87,2026-07-20T19:48:07.219816
+Mother Dairy Milk 1L,Local Kirana,92,92,2026-07-20T19:48:07.219816
+DDC Milk 1L,Local Kirana,98,98,2026-07-20T19:48:07.219816
+Nestle Milk 1L,Local Kirana,103,103,2026-07-20T19:48:07.219816
+Sujal Milk 1L,Local Kirana,109,109,2026-07-20T19:48:07.219816
+Amul Milk 500ml,Local Kirana,48,48,2026-07-20T19:48:07.219816
+Mother Dairy Milk 500ml,Local Kirana,50,50,2026-07-20T19:48:07.219816
+DDC Milk 500ml,Local Kirana,53,53,2026-07-20T19:48:07.219816
+Nestle Milk 500ml,Local Kirana,56,56,2026-07-20T19:48:07.219816
+Sujal Milk 500ml,Local Kirana,59,59,2026-07-20T19:48:07.219816
+Amul Yogurt 500g,Local Kirana,126,126,2026-07-20T19:48:07.219816
+DDC Yogurt 500g,Local Kirana,134,134,2026-07-20T19:48:07.219816
+Kwality Yogurt 500g,Local Kirana,142,142,2026-07-20T19:48:07.219816
+Amul Yogurt 200g,Local Kirana,126,126,2026-07-20T19:48:07.219816
+DDC Yogurt 200g,Local Kirana,134,134,2026-07-20T19:48:07.219816
+Kwality Yogurt 200g,Local Kirana,142,142,2026-07-20T19:48:07.219816
+Amul Butter 500g,Local Kirana,601,601,2026-07-20T19:48:07.219816
+Nestle Butter 500g,Local Kirana,637,637,2026-07-20T19:48:07.219816
+Amul Butter 100g,Local Kirana,601,601,2026-07-20T19:48:07.219816
+Nestle Butter 100g,Local Kirana,637,637,2026-07-20T19:48:07.219816
+Amul Cheese Slice 200g,Local Kirana,310,310,2026-07-20T19:48:07.219816
+Britannia Cheese Slice 200g,Local Kirana,329,329,2026-07-20T19:48:07.219816
+Amul Paneer 200g,Local Kirana,184,184,2026-07-20T19:48:07.219816
+DDC Paneer 200g,Local Kirana,195,195,2026-07-20T19:48:07.219816
+Amul Ghee 1L,Local Kirana,1116,1116,2026-07-20T19:48:07.219816
+Patanjali Ghee 1L,Local Kirana,1182,1182,2026-07-20T19:48:07.219816
+DDC Ghee 1L,Local Kirana,1249,1249,2026-07-20T19:48:07.219816
+Amul Ghee 500ml,Local Kirana,613,613,2026-07-20T19:48:07.219816
+Patanjali Ghee 500ml,Local Kirana,650,650,2026-07-20T19:48:07.219816
+DDC Ghee 500ml,Local Kirana,687,687,2026-07-20T19:48:07.219816
+Whole Wheat Bread 400g,Local Kirana,116,116,2026-07-20T19:48:07.219816
+Krishna Whole Wheat Bread 400g,Local Kirana,123,123,2026-07-20T19:48:07.219816
+Nebico Whole Wheat Bread 400g,Local Kirana,130,130,2026-07-20T19:48:07.219816
+Whole Wheat Bread 800g,Local Kirana,221,221,2026-07-20T19:48:07.219816
+Krishna Whole Wheat Bread 800g,Local Kirana,235,235,2026-07-20T19:48:07.219816
+Nebico Whole Wheat Bread 800g,Local Kirana,247,247,2026-07-20T19:48:07.219816
+White Bread 400g,Local Kirana,87,87,2026-07-20T19:48:07.219816
+Krishna White Bread 400g,Local Kirana,92,92,2026-07-20T19:48:07.219816
+Bun Pack 6pcs,Local Kirana,78,78,2026-07-20T19:48:07.219816
+Nebico Bun Pack 6pcs,Local Kirana,82,82,2026-07-20T19:48:07.219816
+Nebico Rusk 300g,Local Kirana,107,107,2026-07-20T19:48:07.219816
+Britannia Rusk 300g,Local Kirana,113,113,2026-07-20T19:48:07.219816
+Basmati Rice 1kg,Local Kirana,175,175,2026-07-20T19:48:07.219816
+Kohinoor Basmati Rice 1kg,Local Kirana,185,185,2026-07-20T19:48:07.219816
+Daawat Basmati Rice 1kg,Local Kirana,196,196,2026-07-20T19:48:07.219816
+Basmati Rice 5kg,Local Kirana,821,821,2026-07-20T19:48:07.219816
+Kohinoor Basmati Rice 5kg,Local Kirana,870,870,2026-07-20T19:48:07.219816
+Daawat Basmati Rice 5kg,Local Kirana,920,920,2026-07-20T19:48:07.219816
+Brown Rice 1kg,Local Kirana,116,116,2026-07-20T19:48:07.219816
+Brown Rice 5kg,Local Kirana,547,547,2026-07-20T19:48:07.219816
+Jeera Masino Rice 5kg,Local Kirana,2827,2827,2026-07-20T19:48:07.219816
+Sona Jeera Masino Rice 5kg,Local Kirana,2996,2996,2026-07-20T19:48:07.219816
+Jeera Masino Rice 25kg,Local Kirana,2815,2815,2026-07-20T19:48:07.219816
+Sona Jeera Masino Rice 25kg,Local Kirana,2984,2984,2026-07-20T19:48:07.219816
+Wheat Flour 1kg,Local Kirana,92,92,2026-07-20T19:48:07.219816
+Aashirvaad Wheat Flour 1kg,Local Kirana,98,98,2026-07-20T19:48:07.219816
+Patanjali Wheat Flour 1kg,Local Kirana,103,103,2026-07-20T19:48:07.219816
+Wheat Flour 5kg,Local Kirana,433,433,2026-07-20T19:48:07.219816
+Aashirvaad Wheat Flour 5kg,Local Kirana,459,459,2026-07-20T19:48:07.219816
+Patanjali Wheat Flour 5kg,Local Kirana,485,485,2026-07-20T19:48:07.219816
+Maida 1kg,Local Kirana,87,87,2026-07-20T19:48:07.219816
+Aashirvaad Maida 1kg,Local Kirana,92,92,2026-07-20T19:48:07.219816
+Quaker Oats 500g,Local Kirana,272,272,2026-07-20T19:48:07.219816
+Patanjali Oats 500g,Local Kirana,288,288,2026-07-20T19:48:07.219816
+Quaker Oats 1kg,Local Kirana,272,272,2026-07-20T19:48:07.219816
+Patanjali Oats 1kg,Local Kirana,288,288,2026-07-20T19:48:07.219816
+Beaten Rice 1kg,Local Kirana,107,107,2026-07-20T19:48:07.219816
+Semolina 1kg,Local Kirana,97,97,2026-07-20T19:48:07.219816
+Eggs 12pcs,Local Kirana,233,233,2026-07-20T19:48:07.219816
+Eggs 6pcs,Local Kirana,233,233,2026-07-20T19:48:07.219816
+Eggs 30pcs,Local Kirana,233,233,2026-07-20T19:48:07.219816
+Black Lentil 1kg,Local Kirana,204,204,2026-07-20T19:48:07.219816
+Tulsi Black Lentil 1kg,Local Kirana,216,216,2026-07-20T19:48:07.219816
+Red Lentil 1kg,Local Kirana,184,184,2026-07-20T19:48:07.219816
+Tulsi Red Lentil 1kg,Local Kirana,195,195,2026-07-20T19:48:07.219816
+Red Lentil 5kg,Local Kirana,866,866,2026-07-20T19:48:07.219816
+Tulsi Red Lentil 5kg,Local Kirana,919,919,2026-07-20T19:48:07.219816
+Chickpeas 1kg,Local Kirana,175,175,2026-07-20T19:48:07.219816
+Soybean 1kg,Local Kirana,194,194,2026-07-20T19:48:07.219816
+Chicken Breast 500g,Local Kirana,340,340,2026-07-20T19:48:07.219816
+Nepali Farm Chicken Breast 500g,Local Kirana,360,360,2026-07-20T19:48:07.219816
+Chicken Breast 1kg,Local Kirana,340,340,2026-07-20T19:48:07.219816
+Nepali Farm Chicken Breast 1kg,Local Kirana,360,360,2026-07-20T19:48:07.219816
+Chicken Curry Cut 1kg,Local Kirana,407,407,2026-07-20T19:48:07.219816
+Mutton 1kg,Local Kirana,1212,1212,2026-07-20T19:48:07.219816
+Fish Fillet 500g,Local Kirana,369,369,2026-07-20T19:48:07.219816
+Apples 1kg,Local Kirana,272,272,2026-07-20T19:48:07.219816
+Bananas 1kg,Local Kirana,97,97,2026-07-20T19:48:07.219816
+Oranges 1kg,Local Kirana,213,213,2026-07-20T19:48:07.219816
+Grapes 1kg,Local Kirana,310,310,2026-07-20T19:48:07.219816
+Papaya 1kg,Local Kirana,126,126,2026-07-20T19:48:07.219816
+Pomegranate 1kg,Local Kirana,436,436,2026-07-20T19:48:07.219816
+Tomatoes 1kg,Local Kirana,78,78,2026-07-20T19:48:07.219816
+Potatoes 1kg,Local Kirana,48,48,2026-07-20T19:48:07.219816
+Potatoes 5kg,Local Kirana,228,228,2026-07-20T19:48:07.219816
+Onions 1kg,Local Kirana,87,87,2026-07-20T19:48:07.219816
+Cauliflower 1kg,Local Kirana,68,68,2026-07-20T19:48:07.219816
+Cabbage 1kg,Local Kirana,58,58,2026-07-20T19:48:07.219816
+Carrot 1kg,Local Kirana,92,92,2026-07-20T19:48:07.219816
+Spinach 500g,Local Kirana,39,39,2026-07-20T19:48:07.219816
+Green Peas 1kg,Local Kirana,146,146,2026-07-20T19:48:07.219816
+Coca Cola Coca Cola 2L,Local Kirana,155,155,2026-07-20T19:48:07.219816
+Coca Cola Coca Cola 1.25L,Local Kirana,106,106,2026-07-20T19:48:07.219816
+Coca Cola Coca Cola 500ml,Local Kirana,85,85,2026-07-20T19:48:07.219816
+Pepsi Pepsi 2L,Local Kirana,146,146,2026-07-20T19:48:07.219816
+Pepsi Pepsi 1.25L,Local Kirana,99,99,2026-07-20T19:48:07.219816
+Coca Cola Sprite 2L,Local Kirana,150,150,2026-07-20T19:48:07.219816
+Real Mango Juice 1L,Local Kirana,204,204,2026-07-20T19:48:07.219816
+Frooti Mango Juice 1L,Local Kirana,216,216,2026-07-20T19:48:07.219816
+Real Mango Juice 200ml,Local Kirana,61,61,2026-07-20T19:48:07.219816
+Frooti Mango Juice 200ml,Local Kirana,65,65,2026-07-20T19:48:07.219816
+Tokla Black Tea 200g,Local Kirana,184,184,2026-07-20T19:48:07.219816
+Ilam Black Tea 200g,Local Kirana,195,195,2026-07-20T19:48:07.219816
+Gorkha Black Tea 200g,Local Kirana,207,207,2026-07-20T19:48:07.219816
+Tokla Black Tea 500g,Local Kirana,184,184,2026-07-20T19:48:07.219816
+Ilam Black Tea 500g,Local Kirana,195,195,2026-07-20T19:48:07.219816
+Gorkha Black Tea 500g,Local Kirana,207,207,2026-07-20T19:48:07.219816
+Tokla Green Tea 100g,Local Kirana,233,233,2026-07-20T19:48:07.219816
+Ilam Green Tea 100g,Local Kirana,246,246,2026-07-20T19:48:07.219816
+Nescafe Instant Coffee 50g,Local Kirana,171,171,2026-07-20T19:48:07.219816
+Bru Instant Coffee 50g,Local Kirana,181,181,2026-07-20T19:48:07.219816
+Nescafe Instant Coffee 100g,Local Kirana,565,565,2026-07-20T19:48:07.219816
+Bru Instant Coffee 100g,Local Kirana,598,598,2026-07-20T19:48:07.219816
+Mineral Water 1L,Local Kirana,29,29,2026-07-20T19:48:07.219816
+Mineral Water 5L,Local Kirana,134,134,2026-07-20T19:48:07.219816
+Fortune Sunflower Oil 1L,Local Kirana,272,272,2026-07-20T19:48:07.219816
+Dhara Sunflower Oil 1L,Local Kirana,288,288,2026-07-20T19:48:07.219816
+Sunflower Oil 1L,Local Kirana,305,305,2026-07-20T19:48:07.219816
+Fortune Sunflower Oil 5L,Local Kirana,1249,1249,2026-07-20T19:48:07.219816
+Dhara Sunflower Oil 5L,Local Kirana,1324,1324,2026-07-20T19:48:07.219816
+Sunflower Oil 5L,Local Kirana,1400,1400,2026-07-20T19:48:07.219816
+Mustard Oil 1L,Local Kirana,310,310,2026-07-20T19:48:07.219816
+Patanjali Mustard Oil 1L,Local Kirana,329,329,2026-07-20T19:48:07.219816
+Mustard Oil 5L,Local Kirana,1428,1428,2026-07-20T19:48:07.219816
+Patanjali Mustard Oil 5L,Local Kirana,1513,1513,2026-07-20T19:48:07.219816
+Olive Oil 500ml,Local Kirana,454,454,2026-07-20T19:48:07.219816
+Figaro Olive Oil 500ml,Local Kirana,481,481,2026-07-20T19:48:07.219816
+Soybean Oil 1L,Local Kirana,252,252,2026-07-20T19:48:07.219816
+Soybean Oil 5L,Local Kirana,1160,1160,2026-07-20T19:48:07.219816
+Lays Potato Chips 50g,Local Kirana,32,32,2026-07-20T19:48:07.219816
+Kurkure Potato Chips 50g,Local Kirana,34,34,2026-07-20T19:48:07.219816
+Lays Potato Chips 100g,Local Kirana,106,106,2026-07-20T19:48:07.219816
+Kurkure Potato Chips 100g,Local Kirana,113,113,2026-07-20T19:48:07.219816
+Wai Wai Instant Noodles 75g,Local Kirana,24,24,2026-07-20T19:48:07.219816
+Rara Instant Noodles 75g,Local Kirana,25,25,2026-07-20T19:48:07.219816
+Mayos Instant Noodles 75g,Local Kirana,27,27,2026-07-20T19:48:07.219816
+Haldiram Namkeen Mixture 200g,Local Kirana,126,126,2026-07-20T19:48:07.219816
+Namkeen Mixture 200g,Local Kirana,134,134,2026-07-20T19:48:07.219816
+Haldiram Namkeen Mixture 400g,Local Kirana,126,126,2026-07-20T19:48:07.219816
+Namkeen Mixture 400g,Local Kirana,134,134,2026-07-20T19:48:07.219816
+Popcorn 100g,Local Kirana,87,87,2026-07-20T19:48:07.219816
+Britannia Digestive Biscuit 250g,Local Kirana,90,90,2026-07-20T19:48:07.219816
+Nebico Digestive Biscuit 250g,Local Kirana,96,96,2026-07-20T19:48:07.219816
+Britannia Digestive Biscuit 400g,Local Kirana,235,235,2026-07-20T19:48:07.219816
+Nebico Digestive Biscuit 400g,Local Kirana,248,248,2026-07-20T19:48:07.219816
+Britannia Glucose Biscuit 200g,Local Kirana,58,58,2026-07-20T19:48:07.219816
+Parle Glucose Biscuit 200g,Local Kirana,62,62,2026-07-20T19:48:07.219816
+Britannia Cream Biscuit 150g,Local Kirana,95,95,2026-07-20T19:48:07.219816
+Nebico Cream Biscuit 150g,Local Kirana,101,101,2026-07-20T19:48:07.219816
+Parle Cream Biscuit 150g,Local Kirana,107,107,2026-07-20T19:48:07.219816
+Nebico Salt Biscuit 200g,Local Kirana,63,63,2026-07-20T19:48:07.219816
+Kelloggs Corn Flakes 300g,Local Kirana,407,407,2026-07-20T19:48:07.219816
+Patanjali Corn Flakes 300g,Local Kirana,432,432,2026-07-20T19:48:07.219816
+Kelloggs Corn Flakes 500g,Local Kirana,407,407,2026-07-20T19:48:07.219816
+Patanjali Corn Flakes 500g,Local Kirana,432,432,2026-07-20T19:48:07.219816
+Kelloggs Muesli 500g,Local Kirana,601,601,2026-07-20T19:48:07.219816
+Bagrrys Muesli 500g,Local Kirana,637,637,2026-07-20T19:48:07.219816
+Dabur Honey 500g,Local Kirana,543,543,2026-07-20T19:48:07.219816
+Patanjali Honey 500g,Local Kirana,576,576,2026-07-20T19:48:07.219816
+Dabur Honey 250g,Local Kirana,337,337,2026-07-20T19:48:07.219816
+Patanjali Honey 250g,Local Kirana,357,357,2026-07-20T19:48:07.219816
+Pintola Peanut Butter 400g,Local Kirana,466,466,2026-07-20T19:48:07.219816
+Peanut Butter 400g,Local Kirana,494,494,2026-07-20T19:48:07.219816
+Kissan Jam 500g,Local Kirana,310,310,2026-07-20T19:48:07.219816
+Jam 500g,Local Kirana,329,329,2026-07-20T19:48:07.219816
+Everest Turmeric Powder 100g,Local Kirana,68,68,2026-07-20T19:48:07.219816
+MDH Turmeric Powder 100g,Local Kirana,72,72,2026-07-20T19:48:07.219816
+Turmeric Powder 100g,Local Kirana,76,76,2026-07-20T19:48:07.219816
+Everest Turmeric Powder 500g,Local Kirana,68,68,2026-07-20T19:48:07.219816
+MDH Turmeric Powder 500g,Local Kirana,72,72,2026-07-20T19:48:07.219816
+Turmeric Powder 500g,Local Kirana,76,76,2026-07-20T19:48:07.219816
+Everest Chilli Powder 100g,Local Kirana,87,87,2026-07-20T19:48:07.219816
+MDH Chilli Powder 100g,Local Kirana,92,92,2026-07-20T19:48:07.219816
+Everest Chilli Powder 500g,Local Kirana,87,87,2026-07-20T19:48:07.219816
+MDH Chilli Powder 500g,Local Kirana,92,92,2026-07-20T19:48:07.219816
+Everest Coriander Powder 100g,Local Kirana,63,63,2026-07-20T19:48:07.219816
+Coriander Powder 100g,Local Kirana,67,67,2026-07-20T19:48:07.219816
+Cumin Seed 100g,Local Kirana,116,116,2026-07-20T19:48:07.219816
+Everest Garam Masala 50g,Local Kirana,46,46,2026-07-20T19:48:07.219816
+MDH Garam Masala 50g,Local Kirana,48,48,2026-07-20T19:48:07.219816
+Tata Salt 1kg,Local Kirana,29,29,2026-07-20T19:48:07.219816
+Salt 1kg,Local Kirana,31,31,2026-07-20T19:48:07.219816
+Sugar 1kg,Local Kirana,107,107,2026-07-20T19:48:07.219816
+Sugar 5kg,Local Kirana,501,501,2026-07-20T19:48:07.219816
+Colgate Toothpaste 100g,Local Kirana,175,175,2026-07-20T19:48:07.219816
+Close Up Toothpaste 100g,Local Kirana,185,185,2026-07-20T19:48:07.219816
+Dabur Toothpaste 100g,Local Kirana,196,196,2026-07-20T19:48:07.219816
+Colgate Toothpaste 200g,Local Kirana,175,175,2026-07-20T19:48:07.219816
+Close Up Toothpaste 200g,Local Kirana,185,185,2026-07-20T19:48:07.219816
+Dabur Toothpaste 200g,Local Kirana,196,196,2026-07-20T19:48:07.219816
+Head & Shoulders Shampoo 200ml,Local Kirana,111,111,2026-07-20T19:48:07.219816
+Sunsilk Shampoo 200ml,Local Kirana,117,117,2026-07-20T19:48:07.219816
+Clinic Plus Shampoo 200ml,Local Kirana,124,124,2026-07-20T19:48:07.219816
+Head & Shoulders Shampoo 400ml,Local Kirana,2335,2335,2026-07-20T19:48:07.219816
+Sunsilk Shampoo 400ml,Local Kirana,2474,2474,2026-07-20T19:48:07.219816
+Clinic Plus Shampoo 400ml,Local Kirana,2614,2614,2026-07-20T19:48:07.219816
+Dove Bath Soap 4pcs,Local Kirana,242,242,2026-07-20T19:48:07.219816
+Lifebuoy Bath Soap 4pcs,Local Kirana,257,257,2026-07-20T19:48:07.219816
+Lux Bath Soap 4pcs,Local Kirana,272,272,2026-07-20T19:48:07.219816
+Dove Bath Soap 1pcs,Local Kirana,73,73,2026-07-20T19:48:07.219816
+Lifebuoy Bath Soap 1pcs,Local Kirana,78,78,2026-07-20T19:48:07.219816
+Lux Bath Soap 1pcs,Local Kirana,81,81,2026-07-20T19:48:07.219816
+Dettol Hand Wash 200ml,Local Kirana,47,47,2026-07-20T19:48:07.219816
+Lifebuoy Hand Wash 200ml,Local Kirana,49,49,2026-07-20T19:48:07.219816
+Nivea Face Cream 50g,Local Kirana,155,155,2026-07-20T19:48:07.219816
+Ponds Face Cream 50g,Local Kirana,164,164,2026-07-20T19:48:07.219816
+Parachute Hair Oil 200ml,Local Kirana,61,61,2026-07-20T19:48:07.219816
+Dabur Hair Oil 200ml,Local Kirana,65,65,2026-07-20T19:48:07.219816
+Surf Detergent Powder 1kg,Local Kirana,436,436,2026-07-20T19:48:07.219816
+Wheel Detergent Powder 1kg,Local Kirana,463,463,2026-07-20T19:48:07.219816
+Rin Detergent Powder 1kg,Local Kirana,489,489,2026-07-20T19:48:07.219816
+Surf Detergent Powder 500g,Local Kirana,436,436,2026-07-20T19:48:07.219816
+Wheel Detergent Powder 500g,Local Kirana,463,463,2026-07-20T19:48:07.219816
+Rin Detergent Powder 500g,Local Kirana,489,489,2026-07-20T19:48:07.219816
+Vim Dishwash Liquid 500ml,Local Kirana,102,102,2026-07-20T19:48:07.219816
+Dishwash Liquid 500ml,Local Kirana,108,108,2026-07-20T19:48:07.219816
+Harpic Toilet Cleaner 500ml,Local Kirana,123,123,2026-07-20T19:48:07.219816
+Toilet Cleaner 500ml,Local Kirana,130,130,2026-07-20T19:48:07.219816
+Lizol Floor Cleaner 500ml,Local Kirana,149,149,2026-07-20T19:48:07.219816
+Floor Cleaner 500ml,Local Kirana,158,158,2026-07-20T19:48:07.219816
+Garbage Bags 30pcs,Local Kirana,146,146,2026-07-20T19:48:07.219816
+Toilet Paper 4pcs,Local Kirana,213,213,2026-07-20T19:48:07.219816
+Origami Toilet Paper 4pcs,Local Kirana,226,226,2026-07-20T19:48:07.219816

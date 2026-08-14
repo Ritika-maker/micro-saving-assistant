@@ -1,0 +1,13 @@
+# Micro-Savings Assistant - Python dependencies
+# Install with:  pip install -r requirements.txt
+#
+# Tesseract OCR itself is a separate program, not a Python package:
+#   Windows: winget install tesseract
+#            (or https://github.com/UB-Mannheim/tesseract/wiki)
+
+Flask>=3.0
+Flask-Login>=0.6
+Werkzeug>=3.0
+pandas>=2.0
+pillow>=10.0
+pytesseract>=0.3.10

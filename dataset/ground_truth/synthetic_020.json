@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_020",
+  "image_file": "synthetic_020.png",
+  "source": "synthetic",
+  "condition": "small",
+  "store_name": "BIG MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Wai Wai Instant Noodles",
+      "quantity": 1,
+      "unit": "75g",
+      "price": 25.75
+    },
+    {
+      "product_name": "Potatoes",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 240.25
+    },
+    {
+      "product_name": "Dove Bath Soap",
+      "quantity": 4,
+      "unit": "pcs",
+      "price": 250
+    },
+    {
+      "product_name": "Tokla Black Tea",
+      "quantity": 1,
+      "unit": "200g",
+      "price": 190.5
+    }
+  ],
+  "total": 798.34
+}

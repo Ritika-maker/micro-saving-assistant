@@ -1,0 +1,21 @@
+alias,canonical_product,note
+Amu1 Milk 1L,Amul Milk 1L,OCR digit/letter confusion (l -> 1)
+Amul Mlilk 1L,Amul Milk 1L,OCR character insertion
+AMUL MILK 1 L,Amul Milk 1L,spacing and case difference
+Basmati Rce 1kg,Basmati Rice 1kg,OCR dropped character
+Basmati 5 KG,Basmati Rice 5kg,shortened name and spaced unit
+Bsmati Rice 5kg,Basmati Rice 5kg,OCR dropped vowel
+Whole Wheat Bred 400g,Whole Wheat Bread 400g,OCR dropped character
+Whoie Wheat Bread 400g,Whole Wheat Bread 400g,OCR l -> i confusion
+Eggs 12 pcs,Eggs 12pcs,spacing difference
+Egg 12pcs,Eggs 12pcs,singular/plural
+Coca Cola 2 Ltr,Coca Cola 2L,unit spelling variation
+Coca-Cola 2L,Coca Cola 2L,punctuation difference
+Sunfower Oil 1L,Fortune Sunflower Oil 1L,OCR dropped character + missing brand
+Sunflower Oil 1 litre,Fortune Sunflower Oil 1L,unit spelling variation
+Mother Dairy Mllk 1L,Mother Dairy Milk 1L,OCR i -> l confusion
+Colgat Toothpaste 100g,Colgate Toothpaste 100g,OCR dropped character
+Wai Wai Noodles 75g,Wai Wai Instant Noodles 75g,shortened product name
+Tomato 1kg,Tomatoes 1kg,singular/plural
+Potatos 5kg,Potatoes 5kg,misspelling
+Detergant Powder 1kg,Surf Detergent Powder 1kg,misspelling + missing brand

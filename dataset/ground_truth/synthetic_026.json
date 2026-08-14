@@ -1,0 +1,41 @@
+{
+  "receipt_id": "synthetic_026",
+  "image_file": "synthetic_026.png",
+  "source": "synthetic",
+  "condition": "low_contrast",
+  "store_name": "NAMASTE SUPERMARKET",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Amul Butter",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 620.75
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 168
+    },
+    {
+      "product_name": "Whole Wheat Bread",
+      "quantity": 1,
+      "unit": "400g",
+      "price": 120
+    },
+    {
+      "product_name": "Basmati Rice",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 850
+    },
+    {
+      "product_name": "Quaker Oats",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 280.5
+    }
+  ],
+  "total": 2304.35
+}

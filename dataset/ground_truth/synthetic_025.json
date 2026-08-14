@@ -1,0 +1,41 @@
+{
+  "receipt_id": "synthetic_025",
+  "image_file": "synthetic_025.jpg",
+  "source": "synthetic",
+  "condition": "noisy",
+  "store_name": "NAMASTE SUPERMARKET",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Lays Potato Chips",
+      "quantity": 3,
+      "unit": "100g",
+      "price": 285
+    },
+    {
+      "product_name": "Brown Rice",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 120
+    },
+    {
+      "product_name": "White Bread",
+      "quantity": 1,
+      "unit": "400g",
+      "price": 90
+    },
+    {
+      "product_name": "Dove Bath Soap",
+      "quantity": 4,
+      "unit": "pcs",
+      "price": 750
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240
+    }
+  ],
+  "total": 1678.05
+}

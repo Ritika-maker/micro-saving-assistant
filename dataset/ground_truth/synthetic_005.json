@@ -1,0 +1,53 @@
+{
+  "receipt_id": "synthetic_005",
+  "image_file": "synthetic_005.jpg",
+  "source": "synthetic",
+  "condition": "noisy",
+  "store_name": "BHATBHATENI SUPERSTORE",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Bun Pack",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 168
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 120
+    },
+    {
+      "product_name": "Dove Bath Soap",
+      "quantity": 4,
+      "unit": "pcs",
+      "price": 250
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240
+    },
+    {
+      "product_name": "Potatoes",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 240.75
+    },
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 80
+    }
+  ],
+  "total": 1512.79
+}

@@ -10,119 +10,240 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
 
-        .stat-card {
-            position: relative;
-            overflow: hidden;
-        }
+        .stat-card { position: relative; overflow: hidden; }
         .stat-card::before {
-            content: '';
-            position: absolute;
-            top: -30px; right: -30px;
-            width: 100px; height: 100px;
-            border-radius: 50%;
-            opacity: 0.06;
+            content: ''; position: absolute; top: -30px; right: -30px;
+            width: 100px; height: 100px; border-radius: 50%; opacity: .06;
         }
-        .stat-card.green::before  { background: #16a34a; }
-        .stat-card.blue::before   { background: #2563eb; }
-        .stat-card.amber::before  { background: #d97706; }
+        .stat-card.green::before { background: #16a34a; }
+        .stat-card.blue::before  { background: #2563eb; }
+        .stat-card.amber::before { background: #d97706; }
 
-        .history-row {
-            transition: box-shadow .15s, transform .15s;
-        }
-        .history-row:hover {
-            box-shadow: 0 4px 20px rgba(0,0,0,.06);
-            transform: translateY(-1px);
-        }
+        .history-row { transition: box-shadow .15s, transform .15s; }
+        .history-row:hover { box-shadow: 0 4px 20px rgba(0,0,0,.06); transform: translateY(-1px); }
 
         .savings-pill {
             background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-            color: #15803d;
-            font-weight: 700;
-            font-size: 12px;
-            padding: 3px 10px;
-            border-radius: 99px;
+            color: #15803d; font-weight: 700; font-size: 12px;
+            padding: 3px 10px; border-radius: 99px;
         }
-
-        .progress-bar {
-            height: 6px;
-            border-radius: 3px;
-            background: #e5e7eb;
-            overflow: hidden;
-        }
+        .progress-bar { height: 6px; border-radius: 3px; background: #e5e7eb; overflow: hidden; }
         .progress-fill {
-            height: 100%;
-            border-radius: 3px;
+            height: 100%; border-radius: 3px;
             background: linear-gradient(90deg, #16a34a, #4ade80);
             transition: width .6s ease;
         }
-
         .empty-state {
-            background: repeating-linear-gradient(
-                45deg,
-                #f9fafb,
-                #f9fafb 10px,
-                #f3f4f6 10px,
-                #f3f4f6 20px
-            );
+            background: repeating-linear-gradient(45deg, #f9fafb, #f9fafb 10px, #f3f4f6 10px, #f3f4f6 20px);
         }
-
         .download-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            color: #2563eb;
-            padding: 5px 12px;
-            border: 1px solid #bfdbfe;
-            border-radius: 8px;
-            background: #eff6ff;
-            transition: background .15s, border-color .15s;
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 12px; font-weight: 600; color: #2563eb;
+            padding: 5px 12px; border: 1px solid #bfdbfe; border-radius: 8px;
+            background: #eff6ff; transition: background .15s, border-color .15s;
         }
-        .download-btn:hover {
-            background: #dbeafe;
-            border-color: #93c5fd;
+        .download-btn:hover { background: #dbeafe; border-color: #93c5fd; }
+        .view-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 12px; font-weight: 600; color: #15803d;
+            padding: 5px 12px; border: 1px solid #bbf7d0; border-radius: 8px;
+            background: #f0fdf4; transition: background .15s;
         }
+        .view-btn:hover { background: #dcfce7; }
+
+        /* Simple CSS-only savings trend chart */
+        .trend { display: flex; align-items: flex-end; gap: 6px; height: 110px; }
+        .trend-col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+        .trend-bar { background: linear-gradient(180deg, #4ade80, #16a34a); border-radius: 4px 4px 0 0; min-height: 3px; }
+        .trend-bar.spent { background: linear-gradient(180deg, #cbd5e1, #94a3b8); }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
 
 {% include "_nav.html" %}
 
-<div class="max-w-5xl mx-auto px-6 py-10">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
 
     <!-- PAGE HEADER -->
-    <div class="mb-8">
-        <h1 class="text-2xl font-bold text-gray-900">Savings History</h1>
-        <p class="text-sm text-gray-400 mt-1">All your receipt analyses, most recent first.</p>
+    <div class="mb-6">
+        <h1 class="text-2xl font-bold text-gray-900">Savings Dashboard</h1>
+        <p class="text-sm text-gray-400 mt-1">Your spending, savings opportunities and receipt history.</p>
     </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+        <div class="mb-4 text-sm px-4 py-3 rounded-xl {{ 'bg-green-50 text-green-700 border border-green-100' if category == 'success' else 'bg-red-50 text-red-700 border border-red-100' }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
 
     {% if history %}
 
-    <!-- AGGREGATE STATS -->
-    {% set total_spent_all   = history | sum(attribute=3) %}
-    {% set total_savings_all = history | sum(attribute=4) %}
-    {% set avg_savings_pct   = (history | sum(attribute=5)) / (history | length) %}
-
-    <div class="grid grid-cols-3 gap-4 mb-8">
+    <!-- TOP CARDS -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
+        <div class="stat-card blue bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Receipts Analyzed</p>
+            <p class="text-3xl font-extrabold text-gray-900 mt-1">{{ summary.receipts }}</p>
+            <p class="text-xs text-gray-400 mt-1">all time</p>
+        </div>
         <div class="stat-card green bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
             <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Total Spent</p>
-            <p class="text-3xl font-extrabold text-gray-900 mt-1">NPR {{ "%.2f" | format(total_spent_all) }}</p>
-            <p class="text-xs text-gray-400 mt-1">across {{ history | length }} receipt{{ 's' if history | length != 1 }}</p>
+            <p class="text-3xl font-extrabold text-gray-900 mt-1">NPR {{ summary.total_spent }}</p>
+            <p class="text-xs text-gray-400 mt-1">across {{ summary.receipts }} receipt{{ 's' if summary.receipts != 1 }}</p>
         </div>
         <div class="stat-card green bg-green-50 rounded-2xl border border-green-100 shadow-sm p-5">
-            <p class="text-xs font-semibold text-green-600 uppercase tracking-wide">Could Have Saved</p>
-            <p class="text-3xl font-extrabold text-green-700 mt-1">NPR {{ "%.2f" | format(total_savings_all) }}</p>
-            <p class="text-xs text-green-400 mt-1">if you switched to cheaper alternatives</p>
+            <p class="text-xs font-semibold text-green-600 uppercase tracking-wide">Potential Savings</p>
+            <p class="text-3xl font-extrabold text-green-700 mt-1">NPR {{ summary.total_savings }}</p>
+            <p class="text-xs text-green-500 mt-1">Estimated savings if recommended cheaper alternatives were selected</p>
         </div>
         <div class="stat-card amber bg-white rounded-2xl border border-gray-100 shadow-sm p-5">
             <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide">Avg Savings Rate</p>
-            <p class="text-3xl font-extrabold text-gray-900 mt-1">{{ "%.1f" | format(avg_savings_pct) }}%</p>
+            <p class="text-3xl font-extrabold text-gray-900 mt-1">{{ summary.avg_savings_pct }}%</p>
             <p class="text-xs text-gray-400 mt-1">per analysis</p>
         </div>
     </div>
 
+    <!-- ACTUAL SAVINGS + GOAL -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+        <div class="lg:col-span-2 bg-white rounded-2xl border border-gray-100 p-5">
+            <div class="flex items-start justify-between gap-4 flex-wrap">
+                <div>
+                    <h2 class="font-semibold text-gray-800 text-sm">This month · {{ month.label }}</h2>
+                    <p class="text-xs text-gray-400 mt-1">{{ month.receipts }} receipt{{ 's' if month.receipts != 1 }} analyzed</p>
+                </div>
+                <div class="flex gap-6 text-right">
+                    <div>
+                        <p class="text-xs text-gray-400">Spent</p>
+                        <p class="font-bold text-gray-900">NPR {{ month.total_spent }}</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400">Potential</p>
+                        <p class="font-bold text-green-600">NPR {{ month.total_savings }}</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400">Actual</p>
+                        <p class="font-bold text-gray-900">NPR {{ month.actual_savings }}</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-[11px] text-gray-400 mt-3">
+                <i class="fas fa-info-circle mr-1"></i>
+                <strong>Potential savings</strong> are estimates if you switched to the recommended alternatives.
+                <strong>Actual savings</strong> only count recommendations you confirmed using on a receipt page.
+            </p>
+        </div>
+
+        <!-- SAVINGS GOAL -->
+        <div class="bg-white rounded-2xl border border-gray-100 p-5">
+            <h2 class="font-semibold text-gray-800 text-sm mb-2">
+                <i class="fas fa-bullseye text-green-600 mr-1"></i> Monthly savings goal
+            </h2>
+            {% if goal.has_goal %}
+            <p class="text-2xl font-extrabold text-gray-900">NPR {{ goal.actual_savings }}
+                <span class="text-sm font-medium text-gray-400">/ {{ goal.target_amount }}</span></p>
+            <div class="progress-bar mt-3">
+                <div class="progress-fill" style="width: {{ goal.progress_pct }}%"></div>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">
+                {{ goal.progress_pct }}% reached ·
+                {% if goal.remaining > 0 %}NPR {{ goal.remaining }} remaining to reach your goal.
+                {% else %}Goal reached.{% endif %}
+            </p>
+            {% else %}
+            <p class="text-xs text-gray-400 mb-3">Set an optional target for this month.</p>
+            {% endif %}
+            <form method="POST" action="{{ url_for('save_goal') }}" class="mt-3 flex gap-2">
+                <input type="number" name="target_amount" min="1" step="1"
+                       value="{{ goal.target_amount if goal.has_goal else '' }}"
+                       placeholder="NPR 2000"
+                       class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-200">
+                <button type="submit"
+                        class="text-sm font-semibold bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg">
+                    Save
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOP SAVINGS OPPORTUNITIES -->
+    {% if opportunities %}
+    <div class="bg-white rounded-2xl border border-gray-100 p-5 mb-8">
+        <h2 class="font-semibold text-gray-800 text-sm mb-1">
+            <i class="fas fa-lightbulb text-amber-500 mr-1"></i> Top savings opportunities
+        </h2>
+        <p class="text-xs text-gray-400 mb-4">Biggest per-item savings found in your recent receipts.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {% for opp in opportunities %}
+            <div class="border border-gray-100 rounded-xl p-4 bg-gray-50">
+                <div class="flex items-start justify-between gap-3">
+                    <div class="min-w-0">
+                        <p class="text-sm font-semibold text-gray-800 truncate">{{ opp.item }}</p>
+                        <p class="text-xs text-gray-500 mt-1">
+                            Current NPR {{ opp.current_price }} → <span class="text-green-700 font-semibold">{{ opp.alternative }}</span> NPR {{ opp.alt_price }}
+                        </p>
+                        {% if opp.store_name %}
+                        <p class="text-[11px] text-gray-400 mt-1"><i class="fas fa-store mr-1"></i>{{ opp.store_name }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="text-right shrink-0">
+                        <p class="font-bold text-green-700">NPR {{ opp.savings_amount }}</p>
+                        <span class="savings-pill">{{ opp.savings_pct }}%</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- TREND + BY STORE -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+        {% if trend | length > 1 %}
+        {% set max_spent = trend | map(attribute='spent') | max %}
+        <div class="bg-white rounded-2xl border border-gray-100 p-5">
+            <h2 class="font-semibold text-gray-800 text-sm mb-1">Spending &amp; savings trend</h2>
+            <p class="text-xs text-gray-400 mb-4">Last {{ trend | length }} analyses, oldest first.</p>
+            <div class="trend">
+                {% for point in trend %}
+                <div class="trend-col" title="{{ point.date }} · spent NPR {{ point.spent }} · potential NPR {{ point.savings }}">
+                    <div class="trend-bar" style="height: {{ ((point.savings / max_spent * 100) if max_spent else 0) | round(1) }}%"></div>
+                    <div class="trend-bar spent" style="height: {{ (((point.spent - point.savings) / max_spent * 100) if max_spent else 0) | round(1) }}%"></div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="flex gap-4 mt-3 text-[11px] text-gray-400">
+                <span><i class="fas fa-square text-green-500 mr-1"></i>Potential savings</span>
+                <span><i class="fas fa-square text-slate-400 mr-1"></i>Rest of spending</span>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if by_store %}
+        <div class="bg-white rounded-2xl border border-gray-100 p-5">
+            <h2 class="font-semibold text-gray-800 text-sm mb-4">Spending by store</h2>
+            <div class="space-y-3">
+                {% set max_store = by_store | map(attribute='total_spent') | max %}
+                {% for store in by_store %}
+                <div>
+                    <div class="flex justify-between text-xs mb-1">
+                        <span class="font-medium text-gray-700 truncate">{{ store.store_name }}</span>
+                        <span class="text-gray-500">NPR {{ store.total_spent }} · {{ store.receipts }} receipt{{ 's' if store.receipts != 1 }}</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {{ ((store.total_spent / max_store * 100) if max_store else 0) | round(1) }}%"></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
     <!-- HISTORY LIST -->
+    <h2 class="font-semibold text-gray-800 text-sm mb-3">Receipt history</h2>
     <div class="space-y-3">
         {% for analysis in history %}
         {% set pct = analysis[5] | round(1) %}
@@ -131,31 +252,35 @@
         <div class="history-row bg-white rounded-2xl border border-gray-100 p-5">
             <div class="flex items-start justify-between gap-4 flex-wrap">
 
-                <!-- LEFT: date + receipt preview -->
                 <div class="flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
                         <i class="fas fa-receipt text-green-600 text-sm"></i>
                     </div>
                     <div>
-                        <p class="text-xs text-gray-400">{{ analysis[6][:16] }}</p>
+                        <p class="text-xs text-gray-400">{{ analysis[6][:16].replace('T', ' ') }}</p>
                         <p class="text-sm text-gray-500 mt-1 line-clamp-1 max-w-xs">
                             {{ analysis[2][:80] }}{% if analysis[2] | length > 80 %}…{% endif %}
                         </p>
-                        <p class="text-xs text-gray-300 mt-1">{{ analysis[7] }} item{{ 's' if analysis[7] != 1 }}</p>
+                        <p class="text-xs text-gray-300 mt-1">
+                            {{ analysis[7] }} item{{ 's' if analysis[7] != 1 }}
+                            {% if analysis[8] %} · {{ analysis[8] }}{% endif %}
+                        </p>
                     </div>
                 </div>
 
-                <!-- RIGHT: numbers + download -->
-                <div class="flex items-center gap-6 ml-auto">
+                <div class="flex items-center gap-4 sm:gap-6 ml-auto flex-wrap">
                     <div class="text-right">
                         <p class="text-xs text-gray-400">Spent</p>
-                        <p class="font-bold text-gray-800">NPR {{ "%.2f" | format(analysis[3]) }}</p>
+                        <p class="font-bold text-gray-800">NPR {{ analysis[3] | round | int }}</p>
                     </div>
                     <div class="text-right">
-                        <p class="text-xs text-gray-400">Could save</p>
-                        <p class="font-bold text-green-600">NPR {{ "%.2f" | format(analysis[4]) }}</p>
+                        <p class="text-xs text-gray-400">Potential</p>
+                        <p class="font-bold text-green-600">NPR {{ analysis[4] | round | int }}</p>
                     </div>
                     <span class="savings-pill">{{ pct }}% off</span>
+                    <a href="{{ url_for('analysis_detail', analysis_id=analysis[0]) }}" class="view-btn">
+                        <i class="fas fa-eye"></i> View Analysis
+                    </a>
                     <a href="{{ url_for('export_report', analysis_id=analysis[0]) }}"
                        class="download-btn" title="Download CSV">
                         <i class="fas fa-download"></i> CSV
@@ -163,7 +288,6 @@
                 </div>
             </div>
 
-            <!-- SAVINGS PROGRESS BAR -->
             <div class="mt-4">
                 <div class="progress-bar">
                     <div class="progress-fill" style="width: {{ bar_width }}%"></div>
