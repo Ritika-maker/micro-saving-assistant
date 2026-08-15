@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_003",
+  "image_file": "synthetic_003.png",
+  "source": "synthetic",
+  "condition": "small",
+  "store_name": "SUPER MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Pepsi",
+      "quantity": 1,
+      "unit": "1.25L",
+      "price": 110
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 84
+    },
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 320
+    },
+    {
+      "product_name": "Quaker Oats",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 280
+    }
+  ],
+  "total": 897.22
+}

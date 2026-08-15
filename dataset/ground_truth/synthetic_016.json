@@ -1,0 +1,47 @@
+{
+  "receipt_id": "synthetic_016",
+  "image_file": "synthetic_016.png",
+  "source": "synthetic",
+  "condition": "low_contrast",
+  "store_name": "BHATBHATENI SUPERSTORE",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 80
+    },
+    {
+      "product_name": "Sunflower Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 280
+    },
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 80
+    },
+    {
+      "product_name": "Amul Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 90
+    },
+    {
+      "product_name": "Amul Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 90
+    },
+    {
+      "product_name": "White Bread",
+      "quantity": 1,
+      "unit": "400g",
+      "price": 90.75
+    }
+  ],
+  "total": 803.15
+}

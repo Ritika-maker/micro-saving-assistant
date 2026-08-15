@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_013",
+  "image_file": "synthetic_013.png",
+  "source": "synthetic",
+  "condition": "small",
+  "store_name": "NAMASTE SUPERMARKET",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Tokla Black Tea",
+      "quantity": 1,
+      "unit": "200g",
+      "price": 190
+    },
+    {
+      "product_name": "Surf Detergent Powder",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 450
+    },
+    {
+      "product_name": "Surf Detergent Powder",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 450
+    },
+    {
+      "product_name": "Wai Wai Instant Noodles",
+      "quantity": 1,
+      "unit": "75g",
+      "price": 25
+    }
+  ],
+  "total": 1259.95
+}

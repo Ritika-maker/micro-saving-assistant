@@ -1,0 +1,41 @@
+{
+  "receipt_id": "synthetic_004",
+  "image_file": "synthetic_004.jpg",
+  "source": "synthetic",
+  "condition": "blurry",
+  "store_name": "NAMASTE SUPERMARKET",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Sunflower Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 280
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240.5
+    },
+    {
+      "product_name": "Tokla Black Tea",
+      "quantity": 1,
+      "unit": "200g",
+      "price": 190
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 420
+    },
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 1,
+      "unit": "50g",
+      "price": 320
+    }
+  ],
+  "total": 1639.06
+}

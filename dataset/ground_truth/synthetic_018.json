@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_018",
+  "image_file": "synthetic_018.png",
+  "source": "synthetic",
+  "condition": "rotated",
+  "store_name": "SUPER MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 80
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 600
+    },
+    {
+      "product_name": "Apples",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 280
+    },
+    {
+      "product_name": "Wai Wai Instant Noodles",
+      "quantity": 1,
+      "unit": "75g",
+      "price": 25
+    }
+  ],
+  "total": 1113.05
+}

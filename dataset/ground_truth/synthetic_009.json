@@ -1,0 +1,41 @@
+{
+  "receipt_id": "synthetic_009",
+  "image_file": "synthetic_009.png",
+  "source": "synthetic",
+  "condition": "clear",
+  "store_name": "BHATBHATENI SUPERSTORE",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Tomatoes",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 80
+    },
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 3,
+      "unit": "1L",
+      "price": 240
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 120.25
+    },
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 2,
+      "unit": "1L",
+      "price": 160
+    },
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 320
+    }
+  ],
+  "total": 1039.88
+}

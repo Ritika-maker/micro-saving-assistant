@@ -1,0 +1,47 @@
+{
+  "receipt_id": "synthetic_021",
+  "image_file": "synthetic_021.png",
+  "source": "synthetic",
+  "condition": "clear",
+  "store_name": "BHATBHATENI SUPERSTORE",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Whole Wheat Bread",
+      "quantity": 1,
+      "unit": "400g",
+      "price": 120.25
+    },
+    {
+      "product_name": "Coca Cola",
+      "quantity": 1,
+      "unit": "2L",
+      "price": 160
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 420
+    },
+    {
+      "product_name": "Basmati Rice",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 850
+    },
+    {
+      "product_name": "Wai Wai Instant Noodles",
+      "quantity": 1,
+      "unit": "75g",
+      "price": 25
+    }
+  ],
+  "total": 2051.23
+}

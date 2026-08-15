@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_028",
+  "image_file": "synthetic_028.png",
+  "source": "synthetic",
+  "condition": "rotated",
+  "store_name": "NAMASTE SUPERMARKET",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Lays Potato Chips",
+      "quantity": 1,
+      "unit": "100g",
+      "price": 95.75
+    },
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 1,
+      "unit": "50g",
+      "price": 320
+    },
+    {
+      "product_name": "Brown Rice",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 120.5
+    },
+    {
+      "product_name": "Quaker Oats",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 280
+    }
+  ],
+  "total": 922.36
+}

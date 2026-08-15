@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_022",
+  "image_file": "synthetic_022.png",
+  "source": "synthetic",
+  "condition": "clear",
+  "store_name": "LOCAL KIRANA STORE",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Amul Butter",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 620
+    },
+    {
+      "product_name": "Brown Rice",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 120
+    },
+    {
+      "product_name": "Amul Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 90
+    },
+    {
+      "product_name": "Dove Bath Soap",
+      "quantity": 4,
+      "unit": "pcs",
+      "price": 250
+    }
+  ],
+  "total": 1220.4
+}

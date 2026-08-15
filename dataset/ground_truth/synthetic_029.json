@@ -1,0 +1,41 @@
+{
+  "receipt_id": "synthetic_029",
+  "image_file": "synthetic_029.png",
+  "source": "synthetic",
+  "condition": "clear",
+  "store_name": "SUPER MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Surf Detergent Powder",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 450
+    },
+    {
+      "product_name": "Tomatoes",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 80.5
+    },
+    {
+      "product_name": "Dove Bath Soap",
+      "quantity": 4,
+      "unit": "pcs",
+      "price": 250.5
+    },
+    {
+      "product_name": "Amul Butter",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 620.5
+    },
+    {
+      "product_name": "White Bread",
+      "quantity": 1,
+      "unit": "400g",
+      "price": 90.75
+    }
+  ],
+  "total": 1686.24
+}

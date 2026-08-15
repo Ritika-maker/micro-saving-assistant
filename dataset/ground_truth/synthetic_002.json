@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_002",
+  "image_file": "synthetic_002.png",
+  "source": "synthetic",
+  "condition": "clear",
+  "store_name": "SUPER MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Bun Pack",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 168
+    },
+    {
+      "product_name": "Coca Cola",
+      "quantity": 1,
+      "unit": "2L",
+      "price": 160.75
+    },
+    {
+      "product_name": "Surf Detergent Powder",
+      "quantity": 1,
+      "unit": "1kg",
+      "price": 450.5
+    },
+    {
+      "product_name": "Whole Wheat Bread",
+      "quantity": 1,
+      "unit": "400g",
+      "price": 120
+    }
+  ],
+  "total": 1016.15
+}

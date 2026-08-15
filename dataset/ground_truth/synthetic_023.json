@@ -1,0 +1,35 @@
+{
+  "receipt_id": "synthetic_023",
+  "image_file": "synthetic_023.png",
+  "source": "synthetic",
+  "condition": "small",
+  "store_name": "BIG MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 80
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240
+    },
+    {
+      "product_name": "Lays Potato Chips",
+      "quantity": 1,
+      "unit": "100g",
+      "price": 95
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 420.75
+    }
+  ],
+  "total": 944.4
+}

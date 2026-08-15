@@ -1,0 +1,101 @@
+{
+  "receipt_id": "synthetic_017",
+  "image_file": "synthetic_017.png",
+  "source": "synthetic",
+  "condition": "long",
+  "store_name": "BIG MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 320.25
+    },
+    {
+      "product_name": "White Bread",
+      "quantity": 1,
+      "unit": "400g",
+      "price": 90.25
+    },
+    {
+      "product_name": "Amul Milk",
+      "quantity": 3,
+      "unit": "1L",
+      "price": 270.5
+    },
+    {
+      "product_name": "Basmati Rice",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 850
+    },
+    {
+      "product_name": "Nescafe Instant Coffee",
+      "quantity": 3,
+      "unit": "50g",
+      "price": 960
+    },
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 2,
+      "unit": "1L",
+      "price": 160
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 120
+    },
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 3,
+      "unit": "1L",
+      "price": 960
+    },
+    {
+      "product_name": "Coca Cola",
+      "quantity": 1,
+      "unit": "2L",
+      "price": 160
+    },
+    {
+      "product_name": "Potatoes",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 240
+    },
+    {
+      "product_name": "Coca Cola",
+      "quantity": 1,
+      "unit": "2L",
+      "price": 160
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 30,
+      "unit": "pcs",
+      "price": 600
+    },
+    {
+      "product_name": "Basmati Rice",
+      "quantity": 2,
+      "unit": "5kg",
+      "price": 1700
+    },
+    {
+      "product_name": "Coca Cola",
+      "quantity": 3,
+      "unit": "2L",
+      "price": 480
+    },
+    {
+      "product_name": "Mother Dairy Milk",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 80.5
+    }
+  ],
+  "total": 8081.2
+}

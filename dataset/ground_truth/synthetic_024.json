@@ -1,0 +1,41 @@
+{
+  "receipt_id": "synthetic_024",
+  "image_file": "synthetic_024.jpg",
+  "source": "synthetic",
+  "condition": "blurry",
+  "store_name": "BHATBHATENI SUPERSTORE",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Mustard Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 320
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 84
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 84.75
+    },
+    {
+      "product_name": "Potatoes",
+      "quantity": 2,
+      "unit": "5kg",
+      "price": 480
+    },
+    {
+      "product_name": "Eggs",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 240
+    }
+  ],
+  "total": 1365.89
+}

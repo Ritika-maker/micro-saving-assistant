@@ -1,0 +1,59 @@
+{
+  "receipt_id": "synthetic_001",
+  "image_file": "synthetic_001.png",
+  "source": "synthetic",
+  "condition": "clear",
+  "store_name": "BIG MART",
+  "note": "Rendered test receipt, not a photograph of a real receipt.",
+  "items": [
+    {
+      "product_name": "Tokla Black Tea",
+      "quantity": 1,
+      "unit": "200g",
+      "price": 190
+    },
+    {
+      "product_name": "White Bread",
+      "quantity": 1,
+      "unit": "400g",
+      "price": 90.25
+    },
+    {
+      "product_name": "Sunflower Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 280.5
+    },
+    {
+      "product_name": "Amul Butter",
+      "quantity": 1,
+      "unit": "500g",
+      "price": 620
+    },
+    {
+      "product_name": "Sunflower Oil",
+      "quantity": 1,
+      "unit": "1L",
+      "price": 280
+    },
+    {
+      "product_name": "Potatoes",
+      "quantity": 1,
+      "unit": "5kg",
+      "price": 240
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 12,
+      "unit": "pcs",
+      "price": 168
+    },
+    {
+      "product_name": "Bun Pack",
+      "quantity": 6,
+      "unit": "pcs",
+      "price": 84
+    }
+  ],
+  "total": 2206.61
+}
