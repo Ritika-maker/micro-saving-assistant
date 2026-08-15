@@ -12,13 +12,13 @@ Sujal Milk 500ml,Dairy,Sujal,liter,61,61,8
 Amul Yogurt 500g,Dairy,Amul,g,130,130,8
 DDC Yogurt 500g,Dairy,DDC,g,138,138,8
 Kwality Yogurt 500g,Dairy,Kwality,g,146,146,8
-Amul Yogurt 200g,Dairy,Amul,g,130,130,8
-DDC Yogurt 200g,Dairy,DDC,g,138,138,8
-Kwality Yogurt 200g,Dairy,Kwality,g,146,146,8
+Amul Yogurt 200g,Dairy,Amul,g,55,55,8
+DDC Yogurt 200g,Dairy,DDC,g,59,59,8
+Kwality Yogurt 200g,Dairy,Kwality,g,62,62,8
 Amul Butter 500g,Dairy,Amul,g,620,620,5
 Nestle Butter 500g,Dairy,Nestle,g,657,657,5
-Amul Butter 100g,Dairy,Amul,g,620,620,5
-Nestle Butter 100g,Dairy,Nestle,g,657,657,5
+Amul Butter 100g,Dairy,Amul,g,139,139,5
+Nestle Butter 100g,Dairy,Nestle,g,147,147,5
 Amul Cheese Slice 200g,Dairy,Amul,g,320,320,6
 Britannia Cheese Slice 200g,Dairy,Britannia,g,339,339,6
 Amul Paneer 200g,Dairy,Amul,g,190,190,7
@@ -49,8 +49,8 @@ Kohinoor Basmati Rice 5kg,Grains,Kohinoor,kg,897,897,8
 Daawat Basmati Rice 5kg,Grains,Daawat,kg,948,948,8
 Brown Rice 1kg,Grains,Generic,kg,120,120,9
 Brown Rice 5kg,Grains,Generic,kg,564,564,9
-Jeera Masino Rice 5kg,Grains,Generic,kg,2914,2914,7
-Sona Jeera Masino Rice 5kg,Grains,Sona,kg,3089,3089,7
+Jeera Masino Rice 5kg,Grains,Generic,kg,650,650,7
+Sona Jeera Masino Rice 5kg,Grains,Sona,kg,689,689,7
 Jeera Masino Rice 25kg,Grains,Generic,kg,2902,2902,7
 Sona Jeera Masino Rice 25kg,Grains,Sona,kg,3076,3076,7
 Wheat Flour 1kg,Grains,Generic,kg,95,95,8
@@ -63,13 +63,13 @@ Maida 1kg,Grains,Generic,kg,90,90,5
 Aashirvaad Maida 1kg,Grains,Aashirvaad,kg,95,95,5
 Quaker Oats 500g,Grains,Quaker,g,280,280,9
 Patanjali Oats 500g,Grains,Patanjali,g,297,297,9
-Quaker Oats 1kg,Grains,Quaker,g,280,280,9
-Patanjali Oats 1kg,Grains,Patanjali,g,297,297,9
+Quaker Oats 1kg,Grains,Quaker,g,533,533,9
+Patanjali Oats 1kg,Grains,Patanjali,g,566,566,9
 Beaten Rice 1kg,Grains,Generic,kg,110,110,7
 Semolina 1kg,Grains,Generic,kg,100,100,7
 Eggs 12pcs,Protein,Generic,pcs,240,240,7
-Eggs 6pcs,Protein,Generic,pcs,240,240,7
-Eggs 30pcs,Protein,Generic,pcs,240,240,7
+Eggs 6pcs,Protein,Generic,pcs,126,126,7
+Eggs 30pcs,Protein,Generic,pcs,563,563,7
 Black Lentil 1kg,Protein,Generic,kg,210,210,8
 Tulsi Black Lentil 1kg,Protein,Tulsi,kg,223,223,8
 Red Lentil 1kg,Protein,Generic,kg,190,190,8
@@ -80,8 +80,8 @@ Chickpeas 1kg,Protein,Generic,kg,180,180,8
 Soybean 1kg,Protein,Generic,kg,200,200,8
 Chicken Breast 500g,Meat,Generic,g,350,350,6
 Nepali Farm Chicken Breast 500g,Meat,Nepali Farm,g,371,371,6
-Chicken Breast 1kg,Meat,Generic,g,350,350,6
-Nepali Farm Chicken Breast 1kg,Meat,Nepali Farm,g,371,371,6
+Chicken Breast 1kg,Meat,Generic,g,667,667,6
+Nepali Farm Chicken Breast 1kg,Meat,Nepali Farm,g,707,707,6
 Chicken Curry Cut 1kg,Meat,Generic,kg,420,420,6
 Mutton 1kg,Meat,Generic,kg,1250,1250,5
 Fish Fillet 500g,Meat,Generic,g,380,380,7
@@ -100,11 +100,11 @@ Cabbage 1kg,Vegetables,Generic,kg,60,60,9
 Carrot 1kg,Vegetables,Generic,kg,95,95,10
 Spinach 500g,Vegetables,Generic,g,40,40,10
 Green Peas 1kg,Vegetables,Generic,kg,150,150,9
-Coca Cola Coca Cola 2L,Beverages,Coca Cola,liter,160,160,4
-Coca Cola Coca Cola 1.25L,Beverages,Coca Cola,liter,109,109,4
-Coca Cola Coca Cola 500ml,Beverages,Coca Cola,liter,88,88,4
-Pepsi Pepsi 2L,Beverages,Pepsi,liter,150,150,4
-Pepsi Pepsi 1.25L,Beverages,Pepsi,liter,102,102,4
+Coca Cola 2L,Beverages,Coca Cola,liter,160,160,4
+Coca Cola 1.25L,Beverages,Coca Cola,liter,109,109,4
+Coca Cola 500ml,Beverages,Coca Cola,liter,88,88,4
+Pepsi 2L,Beverages,Pepsi,liter,150,150,4
+Pepsi 1.25L,Beverages,Pepsi,liter,102,102,4
 Coca Cola Sprite 2L,Beverages,Coca Cola,liter,155,155,4
 Real Mango Juice 1L,Beverages,Real,liter,210,210,5
 Frooti Mango Juice 1L,Beverages,Frooti,liter,223,223,5
@@ -113,9 +113,9 @@ Frooti Mango Juice 200ml,Beverages,Frooti,liter,67,67,5
 Tokla Black Tea 200g,Beverages,Tokla,g,190,190,7
 Ilam Black Tea 200g,Beverages,Ilam,g,201,201,7
 Gorkha Black Tea 200g,Beverages,Gorkha,g,213,213,7
-Tokla Black Tea 500g,Beverages,Tokla,g,190,190,7
-Ilam Black Tea 500g,Beverages,Ilam,g,201,201,7
-Gorkha Black Tea 500g,Beverages,Gorkha,g,213,213,7
+Tokla Black Tea 500g,Beverages,Tokla,g,445,445,7
+Ilam Black Tea 500g,Beverages,Ilam,g,471,471,7
+Gorkha Black Tea 500g,Beverages,Gorkha,g,499,499,7
 Tokla Green Tea 100g,Beverages,Tokla,g,240,240,9
 Ilam Green Tea 100g,Beverages,Ilam,g,254,254,9
 Nescafe Instant Coffee 50g,Beverages,Nescafe,g,176,176,5
@@ -147,8 +147,8 @@ Rara Instant Noodles 75g,Snacks,Rara,g,26,26,3
 Mayos Instant Noodles 75g,Snacks,Mayos,g,28,28,3
 Haldiram Namkeen Mixture 200g,Snacks,Haldiram,g,130,130,4
 Namkeen Mixture 200g,Snacks,Generic,g,138,138,4
-Haldiram Namkeen Mixture 400g,Snacks,Haldiram,g,130,130,4
-Namkeen Mixture 400g,Snacks,Generic,g,138,138,4
+Haldiram Namkeen Mixture 400g,Snacks,Haldiram,g,248,248,4
+Namkeen Mixture 400g,Snacks,Generic,g,263,263,4
 Popcorn 100g,Snacks,Generic,g,90,90,6
 Britannia Digestive Biscuit 250g,Biscuits,Britannia,g,93,93,6
 Nebico Digestive Biscuit 250g,Biscuits,Nebico,g,99,99,6
@@ -162,8 +162,8 @@ Parle Cream Biscuit 150g,Biscuits,Parle,g,110,110,3
 Nebico Salt Biscuit 200g,Biscuits,Nebico,g,65,65,5
 Kelloggs Corn Flakes 300g,Breakfast,Kelloggs,g,420,420,7
 Patanjali Corn Flakes 300g,Breakfast,Patanjali,g,445,445,7
-Kelloggs Corn Flakes 500g,Breakfast,Kelloggs,g,420,420,7
-Patanjali Corn Flakes 500g,Breakfast,Patanjali,g,445,445,7
+Kelloggs Corn Flakes 500g,Breakfast,Kelloggs,g,675,675,7
+Patanjali Corn Flakes 500g,Breakfast,Patanjali,g,716,716,7
 Kelloggs Muesli 500g,Breakfast,Kelloggs,g,620,620,8
 Bagrrys Muesli 500g,Breakfast,Bagrrys,g,657,657,8
 Dabur Honey 500g,Breakfast,Dabur,g,560,560,7
@@ -177,13 +177,13 @@ Jam 500g,Breakfast,Generic,g,339,339,4
 Everest Turmeric Powder 100g,Spices,Everest,g,70,70,8
 MDH Turmeric Powder 100g,Spices,MDH,g,74,74,8
 Turmeric Powder 100g,Spices,Generic,g,78,78,8
-Everest Turmeric Powder 500g,Spices,Everest,g,70,70,8
-MDH Turmeric Powder 500g,Spices,MDH,g,74,74,8
-Turmeric Powder 500g,Spices,Generic,g,78,78,8
+Everest Turmeric Powder 500g,Spices,Everest,g,313,313,8
+MDH Turmeric Powder 500g,Spices,MDH,g,331,331,8
+Turmeric Powder 500g,Spices,Generic,g,348,348,8
 Everest Chilli Powder 100g,Spices,Everest,g,90,90,7
 MDH Chilli Powder 100g,Spices,MDH,g,95,95,7
-Everest Chilli Powder 500g,Spices,Everest,g,90,90,7
-MDH Chilli Powder 500g,Spices,MDH,g,95,95,7
+Everest Chilli Powder 500g,Spices,Everest,g,402,402,7
+MDH Chilli Powder 500g,Spices,MDH,g,424,424,7
 Everest Coriander Powder 100g,Spices,Everest,g,65,65,8
 Coriander Powder 100g,Spices,Generic,g,69,69,8
 Cumin Seed 100g,Spices,Generic,g,120,120,8
@@ -196,15 +196,15 @@ Sugar 5kg,Spices,Generic,kg,517,517,3
 Colgate Toothpaste 100g,Personal Care,Colgate,g,180,180,7
 Close Up Toothpaste 100g,Personal Care,Close Up,g,191,191,7
 Dabur Toothpaste 100g,Personal Care,Dabur,g,202,202,7
-Colgate Toothpaste 200g,Personal Care,Colgate,g,180,180,7
-Close Up Toothpaste 200g,Personal Care,Close Up,g,191,191,7
-Dabur Toothpaste 200g,Personal Care,Dabur,g,202,202,7
+Colgate Toothpaste 200g,Personal Care,Colgate,g,343,343,7
+Close Up Toothpaste 200g,Personal Care,Close Up,g,364,364,7
+Dabur Toothpaste 200g,Personal Care,Dabur,g,385,385,7
 Head & Shoulders Shampoo 200ml,Personal Care,Head & Shoulders,ml,114,114,6
 Sunsilk Shampoo 200ml,Personal Care,Sunsilk,ml,121,121,6
 Clinic Plus Shampoo 200ml,Personal Care,Clinic Plus,ml,128,128,6
-Head & Shoulders Shampoo 400ml,Personal Care,Head & Shoulders,ml,2407,2407,6
-Sunsilk Shampoo 400ml,Personal Care,Sunsilk,ml,2551,2551,6
-Clinic Plus Shampoo 400ml,Personal Care,Clinic Plus,ml,2695,2695,6
+Head & Shoulders Shampoo 400ml,Personal Care,Head & Shoulders,ml,217,217,6
+Sunsilk Shampoo 400ml,Personal Care,Sunsilk,ml,231,231,6
+Clinic Plus Shampoo 400ml,Personal Care,Clinic Plus,ml,244,244,6
 Dove Bath Soap 4pcs,Personal Care,Dove,pcs,250,250,8
 Lifebuoy Bath Soap 4pcs,Personal Care,Lifebuoy,pcs,265,265,8
 Lux Bath Soap 4pcs,Personal Care,Lux,pcs,280,280,8
@@ -220,9 +220,9 @@ Dabur Hair Oil 200ml,Personal Care,Dabur,ml,67,67,6
 Surf Detergent Powder 1kg,Household,Surf,kg,450,450,5
 Wheel Detergent Powder 1kg,Household,Wheel,kg,477,477,5
 Rin Detergent Powder 1kg,Household,Rin,kg,504,504,5
-Surf Detergent Powder 500g,Household,Surf,kg,450,450,5
-Wheel Detergent Powder 500g,Household,Wheel,kg,477,477,5
-Rin Detergent Powder 500g,Household,Rin,kg,504,504,5
+Surf Detergent Powder 500g,Household,Surf,kg,236,236,5
+Wheel Detergent Powder 500g,Household,Wheel,kg,250,250,5
+Rin Detergent Powder 500g,Household,Rin,kg,265,265,5
 Vim Dishwash Liquid 500ml,Household,Vim,ml,105,105,5
 Dishwash Liquid 500ml,Household,Generic,ml,111,111,5
 Harpic Toilet Cleaner 500ml,Household,Harpic,ml,127,127,5
