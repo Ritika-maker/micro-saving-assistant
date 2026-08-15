@@ -1,5 +1,6 @@
 import pandas as pd
 from product_db import load_products_with_store_prices
+from receipt_processor import match_item
 from unit_utils import parse_quantity_and_unit, units_comparable, size_ratio
 
 MIN_SAVINGS_PCT = 5          # ignore alternatives that save less than this
@@ -14,24 +15,22 @@ def find_alternatives(item, products_df, item_brand=None, current_store=None):
     total, so '2 x Milk = NPR 200' is compared as NPR 100 per litre against
     an alternative's NPR 90 per litre.
     """
-    item_name_lower = item['name'].lower()
     # unit price falls back to the line price for callers that don't supply one
     user_price = float(item.get('unit_price') or item.get('price') or 0)
     item_size = parse_quantity_and_unit(item.get('name', ''))
-    category = None
-    matched_product_name = None
 
-    for prod in products_df.to_dict('records'):
-        prod_name_lower = prod['product_name'].lower()
-        if (prod_name_lower in item_name_lower or
-            item_name_lower in prod_name_lower or
-            any(word in prod_name_lower for word in item_name_lower.split() if len(word) > 3)):
-            category = prod['category']
-            matched_product_name = prod['product_name']
-            break
+    # Identify what the user actually bought, so the search can be limited to
+    # that product's category. This reuses match_item() - the same scored
+    # fuzzy match the review screen shows - instead of taking the first
+    # product that happens to share a word. Picking the first share-a-word
+    # match sent 'Kelloggs Corn Flakes 300g' to Snacks (via 'corn' inside
+    # 'Popcorn') and 'Tokla Black Tea 200g' to Protein (via 'black').
+    matched, _score, _level, _label = match_item(item, products_df.to_dict('records'))
 
-    if not category:
+    if not matched:
         return []
+    category = matched['category']
+    matched_product_name = matched['product_name']
 
     alts = products_df[products_df['category'] == category].copy()
 

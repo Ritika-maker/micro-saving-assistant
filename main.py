@@ -27,8 +27,8 @@ def main():
     
     for item in receipt_data['items']:
         total_spent += item['price']
-        # Normalize with fuzzy
-        matched = fuzzy_match(item['name'], products)
+        # Normalize with fuzzy - fuzzy_match returns (product_or_None, score)
+        matched, _score = fuzzy_match(item['name'], products)
         if matched:
             item['normalized'] = matched['product_name']
             item_for_comp = {"name": matched['product_name'], "price": item['price']}
@@ -46,8 +46,8 @@ def main():
     
     # Dashboard
     print("=== Micro-Savings Assistant Dashboard ===")
-    print(f"Total Spent: ${total_spent:.2f}")
-    print(f"Potential Savings: ${total_savings:.2f} ({(total_savings/total_spent*100 if total_spent > 0 else 0):.1f}%)")
+    print(f"Total Spent: NPR {total_spent:.2f}")
+    print(f"Potential Savings: NPR {total_savings:.2f} ({(total_savings/total_spent*100 if total_spent > 0 else 0):.1f}%)")
     print("\nItem-wise Recommendations:")
     for item_name, recs in all_recs.items():
         print(f"\nFor {item_name}:")
